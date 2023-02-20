@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The type Global exception handler.
@@ -27,9 +27,8 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(value = Exception.class)
     public GlobalResult handleException(@NotNull Exception e) {
-        e.printStackTrace();
-        HashMap<String, Object> hashMap = hashMapPut(e);
-        return getResult(hashMap);
+        ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
+        return getResult(concurrentHashMap);
     }
 
     /**
@@ -40,9 +39,8 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(value = ArithmeticException.class)
     public GlobalResult handleArithmeticException(@NotNull ArithmeticException e) {
-        e.printStackTrace();
-        HashMap<String, Object> hashMap = hashMapPut(e);
-        return getResult(hashMap);
+        ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
+        return getResult(concurrentHashMap);
     }
 
     /**
@@ -53,24 +51,24 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(value = RuntimeException.class)
     public GlobalResult handleRuntimeException(@NotNull RuntimeException e) {
-        e.printStackTrace();
-        HashMap<String, Object> hashMap = hashMapPut(e);
-        return getResult(hashMap);
+        ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
+        return getResult(concurrentHashMap);
     }
 
-    private @NotNull HashMap<String, Object> hashMapPut(@NotNull Exception e) {
-        HashMap<String, Object> hashMap = new HashMap<>(5);
-        hashMap.put("本地化消息", e.getLocalizedMessage());
-        hashMap.put("原因", e.getCause());
-        hashMap.put("类", e.getClass());
-        hashMap.put("已抑制", e.getSuppressed());
-        hashMap.put("哈希代码", e.hashCode());
-        log.error(String.valueOf(hashMap));
-        return hashMap;
+    private @NotNull ConcurrentHashMap<String, Object> concurrentHashMapPut(@NotNull Exception e) {
+        e.printStackTrace();
+        ConcurrentHashMap<String, Object> concurrentHashMap = new ConcurrentHashMap<>(5);
+        concurrentHashMap.put("本地化消息", e.getLocalizedMessage());
+        concurrentHashMap.put("原因", e.getCause());
+        concurrentHashMap.put("类", e.getClass());
+        concurrentHashMap.put("已抑制", e.getSuppressed());
+        concurrentHashMap.put("哈希代码", e.hashCode());
+        log.error(String.valueOf(concurrentHashMap));
+        return concurrentHashMap;
     }
 
     @NotNull
-    private GlobalResult getResult(HashMap<String, Object> hashMap) {
-        return GlobalResult.globalResult().fail(hashMap);
+    private GlobalResult getResult(ConcurrentHashMap<String, Object> concurrentHashMap) {
+        return GlobalResult.globalResult().fail(concurrentHashMap);
     }
 }

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -47,15 +47,15 @@ public class AdminBlogController {
      */
     @GetMapping("/pageList/{status}")
     public GlobalResult getPageList(@PathVariable Integer status) {
-        HashMap<String, Object> hashMap = new HashMap<>();
+        ConcurrentHashMap<String, Object> concurrentHashMap = new ConcurrentHashMap<>();
         IPage<HospitalMode> hospitalModeIPage = blogService.getPage(1, 2, status);
-        hashMap.put("pageList", hospitalModeIPage.getRecords());
-        hashMap.put("total", hospitalModeIPage.getTotal());
-        hashMap.put("pages", hospitalModeIPage.getPages());
-        hashMap.put("current", hospitalModeIPage.getCurrent());
-        hashMap.put("size", hospitalModeIPage.getSize());
+        concurrentHashMap.put("pageList", hospitalModeIPage.getRecords());
+        concurrentHashMap.put("total", hospitalModeIPage.getTotal());
+        concurrentHashMap.put("pages", hospitalModeIPage.getPages());
+        concurrentHashMap.put("current", hospitalModeIPage.getCurrent());
+        concurrentHashMap.put("size", hospitalModeIPage.getSize());
         log.info(hospitalModeIPage.getRecords().toString());
-        return GlobalResult.globalResult().ok(hashMap);
+        return GlobalResult.globalResult().ok(concurrentHashMap);
     }
 
     /**

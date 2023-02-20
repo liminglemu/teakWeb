@@ -21,6 +21,7 @@ public class Test {
         HashMap<String, Object> hashMap1 = new HashMap<>(1);
         hashMap.put("失败", "呜呜");
 
+
         GlobalResult globalResult = GlobalResult.globalResult();
         System.out.println("globalResult.hashCode() = " + globalResult.hashCode());
         System.out.println("======================================================== ");
