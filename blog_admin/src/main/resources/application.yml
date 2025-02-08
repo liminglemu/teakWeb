@@ -5,7 +5,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yygh_hosp?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/mybatisDB?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
   profiles:
     active: dev
 mybatis-plus:

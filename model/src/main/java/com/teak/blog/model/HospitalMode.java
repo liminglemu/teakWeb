@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
  * @date 2023 /2/17
  */
 @Data
-@TableName(value = "hospital_set")
+@TableName(value = "Hospital_mode")
 @AllArgsConstructor
 @NoArgsConstructor
 public class HospitalMode {
@@ -22,8 +22,8 @@ public class HospitalMode {
     @TableId(value = "id")
     private Integer id;
 
-    private String hosname;
-    private String hoscode;
+    private String hosName;
+    private String hosCode;
     private String apiUrl;
     private String contactsName;
     private String contactsPhone;
