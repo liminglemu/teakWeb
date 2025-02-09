@@ -19,10 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Slf4j
 @Configuration
 public class CorConfig {
-    // 提取常量
-    private static final String ALLOWED_ORIGINS = "*"; // 替换为你的可信域名
-    private static final String[] ALLOWED_METHODS = {"GET", "POST", "PUT", "DELETE", "OPTIONS"};
-    private static final String PATH_PATTERN = "/**";
 
     @Bean
     public WebMvcConfigurer configurer() {
@@ -30,9 +26,12 @@ public class CorConfig {
             @Override
             public void addCorsMappings(@NotNull CorsRegistry registry) {
                 try {
-                    registry.addMapping(PATH_PATTERN) //为所有路径启用 CORS 支持。
-                            .allowedOrigins(ALLOWED_ORIGINS) //允许来自任何域名的请求。
-                            .allowedMethods(ALLOWED_METHODS); //允许这些 HTTP 方法。
+                    registry.addMapping("/admin/**")
+                            .allowedOrigins("http://localhost:63342")
+                            .allowedMethods("GET", "POST")
+                            .allowedHeaders("Content-Type", "Authorization")
+                            .allowCredentials(true)
+                            .maxAge(3600);
                 } catch (Exception e) {
                     log.error("CORS配置失败", e);
                 }

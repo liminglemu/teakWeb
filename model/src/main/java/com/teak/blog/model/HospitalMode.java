@@ -1,6 +1,7 @@
 package com.teak.blog.model;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,6 +31,7 @@ public class HospitalMode {
     private String status;
     private String createTime;
     private String updateTime;
+    @TableLogic(value = "0", delval = "1")
     private String isDeleted;
 
 }
