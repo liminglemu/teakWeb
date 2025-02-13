@@ -63,7 +63,7 @@ public class AdminBlogController {
      *
      * @return the list
      */
-    @GetMapping("list")
+    @GetMapping("/list")
     public GlobalResult getList() {
         List<HospitalMode> hospitalModeList = blogService.getList();
         HashMap<String, Object> hashMap = new HashMap<>();
