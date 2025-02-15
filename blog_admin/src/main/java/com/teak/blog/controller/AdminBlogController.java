@@ -5,13 +5,13 @@ import com.teak.blog.model.HospitalMode;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.BlogService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @Slf4j
 @RestController
-@RequestMapping("admin/blog")
+@RequestMapping("/api/blog")
 public class AdminBlogController {
 
     private final BlogService blogService;
@@ -34,7 +34,6 @@ public class AdminBlogController {
      *
      * @param blogService the blog service
      */
-    @Autowired
     public AdminBlogController(BlogService blogService) {
         this.blogService = blogService;
     }

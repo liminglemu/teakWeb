@@ -1,11 +1,9 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.HospitalMode;
 import com.teak.blog.model.Img;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ImgService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,10 +22,13 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("/admin/img")
+@RequestMapping("/api/img")
 public class ImgController {
-    @Autowired
-    private ImgService imgService;
+    private final ImgService imgService;
+
+    public ImgController(ImgService imgService) {
+        this.imgService = imgService;
+    }
 
     @GetMapping("/imgList")
     public GlobalResult getImgList() {

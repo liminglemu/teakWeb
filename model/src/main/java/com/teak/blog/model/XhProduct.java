@@ -6,19 +6,22 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
- * 图片
- * img
+ * Created with: IntelliJ IDEA
+ *
+ * @Author: li zheng
+ * @Date: 2025/2/15 15:34
+ * @Project: teakWeb
+ * @File: XhProduct.java
+ * @Description:
  */
 @Data
-@TableName(value = "img")
-public class Img implements Serializable {
+@TableName(value = "xh_product")
+public class XhProduct {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
-
-    private String imgName;
-
-    private static final long serialVersionUID = 1L;
+    private String productName;
+    private BigDecimal productPrice;
 }
