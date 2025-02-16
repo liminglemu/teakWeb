@@ -1,5 +1,6 @@
 package com.teak.blog.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.lang.management.ManagementFactory;
@@ -21,46 +22,47 @@ import java.net.NetworkInterface;
  * 这样的好处是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞（由datacenter和机器ID作区分），
  * 并且效率较高，经测试，snowflake每秒能够产生26万ID左右，完全满足需要。
  */
+@Slf4j
 @Component
 public final class IdWorker {
     /**
      * 时间起始标记点，作为基准，一般取系统的最近时间（一旦确定不能变动）
      */
-    private final static long TWEPOCH = 1288834974657L;
+    private static final long TWEPOCH = 1288834974657L;
     /**
      * 机器标识位数
      */
-    private final static long WORKER_ID_BITS = 5L;
+    private static final long WORKER_ID_BITS = 5L;
     /**
      * 数据中心标识位数
      */
-    private final static long DATA_CENTER_ID_BITS = 5L;
+    private static final long DATA_CENTER_ID_BITS = 5L;
     /**
      * 机器ID最大值
      */
-    private final static long MAX_WORKER_ID = ~(-1L << WORKER_ID_BITS);
+    private static final long MAX_WORKER_ID = ~(-1L << WORKER_ID_BITS);
     /**
      * 数据中心ID最大值
      */
-    private final static long MAX_DATA_CENTER_ID = ~(-1L << DATA_CENTER_ID_BITS);
+    private static final long MAX_DATA_CENTER_ID = ~(-1L << DATA_CENTER_ID_BITS);
     /**
      * 毫秒内自增位
      */
-    private final static long SEQUENCE_BITS = 12L;
+    private static final long SEQUENCE_BITS = 12L;
     /**
      * 机器ID偏左移12位
      */
-    private final static long WORKER_ID_SHIFT = SEQUENCE_BITS;
+    private static final long WORKER_ID_SHIFT = SEQUENCE_BITS;
     /**
      * 数据中心ID左移17位
      */
-    private final static long DATA_CENTER_ID_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS;
+    private static final long DATA_CENTER_ID_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS;
     /**
      * 时间毫秒左移22位
      */
-    private final static long TIME_STAMP_LEFT_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS + DATA_CENTER_ID_BITS;
+    private static final long TIME_STAMP_LEFT_SHIFT = SEQUENCE_BITS + WORKER_ID_BITS + DATA_CENTER_ID_BITS;
 
-    private final static long SEQUENCE_MASK = ~(-1L << SEQUENCE_BITS);
+    private static final long SEQUENCE_MASK = ~(-1L << SEQUENCE_BITS);
     /**
      * 上次生产id时间戳
      */
@@ -142,7 +144,7 @@ public final class IdWorker {
                 id = id % (maxDatacenterId + 1);
             }
         } catch (Exception e) {
-            System.out.println(" getDatacenterId: " + e.getMessage());
+            log.error(" getDatacenterId: {}", e.getMessage());
         }
         return id;
     }

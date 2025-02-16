@@ -9,6 +9,7 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Signature;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
@@ -40,18 +41,27 @@ public class AuditingPlugin implements Interceptor {
         MappedStatement mappedStatement = (MappedStatement) invocation.getArgs()[0];
         Object param = invocation.getArgs()[1];
         SqlCommandType sqlCommandType = mappedStatement.getSqlCommandType();
-        if (param != null) {
-            if (sqlCommandType == SqlCommandType.INSERT) {
-                Field field = param.getClass().getDeclaredField("id");
-                boolean flag = (!Modifier.isPublic(field.getModifiers()) || !Modifier.isPublic(field.getDeclaringClass().getModifiers())
-                        || Modifier.isFinal(field.getModifiers())) && !field.isAccessible();
-                if (flag) {
-                    field.setAccessible(true);
-                }
+        if (param != null && sqlCommandType == SqlCommandType.INSERT) {
+            Field field = getField(param);
+            Object o = field.get(param);
+            if (o == null) {
                 field.set(param, idWorker.nextId());
-
-            }
+                }
         }
         return invocation.proceed();
+    }
+
+    private static @NotNull Field getField(Object param) throws NoSuchFieldException {
+        Field field = param.getClass().getDeclaredField("id");
+        boolean isNotPublicField = !Modifier.isPublic(field.getModifiers());
+        boolean isNotPublicClass = !Modifier.isPublic(field.getDeclaringClass().getModifiers());
+        boolean isFinalField = Modifier.isFinal(field.getModifiers());
+
+        boolean needSpecialAccess = (isNotPublicField || isNotPublicClass || isFinalField)
+                && !field.isAccessible();
+        if (needSpecialAccess) {
+            field.setAccessible(true);
+        }
+        return field;
     }
 }
