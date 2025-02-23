@@ -1,10 +1,11 @@
 package com.teak.blog.model;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.teak.blog.BaseModel;
+import com.teak.blog.annotation.SnowflakeAlgorithm;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 
@@ -17,10 +18,12 @@ import java.math.BigDecimal;
  * @File: XhProduct.java
  * @Description:
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @TableName(value = "xh_product")
-public class XhProduct {
+public class XhProduct extends BaseModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
     private Long id;
     private String productName;
     private BigDecimal productPrice;

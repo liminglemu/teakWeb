@@ -20,17 +20,44 @@
         <version>2.3.6.RELEASE</version>
     </parent>
 
+
     <dependencyManagement>
+
         <dependencies>
+            <!-- MyBatis-Plus 增强MyBatis框架 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>3.5.3.1</version>
             </dependency>
+
+            <!-- Lombok 自动生成getter/setter等代码 -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.24</version>
+                <scope>provided</scope> <!-- 添加作用域限制 -->
+            </dependency>
+
+            <!-- MySQL驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.28</version>
+            </dependency>
+
+            <!-- Jackson注解 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>2.13.3</version>
+            </dependency>
+
+            <!-- JetBrains注解库 -->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>24.0.0</version> <!-- 修正RELEASE为具体版本 -->
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -38,6 +65,9 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <java.version>11</java.version>
+        <jackson.version>2.13.3</jackson.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
-
 </project>

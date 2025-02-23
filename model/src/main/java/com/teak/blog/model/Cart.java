@@ -2,6 +2,7 @@ package com.teak.blog.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.teak.blog.annotation.SnowflakeAlgorithm;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -20,6 +21,7 @@ import java.math.BigDecimal;
 @Data
 public class Cart implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
     private Long id;
 
     private String name;

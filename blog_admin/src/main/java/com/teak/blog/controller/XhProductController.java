@@ -33,9 +33,6 @@ public class XhProductController {
     public GlobalResult getList() {
         log.info("获取商品列表");
         List<XhProduct> list = xhProductService.list();
-        for (int i = 0; i < list.size(); i++) {
-            log.info("商品列表：" + list.get(i));
-        }
         HashMap<String, Object> XhProductHashMap = new HashMap<>();
         XhProductHashMap.put("list", list);
         return GlobalResult.globalResult().ok(XhProductHashMap);
