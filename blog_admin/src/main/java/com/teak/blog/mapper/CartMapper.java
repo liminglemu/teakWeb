@@ -1,7 +1,7 @@
 package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.teak.blog.model.XhProduct;
+import com.teak.blog.model.Cart;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Repository;
  * Created with: IntelliJ IDEA
  *
  * @Author: li zheng
- * @Date: 2025/2/15 15:41
+ * @Date: 2025/2/21 12:54
  * @Project: teakWeb
- * @File: XhProductMapper.java
+ * @File: CartMapper.java
  * @Description:
  */
 @Repository
-public interface XhProductMapper extends BaseMapper<XhProduct> {
+public interface CartMapper extends BaseMapper<Cart> {
 }

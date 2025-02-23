@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teak.blog.mapper.CartMapper">
+    <resultMap id="BaseResultMap" type="com.teak.blog.model.Cart">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="price" jdbcType="DECIMAL" property="price"/>
+        <result column="count" jdbcType="BIGINT" property="count"/>
+        <result column="thumb" jdbcType="VARCHAR" property="thumb"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, `name`, price, `count`, thumb
+    </sql>
+</mapper>

@@ -53,6 +53,25 @@ public class GlobalResult {
     }
 
     /**
+     * 构建自定义消息的全局结果对象
+     *
+     * @param data    需要封装的结果数据集合，以键值对形式存储的附加数据对象
+     * @param message 自定义的消息内容，用于覆盖默认的失败提示信息
+     * @return 当前GlobalResult实例，支持链式调用
+     * <p>
+     * 方法说明：
+     * 1. 固定设置结果为失败状态（设置code为FAIL枚举对应的错误码）
+     * 2. 使用自定义消息替换默认消息
+     * 3. 绑定传入的业务数据集合
+     */
+    public @NotNull GlobalResult customMessage(Map<String, Object> data, String message) {
+        this.code = GlobalResultEnums.FAIL.getCode();
+        this.message = message;
+        this.data = data;
+        return this;
+    }
+
+    /**
      * Fail global result.
      *
      * @param data the data

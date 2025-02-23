@@ -18,7 +18,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class XhProductServiceImpl extends ServiceImpl<XhProductMapper, XhProduct> implements XhProductService {
-    @Autowired
-    private XhProductMapper xhProductMapper;
+    private final XhProductMapper xhProductMapper;
 
+    public XhProductServiceImpl(XhProductMapper xhProductMapper) {
+        this.xhProductMapper = xhProductMapper;
+    }
 }

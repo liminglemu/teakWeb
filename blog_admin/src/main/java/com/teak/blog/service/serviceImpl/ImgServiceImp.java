@@ -20,8 +20,11 @@ import java.util.List;
  */
 @Service
 public class ImgServiceImp extends ServiceImpl<ImgDao, Img> implements ImgService {
-    @Autowired
-    private ImgDao imgDao;
+    private final ImgDao imgDao;
+
+    public ImgServiceImp(ImgDao imgDao) {
+        this.imgDao = imgDao;
+    }
 
     @Override
     public List<Img> getImgList() {
