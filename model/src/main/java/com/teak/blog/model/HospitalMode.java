@@ -3,6 +3,7 @@ package com.teak.blog.model;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.teak.blog.annotation.SnowflakeAlgorithm;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class HospitalMode {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
     private Long id;
 
     private String hosName;

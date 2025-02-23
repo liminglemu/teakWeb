@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teak.blog.mapper.XhProductMapper;
 import com.teak.blog.model.XhProduct;
 import com.teak.blog.service.XhProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**

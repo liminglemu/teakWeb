@@ -2,7 +2,6 @@ package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.teak.blog.model.XhProduct;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**

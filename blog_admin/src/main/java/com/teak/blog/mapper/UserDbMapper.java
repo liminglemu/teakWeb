@@ -1,18 +1,18 @@
 package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.teak.blog.model.Cart;
+import com.teak.blog.model.UserDb;
 import org.springframework.stereotype.Repository;
 
 /**
  * Created with: IntelliJ IDEA
  *
  * @Author: li zheng
- * @Date: 2025/2/21 12:54
+ * @Date: 2025/2/15 15:41
  * @Project: teakWeb
- * @File: CartMapper.java
+ * @File: XhProductMapper.java
  * @Description:
  */
 @Repository
-public interface CartMapper extends BaseMapper<Cart> {
+public interface UserDbMapper extends BaseMapper<UserDb> {
 }
