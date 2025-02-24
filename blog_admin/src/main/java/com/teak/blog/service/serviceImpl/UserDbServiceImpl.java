@@ -22,4 +22,5 @@ public class UserDbServiceImpl extends ServiceImpl<UserDbMapper, UserDb> impleme
     public UserDbServiceImpl(UserDbMapper userDbMapper) {
         this.userDbMapper = userDbMapper;
     }
+
 }

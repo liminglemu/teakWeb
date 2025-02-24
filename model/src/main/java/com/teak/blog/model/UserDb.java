@@ -20,7 +20,7 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-@TableName(value = "xh_product")
+@TableName(value = "user_db")
 public class UserDb extends BaseModel implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
@@ -35,4 +35,8 @@ public class UserDb extends BaseModel implements Serializable {
      * 密码
      */
     private String password;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
+    private Long token;
 }

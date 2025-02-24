@@ -3,11 +3,8 @@
 <mapper namespace="com.teak.blog.mapper.UserDbMapper">
     <resultMap id="BaseResultMap" type="com.teak.blog.model.UserDb">
         <id column="id" jdbcType="BIGINT" property="id"/>
-        <result column="product_name" jdbcType="VARCHAR" property="userName"/>
-        <result column="product_price" jdbcType="VARCHAR" property="password"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
     </resultMap>
-    <sql id="Base_Column_List">
-        id, product_name, product_price
-    </sql>
 
 </mapper>

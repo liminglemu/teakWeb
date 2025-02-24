@@ -2,6 +2,8 @@ package com.teak.blog;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.teak.blog.annotation.CreateTime;
+import com.teak.blog.annotation.IsDeleted;
+import com.teak.blog.annotation.Statue;
 import com.teak.blog.annotation.UpdateTime;
 import lombok.Data;
 
@@ -20,11 +22,13 @@ import java.util.Date;
 @Data
 public class BaseModel {
 
+    @Statue
     private Integer status;
     @CreateTime
     private Date createTime;
     @UpdateTime
     private Date updateTime;
     @TableLogic(value = "0", delval = "1")
+    @IsDeleted
     private Integer isDeleted;
 }

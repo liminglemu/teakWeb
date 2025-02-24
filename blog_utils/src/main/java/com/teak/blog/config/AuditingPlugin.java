@@ -1,8 +1,6 @@
 package com.teak.blog.config;
 
-import com.teak.blog.annotation.CreateTime;
-import com.teak.blog.annotation.SnowflakeAlgorithm;
-import com.teak.blog.annotation.UpdateTime;
+import com.teak.blog.annotation.*;
 import com.teak.blog.utils.IdWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.Executor;
@@ -82,6 +80,15 @@ public class AuditingPlugin implements Interceptor {
                 needRestoreAccess = prepareFieldAccess(field, param);
                 handleUpdateTime(field, param, isInsert, isUpdate);
             }
+
+            if (field.isAnnotationPresent(Statue.class) && isInsert) {
+                needRestoreAccess = prepareFieldAccess(field, param);
+                handleStatue(field, param);
+            }
+            if (field.isAnnotationPresent(IsDeleted.class) && isInsert) {
+                needRestoreAccess = prepareFieldAccess(field, param);
+                handleIsDeleted(field, param);
+            }
         } finally {
             if (needRestoreAccess) {
                 field.setAccessible(false);
@@ -109,6 +116,21 @@ public class AuditingPlugin implements Interceptor {
             field.set(param, new Date());
         }
     }
+
+    private void handleStatue(Field field, Object param) throws IllegalAccessException {
+        if (field.get(param) == null) {
+            log.debug("注入Statue 默认值0");
+            field.set(param, 0);
+        }
+    }
+
+    private void handleIsDeleted(Field field, Object param) throws IllegalAccessException {
+        if (field.get(param) == null) {
+            log.debug("注入IsDeleted 默认值0");
+            field.set(param, 0);
+        }
+    }
+
 
     private boolean prepareFieldAccess(Field field, Object param) {
         boolean needSpecialAccess = (!Modifier.isPublic(field.getModifiers())
