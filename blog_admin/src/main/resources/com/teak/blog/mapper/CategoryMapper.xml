@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teak.blog.mapper.CategoryMapper">
+    <resultMap id="BaseResultMap" type="com.teak.blog.model.Category">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="cate_name" property="cateName" jdbcType="VARCHAR"/>
+        <result column="cate_alias" property="cateAlias" jdbcType="VARCHAR"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getListById" resultType="com.teak.blog.model.Category">
+        select *
+        from category
+        where user_id = #{id}
+    </select>
+
+</mapper>

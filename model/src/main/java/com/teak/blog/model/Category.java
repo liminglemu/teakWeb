@@ -21,24 +21,22 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @TableName(value = "user_db")
-public class UserDb extends BaseModel implements Serializable {
+public class Category extends BaseModel implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
 
     /**
-     * 用户名称
+     * 文章分类名称
      */
-    private String userName;
+    private String cateName;
 
     /**
-     * 密码
+     * 文章分类别名
      */
-    private String password;
+    private String cateAlias;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    @SnowflakeAlgorithm
-    private Long token;
+    private Long userId;
 
-    private String picture;
 }

@@ -21,7 +21,7 @@ public class GlobalResult {
     private Map<String, Object> data;
 
 
-    private GlobalResult() {
+    public GlobalResult() {
     }
 
     /**
@@ -29,15 +29,17 @@ public class GlobalResult {
      * <p>
      * 这里使用的是饿汉式单例，我也不知道为什么怎么写，就是单纯的想写写看，这里的单例确实有效，所有消费者的hashCode都是一样的
      *
+     * 2025/2/26 全局返回不能写单例，因为如果使用单例，那么每次调用都会返回同一个对象，多线程返回的数据会被覆盖
+     *
      * @return the global result
      */
-    public static GlobalResult globalResult() {
+   /* public static GlobalResult globalResult() {
         return InnClass.globalResult;
     }
 
     private static class InnClass {
         private static final GlobalResult globalResult = new GlobalResult();
-    }
+    }*/
 
     /**
      * Ok global result.

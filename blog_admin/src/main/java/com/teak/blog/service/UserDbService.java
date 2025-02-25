@@ -2,6 +2,9 @@ package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.teak.blog.model.UserDb;
+import com.teak.blog.vo.RegisterVo;
+
+import java.util.List;
 
 /**
  * Created with: IntelliJ IDEA
@@ -13,4 +16,9 @@ import com.teak.blog.model.UserDb;
  * @Description:
  */
 public interface UserDbService extends IService<UserDb> {
+    List<UserDb> finListByName(UserDb userDb);
+
+    UserDb finByNameAndPswd(RegisterVo registerVo);
+
+    UserDb getByToken(String token);
 }

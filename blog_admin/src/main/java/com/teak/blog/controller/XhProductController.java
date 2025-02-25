@@ -35,7 +35,7 @@ public class XhProductController {
         List<XhProduct> list = xhProductService.list();
         HashMap<String, Object> XhProductHashMap = new HashMap<>();
         XhProductHashMap.put("list", list);
-        return GlobalResult.globalResult().ok(XhProductHashMap);
+        return new GlobalResult().ok(XhProductHashMap);
     }
 
     @PostMapping("/addProduct")
@@ -46,9 +46,9 @@ public class XhProductController {
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("flag", flag);
         if (flag) {
-            return GlobalResult.globalResult().ok(hashMap);
+            return new GlobalResult().ok(hashMap);
         } else {
-            return GlobalResult.globalResult().fail(hashMap);
+            return new GlobalResult().fail(hashMap);
         }
     }
 
@@ -59,7 +59,7 @@ public class XhProductController {
         try {
             Boolean flag = xhProductService.removeById(id);
             hashMap.put("flag", flag);
-            return GlobalResult.globalResult().ok(hashMap);
+            return new GlobalResult().ok(hashMap);
         } catch (Exception e) {
             return new GlobalExceptionHandler().handleException(e);
         }

@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teak.blog.mapper.UserDbMapper;
 import com.teak.blog.model.UserDb;
 import com.teak.blog.service.UserDbService;
+import com.teak.blog.vo.RegisterVo;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created with: IntelliJ IDEA
@@ -23,4 +26,18 @@ public class UserDbServiceImpl extends ServiceImpl<UserDbMapper, UserDb> impleme
         this.userDbMapper = userDbMapper;
     }
 
+    @Override
+    public List<UserDb> finListByName(UserDb userDb) {
+        return userDbMapper.finListByName(userDb.getUserName());
+    }
+
+    @Override
+    public UserDb finByNameAndPswd(RegisterVo registerVo) {
+        return userDbMapper.finByNameAndPswd(registerVo);
+    }
+
+    @Override
+    public UserDb getByToken(String token) {
+        return userDbMapper.getByToken(token);
+    }
 }

@@ -12,7 +12,7 @@ public enum GlobalResultEnums {
     /**
      * Success global result enums.
      */
-    SUCCESS(200, "成功 "),
+    SUCCESS(200, "操作成功 "),
     /**
      * Forward global result enums.
      */
@@ -20,7 +20,7 @@ public enum GlobalResultEnums {
     /**
      * Fail global result enums.
      */
-    FAIL(404, "失败");
+    FAIL(400, "操作失败");
 
     private final Integer code;
     private final String message;

@@ -5,6 +5,23 @@
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="user_name" jdbcType="VARCHAR" property="userName"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="picture" jdbcType="VARCHAR" property="picture"/>
     </resultMap>
+    <select id="finListByName" resultType="com.teak.blog.model.UserDb">
+        select *
+        from user_db
+        where user_name = #{userName}
+    </select>
+    <select id="finByNameAndPswd" resultType="com.teak.blog.model.UserDb">
+        select *
+        from user_db
+        where user_name = #{userName}
+          and password = #{password}
+    </select>
+    <select id="getByToken" resultType="com.teak.blog.model.UserDb">
+        select *
+        from user_db
+        where token = #{token}
+    </select>
 
 </mapper>

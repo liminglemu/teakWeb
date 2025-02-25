@@ -2,8 +2,11 @@ package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.teak.blog.model.UserDb;
+import com.teak.blog.vo.RegisterVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Created with: IntelliJ IDEA
@@ -16,4 +19,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserDbMapper extends BaseMapper<UserDb> {
+    List<UserDb> finListByName(String userName);
+
+    UserDb finByNameAndPswd(RegisterVo registerVo);
+
+    UserDb getByToken(String token);
 }

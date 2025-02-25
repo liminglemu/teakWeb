@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created with: IntelliJ IDEA
@@ -39,12 +40,49 @@ public class UserDbController {
         userDb.setPassword(registerVo.getPassword());
         HashMap<String, Object> hashMap = new HashMap<>();
         try {
-            userDbService.save(userDb);
-            hashMap.put("userDb", userDb);
+            List<UserDb> userDbList = userDbService.finListByName(userDb);
+            if (userDbList.isEmpty()) {
+                userDbService.save(userDb);
+                hashMap.put("userDb", userDb);
+                return new GlobalResult().ok(hashMap);
+            } else {
+                return new GlobalResult().customMessage(null, "用户名已存在");
+            }
         } catch (Exception e) {
-            return GlobalResult.globalResult().customMessage(null, e.getMessage());
+            return new GlobalResult().customMessage(null, e.getMessage());
         }
-        return GlobalResult.globalResult().ok(hashMap);
+    }
+
+    @PostMapping("/login")
+    public GlobalResult login(@RequestBody RegisterVo registerVo) {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        try {
+            UserDb userDb = userDbService.finByNameAndPswd(registerVo);
+            if (userDb == null) {
+                return new GlobalResult().customMessage(null, "用户名不存在或者密码错误");
+            } else {
+                hashMap.put("userDb", userDb);
+                return new GlobalResult().ok(hashMap);
+            }
+        } catch (Exception e) {
+            return new GlobalResult().customMessage(null, e.getMessage());
+        }
+    }
+
+    @PostMapping("/getByToken")
+    public GlobalResult getByToken(@RequestBody String token) {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        try {
+            UserDb userDb = userDbService.getByToken(token);
+            if (userDb == null) {
+                return new GlobalResult().customMessage(null, "用户不存在");
+            } else {
+                hashMap.put("userDb", userDb);
+                return new GlobalResult().ok(hashMap);
+            }
+        } catch (Exception e) {
+            return new GlobalResult().customMessage(null, e.getMessage());
+        }
     }
 
 }
