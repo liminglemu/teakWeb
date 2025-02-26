@@ -11,6 +11,7 @@
         select *
         from category
         where user_id = #{id}
+          And is_deleted = 0
     </select>
 
 </mapper>

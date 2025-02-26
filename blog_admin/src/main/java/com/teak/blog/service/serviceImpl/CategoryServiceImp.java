@@ -31,4 +31,15 @@ public class CategoryServiceImp extends ServiceImpl<CategoryMapper, Category> im
     public List<Category> getListById(Long id) {
         return categoryMapper.getListById(id);
     }
+
+    @Override
+    public void addArticle(Category category) {
+        categoryMapper.insert(category);
+    }
+
+    @Override
+    public void updateArticle(Category category) {
+        categoryMapper.updateById(category);
+    }
+
 }

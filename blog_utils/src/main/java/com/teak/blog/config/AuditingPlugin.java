@@ -52,13 +52,42 @@ public class AuditingPlugin implements Interceptor {
         boolean isInsert = sqlCommandType == SqlCommandType.INSERT;
         boolean isUpdate = sqlCommandType == SqlCommandType.UPDATE;
 
-        for (Field field : getCachedFields(param.getClass())) {
-            try {
-                processField(field, param, isInsert, isUpdate);
-            } catch (IllegalAccessException e) {
-                log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage());
+        if (isInsert) {
+            for (Field field : getCachedFields(param.getClass())) {
+                try {
+                    processField(field, param, true, false);
+                } catch (IllegalAccessException e) {
+                    log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage(), e);
+                }
+            }
+        } else if (isUpdate) {
+            Object targetObject = param;
+            if (param instanceof Map) {
+                Map<?, ?> paramMap = (Map<?, ?>) param;
+                targetObject = paramMap.get("et");
+                if (targetObject == null) {
+                    for (Object value : paramMap.values()) {
+                        if (value != null && !(value instanceof Map)) {
+                            targetObject = value;
+                            break;
+                        }
+                    }
+                    if (targetObject == null) {
+                        log.warn("UPDATE操作中未找到实体对象，param: {}", param);
+                        return invocation.proceed();
+                    }
+                }
+            }
+
+            for (Field field : getCachedFields(targetObject.getClass())) {
+                try {
+                    processField(field, targetObject, false, true);
+                } catch (IllegalAccessException e) {
+                    log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage(), e);
+                }
             }
         }
+
         return invocation.proceed();
     }
 

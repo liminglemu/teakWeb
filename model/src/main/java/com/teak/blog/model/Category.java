@@ -20,7 +20,7 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-@TableName(value = "user_db")
+@TableName(value = "category")
 public class Category extends BaseModel implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm

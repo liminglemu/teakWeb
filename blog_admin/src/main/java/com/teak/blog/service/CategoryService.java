@@ -2,7 +2,6 @@ package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.teak.blog.model.Category;
-import com.teak.blog.model.UserDb;
 
 import java.util.List;
 
@@ -17,4 +16,8 @@ import java.util.List;
  */
 public interface CategoryService extends IService<Category> {
     List<Category> getListById(Long id);
+
+    void addArticle(Category category);
+
+    void updateArticle(Category category);
 }

@@ -4,12 +4,10 @@ import com.teak.blog.handler.GlobalExceptionHandler;
 import com.teak.blog.model.Category;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.CategoryService;
-import com.teak.blog.service.UserDbService;
+import com.teak.blog.vo.ArticleVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.BeanUtils;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,11 +26,9 @@ import java.util.List;
 @RequestMapping("/api/category")
 public class CategoryController {
     private final CategoryService categoryService;
-    private final UserDbService userDbService;
 
-    public CategoryController(CategoryService categoryService, UserDbService userDbService) {
+    public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
-        this.userDbService = userDbService;
     }
 
     @GetMapping("/list")
@@ -46,6 +42,49 @@ public class CategoryController {
             new GlobalExceptionHandler().handleException(e);
         }
         log.info("获取栏目列表失败");
+        return null;
+    }
+
+    @PostMapping("/addArticle")
+    public GlobalResult addArticle(@RequestBody ArticleVo articleVo) {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        try {
+            Category category = new Category();
+            BeanUtils.copyProperties(articleVo.getArticle(), category);
+            category.setUserId(articleVo.getUserId());
+            categoryService.addArticle(category);
+            hashMap.put("category", category);
+            return new GlobalResult().ok(hashMap);
+        } catch (Exception e) {
+            new GlobalExceptionHandler().handleException(e);
+        }
+        log.info("添加分类失败");
+        return null;
+    }
+
+    @PutMapping("/updateArticle")
+    public GlobalResult updateArticle(@RequestBody ArticleVo articleVo) {
+        try {
+            Category category = new Category();
+            BeanUtils.copyProperties(articleVo.getArticle(), category);
+
+            category.setUpdateTime(null);
+            categoryService.updateArticle(category);
+            return new GlobalResult().ok(null);
+        } catch (Exception e) {
+            new GlobalExceptionHandler().handleException(e);
+        }
+        return null;
+    }
+
+    @DeleteMapping("/deleteArticle")
+    public GlobalResult deleteArticle(@RequestBody Long id) {
+        try {
+            categoryService.removeById(id);
+            return new GlobalResult().ok(null);
+        } catch (Exception e) {
+            new GlobalExceptionHandler().handleException(e);
+        }
         return null;
     }
 }
