@@ -20,4 +20,6 @@ public interface CategoryService extends IService<Category> {
     void addArticle(Category category);
 
     void updateArticle(Category category);
+
+    Category getByCateName(String category, Long userId);
 }

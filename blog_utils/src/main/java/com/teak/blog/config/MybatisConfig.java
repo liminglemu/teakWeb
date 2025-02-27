@@ -1,5 +1,6 @@
 package com.teak.blog.config;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
@@ -16,24 +17,15 @@ import org.springframework.context.annotation.Bean;
  */
 @SpringBootConfiguration
 public class MybatisConfig {
-    /**
-     * Mybatis plus interceptor mybatis plus interceptor.
-     *
-     * @return the mybatis plus interceptor
-     */
-   /* @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor() {
-        MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
-        mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
-        return mybatisPlusInterceptor;
-    }*/
-
-    // 主拦截器配置（原有分页插件保留）
+    // 主拦截器配置（分页插件）
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+
+        PaginationInnerInterceptor paginationInterceptor = new PaginationInnerInterceptor(DbType.MYSQL);
+        paginationInterceptor.setOptimizeJoin(true);
         // 分页插件
-        interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+        interceptor.addInnerInterceptor(paginationInterceptor);
         // 防止全表更新与删除插件
         interceptor.addInnerInterceptor(new BlockAttackInnerInterceptor());
         return interceptor;

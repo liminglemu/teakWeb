@@ -1,5 +1,6 @@
 package com.teak.blog.model;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teak.blog.BaseModel;
@@ -34,8 +35,14 @@ public class Article extends BaseModel implements Serializable {
     /**
      * 文章分类Id
      */
-    private String cateId;
+    private Long cateId;
+
+    @TableField(exist = false)
+    private String cateName;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long userId;
+
+    @TableField(exist = false)
+    private String userName;
 }

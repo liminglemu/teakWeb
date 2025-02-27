@@ -13,5 +13,11 @@
         where user_id = #{id}
           And is_deleted = 0
     </select>
+    <select id="getByCateName" resultType="com.teak.blog.model.Category">
+        select *
+        from category
+        where cate_name = #{category}
+          And user_id = #{userId}
+    </select>
 
 </mapper>

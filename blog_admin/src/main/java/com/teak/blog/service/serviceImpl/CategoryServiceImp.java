@@ -6,6 +6,7 @@ import com.teak.blog.model.Category;
 import com.teak.blog.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,19 +28,28 @@ public class CategoryServiceImp extends ServiceImpl<CategoryMapper, Category> im
         this.categoryMapper = categoryMapper;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public List<Category> getListById(Long id) {
         return categoryMapper.getListById(id);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void addArticle(Category category) {
         categoryMapper.insert(category);
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void updateArticle(Category category) {
         categoryMapper.updateById(category);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public Category getByCateName(String category, Long userId) {
+        return categoryMapper.getByCateName(category, userId);
     }
 
 }

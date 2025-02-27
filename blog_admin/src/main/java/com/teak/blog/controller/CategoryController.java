@@ -34,15 +34,9 @@ public class CategoryController {
     @GetMapping("/list")
     public GlobalResult list(@RequestParam Long id) {
         HashMap<String, Object> hashMap = new HashMap<>();
-        try {
             List<Category> list = categoryService.getListById(id);
             hashMap.put("channelList", list);
             return new GlobalResult().ok(hashMap);
-        } catch (Exception e) {
-            new GlobalExceptionHandler().handleException(e);
-        }
-        log.info("获取栏目列表失败");
-        return null;
     }
 
     @PostMapping("/addArticle")

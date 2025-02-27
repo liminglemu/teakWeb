@@ -36,7 +36,7 @@ class ApplicationTest {
 
     @Test
     void test2() {
-        Page<Article> page = articleService.getPage(1, 10, 1, 1894330079119998976L);
+        Page<Article> page = articleService.getPage(1, 10, "678678L", "1", 1894330079119998976L);
         page.getRecords().forEach(System.out::println);
     }
 }

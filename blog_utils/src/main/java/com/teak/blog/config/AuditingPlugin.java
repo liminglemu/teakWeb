@@ -11,6 +11,7 @@ import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Signature;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -40,55 +41,57 @@ public class AuditingPlugin implements Interceptor {
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
+        log.info("当前事务状态: {}", TransactionSynchronizationManager.isActualTransactionActive());
         log.debug("触发审计拦截器");
         MappedStatement mappedStatement = (MappedStatement) invocation.getArgs()[0];
         Object param = invocation.getArgs()[1];
 
-        if (param == null) {
-            return invocation.proceed();
-        }
+        if (param == null) return invocation.proceed();
 
-        SqlCommandType sqlCommandType = mappedStatement.getSqlCommandType();
-        boolean isInsert = sqlCommandType == SqlCommandType.INSERT;
-        boolean isUpdate = sqlCommandType == SqlCommandType.UPDATE;
-
-        if (isInsert) {
-            for (Field field : getCachedFields(param.getClass())) {
-                try {
-                    processField(field, param, true, false);
-                } catch (IllegalAccessException e) {
-                    log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage(), e);
-                }
-            }
-        } else if (isUpdate) {
-            Object targetObject = param;
-            if (param instanceof Map) {
-                Map<?, ?> paramMap = (Map<?, ?>) param;
-                targetObject = paramMap.get("et");
-                if (targetObject == null) {
-                    for (Object value : paramMap.values()) {
-                        if (value != null && !(value instanceof Map)) {
-                            targetObject = value;
-                            break;
-                        }
-                    }
-                    if (targetObject == null) {
-                        log.warn("UPDATE操作中未找到实体对象，param: {}", param);
-                        return invocation.proceed();
-                    }
-                }
-            }
-
-            for (Field field : getCachedFields(targetObject.getClass())) {
-                try {
-                    processField(field, targetObject, false, true);
-                } catch (IllegalAccessException e) {
-                    log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage(), e);
-                }
-            }
-        }
-
+        processByCommandType(mappedStatement.getSqlCommandType(), param);
         return invocation.proceed();
+    }
+
+
+    private void processByCommandType(SqlCommandType commandType, Object param) {
+        if (commandType == SqlCommandType.INSERT) {
+            processFieldsWithAnnotations(param, true, false);
+        } else if (commandType == SqlCommandType.UPDATE) {
+            Object targetObject = extractTargetObject(param);
+            if (targetObject == null) {
+                log.warn("UPDATE操作中未找到实体对象，param: {}", param);
+                return;
+            }
+            processFieldsWithAnnotations(targetObject, false, true);
+        }
+    }
+
+    private Object extractTargetObject(Object param) {
+        Object targetObject;
+        if (param instanceof Map) {
+            Map<?, ?> paramMap = (Map<?, ?>) param;
+            targetObject = paramMap.get("et");
+            if (targetObject == null) {
+                for (Object value : paramMap.values()) {
+                    if (value != null && !(value instanceof Map)) {
+                        targetObject = value;
+                        break;
+                    }
+                }
+            }
+            return targetObject;
+        }
+        return param;
+    }
+
+    private void processFieldsWithAnnotations(Object target, boolean isInsert, boolean isUpdate) {
+        getCachedFields(target.getClass()).forEach(field -> {
+            try {
+                processField(field, target, isInsert, isUpdate);
+            } catch (IllegalAccessException e) {
+                log.error("字段[{}]赋值失败: {}", field.getName(), e.getMessage(), e);
+            }
+        });
     }
 
     private void processField(Field field, Object param, boolean isInsert, boolean isUpdate) throws IllegalAccessException {

@@ -1,7 +1,6 @@
 package com.teak.blog.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.teak.blog.handler.GlobalExceptionHandler;
 import com.teak.blog.model.Article;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleService;
@@ -32,16 +31,15 @@ public class ArticleController {
         this.articleService = articleService;
     }
 
-    @GetMapping("/getPage")
-    public GlobalResult getPage(@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize, @RequestParam int status, @RequestParam Long userId) {
+    @GetMapping("/getArticlePage")
+    public GlobalResult getPage(@RequestParam(defaultValue = "1") int pageNum,
+                                @RequestParam(defaultValue = "5") int pageSize,
+                                @RequestParam(required = false) String status,
+                                @RequestParam(required = false) String category,
+                                @RequestParam Long userId) {
         HashMap<String, Object> hashMap = new HashMap<>();
-        try {
-            Page<Article> page = articleService.getPage(pageNum, pageSize, status, userId);
+        Page<Article> page = articleService.getPage(pageNum, pageSize, category, status, userId);
             hashMap.put("page", page);
             return new GlobalResult().ok(hashMap);
-        } catch (Exception e) {
-            new GlobalExceptionHandler().handleException(e);
-        }
-        return null;
     }
 }
