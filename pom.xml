@@ -15,59 +15,69 @@
     </modules>
 
     <parent>
-        <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>2.3.6.RELEASE</version>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.18</version>  <!-- 升级到支持 Java 17 的版本 -->
     </parent>
 
-
     <dependencyManagement>
-
         <dependencies>
-            <!-- MyBatis-Plus 增强MyBatis框架 -->
+            <!-- MyBatis-Plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.3.1</version>
+                <version>3.5.5</version>  <!-- 升级到兼容 Spring Boot 2.7 的版本 -->
             </dependency>
 
-            <!-- Lombok 自动生成getter/setter等代码 -->
+            <!-- Lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.24</version>
-                <scope>provided</scope> <!-- 添加作用域限制 -->
+                <version>1.18.30</version>
+                <scope>provided</scope>
             </dependency>
 
-            <!-- MySQL驱动 -->
+            <!-- MySQL -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.28</version>
+                <version>8.0.33</version>  <!-- 升级到最新稳定版 -->
             </dependency>
 
-            <!-- Jackson注解 -->
+            <!-- Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>2.13.3</version>
+                <version>2.15.2</version>  <!-- 与 Spring Boot 2.7 版本对齐 -->
             </dependency>
 
-            <!-- JetBrains注解库 -->
             <dependency>
-                <groupId>org.jetbrains</groupId>
-                <artifactId>annotations</artifactId>
-                <version>24.0.0</version> <!-- 修正RELEASE为具体版本 -->
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>3.15.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <java.version>11</java.version>
-        <jackson.version>2.13.3</jackson.version>
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
-        <mysql.version>8.0.28</mysql.version>
+        <java.version>17</java.version>  <!-- 设置 Java 17 -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <mysql.version>8.0.33</mysql.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
+
+    <build>
+        <plugins>
+            <!-- 统一配置 Spring Boot 打包插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>  <!-- 父项目不打包 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
