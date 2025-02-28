@@ -3,26 +3,20 @@ package com.teak.blog.service.serviceImpl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.teak.blog.mapper.ArticleDetailMapper;
 import com.teak.blog.mapper.ArticleMapper;
 import com.teak.blog.mapper.CategoryMapper;
 import com.teak.blog.mapper.UserDbMapper;
 import com.teak.blog.model.Article;
-import com.teak.blog.model.ArticleDetail;
 import com.teak.blog.model.Category;
 import com.teak.blog.model.UserDb;
 import com.teak.blog.service.ArticleService;
-import com.teak.blog.vo.ArticleVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import static com.teak.blog.ContentStatusConstants.STATUS_TO_CODE_MAP;
 
 /**
  * Created with: IntelliJ IDEA
@@ -37,16 +31,19 @@ import static com.teak.blog.ContentStatusConstants.STATUS_TO_CODE_MAP;
 @Slf4j
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
     private final ArticleMapper articleMapper;
-    private final ArticleDetailMapper articleDetailMapper;
     private final CategoryMapper categoryMapper;
     private final UserDbMapper userDbMapper;
 
-    public ArticleServiceImpl(ArticleMapper articleMapper, ArticleDetailMapper articleDetailMapper, CategoryMapper categoryMapper, UserDbMapper userDbMapper) {
+    public ArticleServiceImpl(ArticleMapper articleMapper, CategoryMapper categoryMapper, UserDbMapper userDbMapper) {
         this.articleMapper = articleMapper;
-        this.articleDetailMapper = articleDetailMapper;
         this.categoryMapper = categoryMapper;
         this.userDbMapper = userDbMapper;
     }
+
+    private static final String DRAFT_STATUS = "草稿";
+    private static final String PUBLISHED_STATUS = "已发布";
+    private static final int DRAFT_CODE = 0;
+    private static final int PUBLISHED_CODE = 1;
 
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -68,8 +65,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         }
 
         if (status != null) {
-            Integer code = STATUS_TO_CODE_MAP.get(status);
-            wrapper.eq("status", code);
+            if (DRAFT_STATUS.equals(status)) {
+                wrapper.eq("status", DRAFT_CODE);
+            } else if (PUBLISHED_STATUS.equals(status)) {
+                wrapper.eq("status", PUBLISHED_CODE);
+            }
         }
 
         // 3. 执行分页查询（自动包含 COUNT 查询）
@@ -93,21 +93,5 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         }
 
         return page;
-    }
-
-    @Override
-    @Transactional(rollbackFor = Exception.class)
-    public Article addArticle(ArticleVo articleVo) {
-        Article article = new Article();
-        BeanUtils.copyProperties(articleVo, article);
-        articleMapper.insert(article);
-
-        ArticleDetail articleDetail = new ArticleDetail();
-        articleDetail.setArticleId(article.getId());
-        articleDetail.setContent(articleVo.getContent());
-
-        articleDetailMapper.insert(articleDetail);
-        return article;
-
     }
 }

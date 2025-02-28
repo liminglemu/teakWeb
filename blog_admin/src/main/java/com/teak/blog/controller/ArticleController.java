@@ -4,12 +4,12 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.teak.blog.model.Article;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleService;
-import com.teak.blog.vo.ArticleVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -42,13 +42,4 @@ public class ArticleController {
             hashMap.put("page", page);
             return new GlobalResult().ok(hashMap);
     }
-
-    @PostMapping("/addArticle")
-    public GlobalResult addArticle(@RequestBody ArticleVo articleVo) {
-        HashMap<String, Object> hashMap = new HashMap<>();
-        Article article = articleService.addArticle(articleVo);
-        hashMap.put("article", article);
-        return new GlobalResult().ok(hashMap);
-    }
-
 }
