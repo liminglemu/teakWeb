@@ -23,7 +23,3 @@ mybatis-plus:
     default-executor-type: reuse # 重用预处理语句
     cache-enabled: true
     local-cache-scope: session
-oss.endpoint: oss-cn-beijing.aliyuncs.com
-oss.accessKeyId: LTAI5t8tbEDxXwWupFqPaBEj
-oss.accessKeySecret: ETendtTuR2F84iZPvEeJDbChDr428C
-oss.bucketName: dashijian
