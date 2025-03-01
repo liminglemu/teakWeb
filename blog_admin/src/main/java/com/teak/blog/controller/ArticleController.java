@@ -7,9 +7,7 @@ import com.teak.blog.service.ArticleService;
 import com.teak.blog.vo.ArticleVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -48,6 +46,14 @@ public class ArticleController {
         HashMap<String, Object> hashMap = new HashMap<>();
         Article article = articleService.addArticle(articleVo);
         hashMap.put("article", article);
+        return new GlobalResult().ok(hashMap);
+    }
+
+    @PostMapping("/delArticle")
+    public GlobalResult delArticle(@RequestBody Long id) {
+        HashMap<String, Object> hashMap = new HashMap<>();
+        articleService.delArticle(id);
+        hashMap.put("article", null);
         return new GlobalResult().ok(hashMap);
     }
     @PostMapping("/updateArticle")

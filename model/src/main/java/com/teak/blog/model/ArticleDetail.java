@@ -37,6 +37,9 @@ public class ArticleDetail extends BaseModel implements Serializable {
 
     private String articleCoverUrl;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long fileId;
+
     @TableField(exist = false)
     private String articleStatus;
 

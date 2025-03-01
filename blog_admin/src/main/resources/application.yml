@@ -27,3 +27,4 @@ oss.endpoint: oss-cn-beijing.aliyuncs.com
 oss.accessKeyId: LTAI5t8tbEDxXwWupFqPaBEj
 oss.accessKeySecret: ETendtTuR2F84iZPvEeJDbChDr428C
 oss.bucketName: dashijian
+oss.expireSeconds: 360000

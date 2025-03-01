@@ -8,11 +8,14 @@ import com.teak.blog.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
+import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -40,6 +43,8 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implemen
     private String endpoint;
     @Value("${oss.bucketName}")
     private String bucketName;
+    @Value("${oss.expireSeconds}")
+    private int expireSeconds;
 
     /**
      * 智能文件上传（自动重名处理）
@@ -49,6 +54,7 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implemen
      * @param directory 存储目录
      * @return 文件访问URL
      */
+    @Transactional(rollbackFor = Exception.class)
     public FileModel uploadFile(Long userId, MultipartFile file, String directory) {
         // 生成唯一文件名（带原始扩展名）
         String originalName = file.getOriginalFilename();
@@ -115,10 +121,13 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implemen
      * 生成访问URL（建议使用HTTPS）
      */
     private String generateFileUrl(String objectKey) {
-        return String.format("https://%s.%s/%s",
+        Date expiration = new Date(System.currentTimeMillis() + expireSeconds * 1000L);
+        URL url = ossClient.generatePresignedUrl(bucketName, objectKey, expiration);
+        return url.toString();
+        /*return String.format("https://%s.%s/%s",
                 bucketName,
                 endpoint.replace("https://", ""),
-                objectKey);
+                objectKey);*/
     }
 
     /**

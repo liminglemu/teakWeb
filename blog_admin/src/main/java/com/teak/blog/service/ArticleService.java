@@ -19,4 +19,6 @@ public interface ArticleService extends IService<Article> {
     Page<Article> getPage(int pageNum, int pageSize, String category, String status, Long userId) ;
 
     Article addArticle(ArticleVo articleVo);
+
+    void delArticle( Long id);
 }

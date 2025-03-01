@@ -114,4 +114,12 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         return article;
 
     }
+
+    @Override
+    public void delArticle(Long id) {
+        QueryWrapper<ArticleDetail> wrapper = new QueryWrapper<>();
+        wrapper.eq("article_id", id);
+        articleDetailMapper.delete(wrapper);
+        articleMapper.deleteById(id);
+    }
 }

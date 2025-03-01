@@ -6,6 +6,7 @@
         <result column="content" property="content" jdbcType="VARCHAR"/>
         <result column="article_id" property="articleId" jdbcType="VARCHAR"/>
         <result column="article_cover_url" property="articleCoverUrl" jdbcType="VARCHAR"/>
+        <result column="file_id" property="fileId" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="getArtDetailByArtId" resultType="com.teak.blog.model.ArticleDetail">
         select a.id,

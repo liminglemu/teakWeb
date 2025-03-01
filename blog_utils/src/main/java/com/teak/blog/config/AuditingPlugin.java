@@ -70,16 +70,18 @@ public class AuditingPlugin implements Interceptor {
         Object targetObject;
         if (param instanceof Map) {
             Map<?, ?> paramMap = (Map<?, ?>) param;
-            targetObject = paramMap.get("et");
-            if (targetObject == null) {
-                for (Object value : paramMap.values()) {
-                    if (value != null && !(value instanceof Map)) {
-                        targetObject = value;
-                        break;
+            if (paramMap.containsKey("et")) {
+                targetObject = paramMap.get("et");
+                if (targetObject == null) {
+                    for (Object value : paramMap.values()) {
+                        if (value != null && !(value instanceof Map)) {
+                            targetObject = value;
+                            break;
+                        }
                     }
                 }
+                return targetObject;
             }
-            return targetObject;
         }
         return param;
     }
