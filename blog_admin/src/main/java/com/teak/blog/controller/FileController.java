@@ -31,13 +31,6 @@ public class FileController {
         this.fileService = fileService;
     }
 
-    @PostMapping("/uploadFile/{userId}")
-    public GlobalResult uploadFile(@PathVariable Long userId, @RequestBody MultipartFile file) {
-        HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("Upload", null);
-        return new GlobalResult().ok(hashMap);
-    }
-
     @PostMapping("/upload/{userId}")
     public ResponseEntity<Map<String, FileModel>> uploadFile(@PathVariable Long userId,
                                                              @RequestBody MultipartFile file,
