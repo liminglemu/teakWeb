@@ -1,7 +1,6 @@
 package com.teak.blog.controller;
 
 import com.teak.blog.model.FileModel;
-import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.FileService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -42,6 +40,16 @@ public class FileController {
 
     @DeleteMapping
     public ResponseEntity<Void> deleteFile(
+            @RequestParam String fileUrl,
+            @RequestParam(defaultValue = "deleted") String archiveDir) {
+
+        String objectKey = extractObjectKeyFromUrl(fileUrl);
+        fileService.safeDelete(objectKey, archiveDir);
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteFile2(
             @RequestParam String fileUrl,
             @RequestParam(defaultValue = "deleted") String archiveDir) {
 
