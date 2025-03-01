@@ -2,7 +2,6 @@ package com.teak.blog.handler;
 
 import com.teak.blog.result.GlobalResult;
 import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -26,7 +25,7 @@ public class GlobalExceptionHandler {
      * @return the global result
      */
     @ExceptionHandler(value = Exception.class)
-    public GlobalResult handleException(@NotNull Exception e) {
+    public GlobalResult handleException(Exception e) {
         ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
         return getResult(concurrentHashMap);
     }
@@ -38,7 +37,7 @@ public class GlobalExceptionHandler {
      * @return the global result
      */
     @ExceptionHandler(value = ArithmeticException.class)
-    public GlobalResult handleArithmeticException(@NotNull ArithmeticException e) {
+    public GlobalResult handleArithmeticException(ArithmeticException e) {
         ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
         return getResult(concurrentHashMap);
     }
@@ -50,12 +49,12 @@ public class GlobalExceptionHandler {
      * @return the global result
      */
     @ExceptionHandler(value = RuntimeException.class)
-    public GlobalResult handleRuntimeException(@NotNull RuntimeException e) {
+    public GlobalResult handleRuntimeException(RuntimeException e) {
         ConcurrentHashMap<String, Object> concurrentHashMap = concurrentHashMapPut(e);
         return getResult(concurrentHashMap);
     }
 
-    private @NotNull ConcurrentHashMap<String, Object> concurrentHashMapPut(@NotNull Exception e) {
+    private ConcurrentHashMap<String, Object> concurrentHashMapPut(Exception e) {
         e.printStackTrace();
         ConcurrentHashMap<String, Object> concurrentHashMap = new ConcurrentHashMap<>(5);
         concurrentHashMap.put("本地化消息", e.getLocalizedMessage());
@@ -67,7 +66,7 @@ public class GlobalExceptionHandler {
         return concurrentHashMap;
     }
 
-    @NotNull
+
     private GlobalResult getResult(ConcurrentHashMap<String, Object> concurrentHashMap) {
         return new GlobalResult().fail(concurrentHashMap);
     }

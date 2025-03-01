@@ -2,7 +2,6 @@ package com.teak.blog.result;
 
 import com.teak.blog.result.enums.GlobalResultEnums;
 import lombok.Data;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -47,7 +46,7 @@ public class GlobalResult {
      * @param data the data
      * @return the global result
      */
-    public @NotNull GlobalResult ok(Map<String, Object> data) {
+    public GlobalResult ok(Map<String, Object> data) {
         this.code = GlobalResultEnums.SUCCESS.getCode();
         this.message = GlobalResultEnums.SUCCESS.getMessage();
         this.data = data;
@@ -66,7 +65,7 @@ public class GlobalResult {
      * 2. 使用自定义消息替换默认消息
      * 3. 绑定传入的业务数据集合
      */
-    public @NotNull GlobalResult customMessage(Map<String, Object> data, String message) {
+    public GlobalResult customMessage(Map<String, Object> data, String message) {
         this.code = GlobalResultEnums.FAIL.getCode();
         this.message = message;
         this.data = data;
@@ -79,7 +78,7 @@ public class GlobalResult {
      * @param data the data
      * @return the global result
      */
-    public @NotNull GlobalResult fail(Map<String, Object> data) {
+    public GlobalResult fail(Map<String, Object> data) {
         this.code = GlobalResultEnums.FAIL.getCode();
         this.message = GlobalResultEnums.FAIL.getMessage();
         this.data = data;
@@ -92,7 +91,7 @@ public class GlobalResult {
      * @param data the data
      * @return the global result
      */
-    public @NotNull GlobalResult forward(Map<String, Object> data) {
+    public GlobalResult forward(Map<String, Object> data) {
         this.code = GlobalResultEnums.FORWARD.getCode();
         this.message = GlobalResultEnums.FORWARD.getMessage();
         this.data = data;
