@@ -2,7 +2,6 @@ package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.teak.blog.model.ArticleDetail;
-import com.teak.blog.vo.ArticleAndDetailVo;
 
 /**
  * Created with: IntelliJ IDEA
@@ -14,6 +13,6 @@ import com.teak.blog.vo.ArticleAndDetailVo;
  * @Description:
  */
 public interface ArticleDetailService extends IService<ArticleDetail> {
-    ArticleAndDetailVo getArtDetailByArtId(Long articleId);
+    ArticleDetail getArtDetailByArtId(Long articleId);
 
 }

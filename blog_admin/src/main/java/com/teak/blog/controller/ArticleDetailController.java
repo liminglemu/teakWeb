@@ -3,12 +3,12 @@ package com.teak.blog.controller;
 import com.teak.blog.model.ArticleDetail;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
-import com.teak.blog.vo.ArticleAndDetailVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -35,8 +35,8 @@ public class ArticleDetailController {
 
         HashMap<String, Object> hashMap = new HashMap<>();
 
-        ArticleAndDetailVo articleAndDetailVo = articleDetailService.getArtDetailByArtId(articleId);
-        hashMap.put("articleAndDetailVo", articleAndDetailVo);
+       ArticleDetail articleDetail = articleDetailService.getArtDetailByArtId(articleId);
+        hashMap.put("ArticleDetail", articleDetail);
         return new GlobalResult().ok(hashMap);
     }
 

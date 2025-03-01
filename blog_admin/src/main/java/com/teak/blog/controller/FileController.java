@@ -9,9 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created with: IntelliJ IDEA
@@ -31,20 +29,15 @@ public class FileController {
         this.fileService = fileService;
     }
 
-    @PostMapping("/uploadFile/{userId}")
-    public GlobalResult uploadFile(@PathVariable Long userId, @RequestBody MultipartFile file) {
-        HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("Upload", null);
-        return new GlobalResult().ok(hashMap);
-    }
-
     @PostMapping("/upload/{userId}")
-    public ResponseEntity<Map<String, FileModel>> uploadFile(@PathVariable Long userId,
-                                                             @RequestBody MultipartFile file,
-                                                             @RequestParam(value = "directory", defaultValue = "uploads") String directory) {
+    public GlobalResult uploadFile(@PathVariable Long userId,
+                                   @RequestPart MultipartFile file,
+                                   @RequestParam(value = "directory", defaultValue = "uploads") String directory) {
 
+        HashMap<String, Object> hashMap = new HashMap<>();
         FileModel fileModel = fileService.uploadFile(userId, file, directory);
-        return ResponseEntity.ok(Collections.singletonMap("fileModel", fileModel));
+        hashMap.put("fileModel", fileModel);
+        return new GlobalResult().ok(hashMap);
     }
 
     @DeleteMapping

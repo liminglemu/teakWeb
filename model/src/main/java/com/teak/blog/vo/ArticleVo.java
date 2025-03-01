@@ -16,12 +16,13 @@ import java.io.File;
  */
 @Data
 public class ArticleVo {
+    private Long id;
     private String title;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long cateId;
+    private String categoryName;
     private String content;
-    private File articleCover;
+    private String articleCoverUrl;
     private String status;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private String userId;
+    private Long userId;
 }

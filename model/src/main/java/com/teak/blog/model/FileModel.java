@@ -1,5 +1,6 @@
 package com.teak.blog.model;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teak.blog.BaseModel;
 import com.teak.blog.annotation.SnowflakeAlgorithm;
@@ -17,6 +18,7 @@ import lombok.EqualsAndHashCode;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@TableName(value = "file_url")
 public class FileModel extends BaseModel {
     @SnowflakeAlgorithm
     @JsonFormat(shape = JsonFormat.Shape.STRING)

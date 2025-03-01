@@ -100,11 +100,15 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     public Article addArticle(ArticleVo articleVo) {
         Article article = new Article();
         BeanUtils.copyProperties(articleVo, article);
+
+        Category category = categoryMapper.getByCateName(articleVo.getCategoryName(), articleVo.getUserId());
+        article.setCateId(category.getId());
         articleMapper.insert(article);
 
         ArticleDetail articleDetail = new ArticleDetail();
         articleDetail.setArticleId(article.getId());
         articleDetail.setContent(articleVo.getContent());
+        articleDetail.setArticleCoverUrl(articleVo.getArticleCoverUrl());
 
         articleDetailMapper.insert(articleDetail);
         return article;

@@ -5,24 +5,25 @@
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="content" property="content" jdbcType="VARCHAR"/>
         <result column="article_id" property="articleId" jdbcType="VARCHAR"/>
-        <result column="article_cover" property="articleCover" jdbcType="VARCHAR"/>
+        <result column="article_cover_url" property="articleCoverUrl" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getArtDetailByArtId" resultType="com.teak.blog.vo.ArticleAndDetailVo">
+    <select id="getArtDetailByArtId" resultType="com.teak.blog.model.ArticleDetail">
         select a.id,
-               b.title,
-               a.article_cover,
                a.content,
-               b.cate_id,
-               c.cate_name,
-               b.status,
-               b.create_time,
-               b.update_time,
-               b.is_deleted
+               a.article_id,
+               b.title     as articleName,
+               a.article_cover_url,
+               b.status    as articleStatus,
+               c.cate_name as cateName,
+               a.status,
+               a.create_time,
+               a.update_time,
+               a.is_deleted
         from article_detail a
-                 left join article b on a.article_id = b.id
-                 left join category c on b.cate_id = c.id
-        where a.id = #{articleId}
-          and b.is_deleted = 0
+                 left join article b on b.id = a.article_id
+                 left join category c on c.id = b.cate_id
+        where article_id = #{articleId}
     </select>
+
 
 </mapper>

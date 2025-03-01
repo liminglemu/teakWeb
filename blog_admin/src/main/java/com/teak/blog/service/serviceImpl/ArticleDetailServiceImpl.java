@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teak.blog.mapper.ArticleDetailMapper;
 import com.teak.blog.model.ArticleDetail;
 import com.teak.blog.service.ArticleDetailService;
-import com.teak.blog.vo.ArticleAndDetailVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +28,7 @@ public class ArticleDetailServiceImpl extends ServiceImpl<ArticleDetailMapper, A
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public ArticleAndDetailVo getArtDetailByArtId(Long articleId) {
+    public ArticleDetail getArtDetailByArtId(Long articleId) {
         return articleDetailMapper.getArtDetailByArtId(articleId);
     }
 

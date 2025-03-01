@@ -17,5 +17,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ArticleDetailMapper  extends BaseMapper<ArticleDetail> {
-    ArticleAndDetailVo getArtDetailByArtId(@Param("articleId") Long articleId);
+    ArticleDetail getArtDetailByArtId(@Param("articleId") Long articleId);
 }
