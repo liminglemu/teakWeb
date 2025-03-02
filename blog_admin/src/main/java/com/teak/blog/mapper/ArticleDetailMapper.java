@@ -2,7 +2,6 @@ package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.teak.blog.model.ArticleDetail;
-import com.teak.blog.vo.ArticleAndDetailVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

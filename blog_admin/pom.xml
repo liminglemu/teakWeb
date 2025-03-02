@@ -63,36 +63,5 @@
         </dependency>
     </dependencies>
 
-    <!-- 原父级配置改为dependencyManagement -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.example</groupId>
-                <artifactId>teakweb-parent</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
-    <build>
-        <plugins>
-            <!-- Spring Boot 可执行 JAR 打包 -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.teak.blog.BlogAdminApplication</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

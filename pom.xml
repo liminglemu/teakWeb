@@ -74,9 +74,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>  <!-- 父项目不打包 -->
-                </configuration>
             </plugin>
         </plugins>
     </build>

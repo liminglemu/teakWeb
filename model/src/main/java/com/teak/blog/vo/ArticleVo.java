@@ -3,8 +3,6 @@ package com.teak.blog.vo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.io.File;
-
 /**
  * Created with: IntelliJ IDEA
  *
