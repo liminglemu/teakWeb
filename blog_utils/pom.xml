@@ -36,6 +36,11 @@
             <artifactId>aliyun-sdk-oss</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

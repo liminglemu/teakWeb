@@ -3,6 +3,7 @@ package com.teak.blog;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @version 1.0
  * @date 2023 /2/18
  */
+@EnableScheduling
 @SpringBootApplication
 @EnableTransactionManagement // 启用事务管理
 @MapperScan(basePackages = "com.teak.blog.mapper")

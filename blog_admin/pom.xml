@@ -32,8 +32,8 @@
 
         <!-- MySQL -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
         </dependency>
 
         <!-- 内部模块依赖 -->
