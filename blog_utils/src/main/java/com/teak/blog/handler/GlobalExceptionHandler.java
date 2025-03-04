@@ -55,7 +55,6 @@ public class GlobalExceptionHandler {
     }
 
     private ConcurrentHashMap<String, Object> concurrentHashMapPut(Exception e) {
-        e.printStackTrace();
         ConcurrentHashMap<String, Object> concurrentHashMap = new ConcurrentHashMap<>(5);
         concurrentHashMap.put("本地化消息", e.getLocalizedMessage());
         concurrentHashMap.put("原因", e.getCause());

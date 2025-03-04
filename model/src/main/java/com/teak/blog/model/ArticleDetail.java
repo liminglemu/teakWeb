@@ -30,6 +30,7 @@ public class ArticleDetail extends BaseModel implements Serializable {
     private String content;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
     private Long articleId;
 
     @TableField(exist = false)
@@ -38,6 +39,7 @@ public class ArticleDetail extends BaseModel implements Serializable {
     private String articleCoverUrl;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    @SnowflakeAlgorithm
     private Long fileId;
 
     @TableField(exist = false)

@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with: IntelliJ IDEA
@@ -65,8 +67,9 @@ public final class IdWorker {
     private static final long SEQUENCE_MASK = ~(-1L << SEQUENCE_BITS);
     /**
      * 上次生产id时间戳
+     * 使用static修饰，当存在多个IdWorker实例时会导致时间戳状态共享，可能产生重复ID。应改为实例变量
      */
-    private static long LAST_TIME_STAMP = -1L;
+    private long lastTimeStamp = -1L;
     /**
      * 0，并发控制
      */
@@ -78,6 +81,13 @@ public final class IdWorker {
      * 数据标识id部分
      */
     private final long DATA_CENTER_ID;
+
+    /**
+     *  添加时钟回拨容忍阈值（3秒）
+     *  */
+    private static final long MAX_BACKWARD_MS = 1000;
+
+
 
     public IdWorker() {
         this.DATA_CENTER_ID = getDatacenterId(MAX_DATA_CENTER_ID);
@@ -91,26 +101,37 @@ public final class IdWorker {
      */
     public synchronized long nextId() {
         long timestamp = timeGen();
-        if (timestamp < LAST_TIME_STAMP) {
-            throw new RuntimeException(String.format("时间生成异常 %d", LAST_TIME_STAMP - timestamp));
+
+        // 增强时钟回拨处理
+        if (timestamp < lastTimeStamp) {
+            long offset = lastTimeStamp - timestamp;
+            if (offset > MAX_BACKWARD_MS) {
+                throw new RuntimeException(String.format("时钟回拨超过阈值，拒绝生成ID %d ms", offset));
+            }
+            try {
+                TimeUnit.MILLISECONDS.sleep(offset);
+                timestamp = timeGen();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("时钟回拨等待中断", e);
+            }
         }
 
-        if (LAST_TIME_STAMP == timestamp) {
-            // 当前毫秒内，则+1
+        if (timestamp == lastTimeStamp) {
             sequence = (sequence + 1) & SEQUENCE_MASK;
             if (sequence == 0) {
-                // 当前毫秒内计数满了，则等待下一秒
-                timestamp = tilNextMillis(LAST_TIME_STAMP);
+                timestamp = tilNextMillis(lastTimeStamp);
             }
         } else {
             sequence = 0L;
         }
-        LAST_TIME_STAMP = timestamp;
-        // ID偏移组合生成最终的ID，并返回ID
+        lastTimeStamp = timestamp;
 
-        return ((timestamp - TWEPOCH) << TIME_STAMP_LEFT_SHIFT)
-                | (DATA_CENTER_ID << DATA_CENTER_ID_SHIFT)
-                | (workerId << WORKER_ID_SHIFT) | sequence;
+        // 添加位移注释说明
+        return ((timestamp - TWEPOCH) << TIME_STAMP_LEFT_SHIFT) // 41位时间戳
+                | (DATA_CENTER_ID << DATA_CENTER_ID_SHIFT)      // 5位数据中心
+                | (workerId << WORKER_ID_SHIFT)                 // 5位工作节点
+                | sequence;                                     // 12位序列号
     }
 
     private long tilNextMillis(final long lastTimestamp) {
@@ -144,7 +165,9 @@ public final class IdWorker {
                 id = id % (maxDatacenterId + 1);
             }
         } catch (Exception e) {
-            log.error(" getDatacenterId: {}", e.getMessage());
+            log.error("获取数据中心ID失败，使用随机回退策略", e);
+            // 添加随机fallback
+            return ThreadLocalRandom.current().nextLong(maxDatacenterId + 1);
         }
         return id;
     }
