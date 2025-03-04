@@ -2,15 +2,18 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.teak.blog.BlogAdminApplication;
 import com.teak.blog.controller.XhProductController;
 import com.teak.blog.model.Article;
+import com.teak.blog.model.Cart;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Lazy;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -48,66 +51,19 @@ class ApplicationTest {
     @Test
     void test3() {
         ArrayList<Future<?>> futures = new ArrayList<>();
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程1执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程2执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程3执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程4执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程5执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程6执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程7执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程8执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程9执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
-        futures.add(executorService.submit(() -> {
-            Thread currentThread = Thread.currentThread();
-            for (int i = 0; i < 1000; i++) {
-                log.info("线程10执行中 | 线程ID:{} 线程名称:{}", currentThread.getId(), currentThread.getName());
-            }
-        }));
+        for (int i = 0; i < 1000; i++) {
+            int finalI = i;
+            futures.add(executorService.submit(() -> {
+                Thread currentThread = Thread.currentThread();
+                try {
+                    log.info("线程{}}执行中 | 线程ID:{} 线程名称:{}", finalI, currentThread.getId(), currentThread.getName());
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }));
+        }
+
         futures.forEach(future -> {
             try {
                 future.get();
@@ -115,5 +71,30 @@ class ApplicationTest {
                 log.error("线程执行异常：{}", e.getMessage(), e);
             }
         });
+    }
+
+    public static void main(String[] args) {
+        Cart cart = new Cart();
+        cart.setId(1L);
+        cart.setName("测试");
+        cart.setPrice(new BigDecimal("100.00"));
+        cart.setCount(1L);
+        cart.setThumb("https://www.baidu.com");
+
+        Cart cart1 = new Cart();
+        cart1 = cart;
+
+        cart1.setId(2L);
+        cart1.setName("测试1");
+
+        log.info("cart:{}", cart);
+        log.info("cart1:{}", cart1);
+
+        Cart cart2 = new Cart();
+        BeanUtils.copyProperties(cart, cart2);
+        cart2.setId(3L);
+        cart2.setName("测试2");
+        log.info("cart2:{}", cart2);
+
     }
 }

@@ -44,7 +44,7 @@ public class AsyncConfig implements AsyncConfigurer {
         ThreadFactory threadFactory = new CustomizableThreadFactory("AsyncPool-");
 
         RejectedExecutionHandler handler = (r, executor) -> {
-            log.warn("Task {} rejected", r.toString());
+            log.warn("任务 {} 拒收", r.toString());
             new ThreadPoolExecutor.CallerRunsPolicy().rejectedExecution(r, executor);
         };
 

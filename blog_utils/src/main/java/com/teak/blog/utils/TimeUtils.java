@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
+import static com.teak.blog.utils.TimeDependentConstant.*;
+
 /**
  * Created with: IntelliJ IDEA
  *
@@ -21,11 +23,12 @@ import java.util.regex.Pattern;
  */
 @Component
 public class TimeUtils {
-    private static final String pattern1 = "yyyy-MM";
-    private static final String pattern2 = "yyyy-MM-dd";
-    private static final String pattern3 = "yyyy-MM-dd HH:mm:ss";
-    private static final String regular1 = "^\\d{4}-\\d{1,2}";
-    private static final String regular2 = "^\\d{4}-\\d{1,2}-\\d{1,2}";
+
+
+    public Date getDate(Date date) {
+        String strDate = dateToStringFormat(date);
+        return getDate(strDate);
+    }
 
     /**
      * 获取时间Date
@@ -34,36 +37,49 @@ public class TimeUtils {
         return parseDate(time);
     }
 
-    public Date getDate(Date date) {
-        String strDate = dateToStringFormat(date);
-        return getDate(strDate);
+    /**
+     * 格式化字符串时间
+     */
+    public Date parseDate(String stringDate) {
+        try {
+            if (Pattern.matches(REGEX_YEAR_MONTH, stringDate)) {
+                return new SimpleDateFormat(PATTERN_YEAR_MONTH).parse(stringDate);
+            } else if (Pattern.matches(REGEX_DATE, stringDate)) {
+                return new SimpleDateFormat(PATTERN_DATE).parse(stringDate);
+            } else {
+                return new SimpleDateFormat(PATTERN_DATETIME).parse(stringDate);
+            }
+        } catch (ParseException e) {
+            throw new RuntimeException("日期解析失败: " + stringDate, e); // 保留原始异常
+        }
     }
 
-    public String getDatePattern3(Date date) {
-        return new SimpleDateFormat(pattern3).format(date);
+    private Calendar getCalendar(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        return calendar;
     }
 
     /**
      * 格式日期为String类型
      */
     public String dateToStringFormat(Date date) {
-        return new SimpleDateFormat(pattern2).format(date);
+        return DATE_FORMAT_CACHE.get().format(date);
     }
-
     public String dateToStringFormat(Date date, String pattern) {
         return new SimpleDateFormat(pattern).format(date);
     }
 
+
     public String yearMonth(Date date) {
-        return new SimpleDateFormat(pattern1).format(date);
+        return new SimpleDateFormat(PATTERN_YEAR_MONTH).format(date);
     }
 
     /**
      * 增加天数
      */
     public Date increaseDays(Date date, Integer days) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.add(Calendar.DAY_OF_MONTH, days);
         return calendar.getTime();
     }
@@ -73,8 +89,7 @@ public class TimeUtils {
      */
     public Date increaseMonths(String time, Integer months) {
         Date date = parseDate(time);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.add(Calendar.MONTH, months);
         return calendar.getTime();
     }
@@ -83,8 +98,7 @@ public class TimeUtils {
      * 增加月数
      */
     public Date increaseMonths(Date date, Integer months) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.add(Calendar.MONTH, months);
         return calendar.getTime();
     }
@@ -103,27 +117,26 @@ public class TimeUtils {
     /**
      * 增加年数
      */
+    public Date increaseYears(String strDate, Integer years) {
+        return increaseYears(parseDate(strDate), years);
+    }
+
     public Date increaseYears(Date date, Integer years) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
-        int year = getYear(date);
+        Calendar calendar = getCalendar(date);
         calendar.add(Calendar.YEAR, years);
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            increaseDays(calendar.getTime(), -1);
+
+        // 修正后的闰年处理逻辑
+        int newYear = calendar.get(Calendar.YEAR);
+        if (isFebruary29th(date) && !isLeapYear(calendar.getTime())) {
+            calendar.set(Calendar.DAY_OF_MONTH, 28);
         }
         return calendar.getTime();
     }
 
-    public Date increaseYears(String strDate, Integer years) {
-        Date date = parseDate(strDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
-        int year = getYear(date);
-        calendar.add(Calendar.YEAR, years);
-        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-            increaseDays(calendar.getTime(), -1);
-        }
-        return calendar.getTime();
+    private boolean isFebruary29th(Date date) {
+        Calendar calendar = getCalendar(date);
+        return calendar.get(Calendar.MONTH) == Calendar.FEBRUARY
+                && calendar.get(Calendar.DAY_OF_MONTH) == 29;
     }
 
     /**
@@ -131,14 +144,12 @@ public class TimeUtils {
      */
     public int getYear(String stringDate) {
         Date date = parseDate(stringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.YEAR);
     }
 
     public int getYear(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.YEAR);
     }
 
@@ -157,15 +168,13 @@ public class TimeUtils {
     }
 
     public int getMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.MONTH) + 1;
     }
 
     public int getMonth(String time) {
         Date date = parseDate(time);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.MONTH) + 1;
     }
 
@@ -173,8 +182,7 @@ public class TimeUtils {
      * 获取当前日期在一个月内是第几周
      */
     public int getWeekInMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         int weeks = 0;
@@ -189,8 +197,7 @@ public class TimeUtils {
 
     public int getWeekInMonth(String StringDate) {
         Date date = parseDate(StringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         int weeks = 0;
@@ -207,51 +214,27 @@ public class TimeUtils {
      * 获取当月日期
      */
     public int getDayInMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.DAY_OF_MONTH);
     }
 
     public int getDayInMonth(String StringDate) {
         Date date = parseDate(StringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.DAY_OF_MONTH);
     }
 
     public int getDayInYear(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.DAY_OF_YEAR);
     }
 
     public int getDayInYear(String StringDate) {
         Date date = parseDate(StringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.DAY_OF_YEAR);
     }
 
-    /**
-     * 格式化字符串时间
-     */
-    public Date parseDate(String stringDate) {
-        if (Pattern.matches(regular1, stringDate)) {
-            try {
-                return new SimpleDateFormat(pattern1).parse(stringDate);
-            } catch (ParseException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (Pattern.matches(regular2, stringDate)) {
-            try {
-                return new SimpleDateFormat(pattern2).parse(stringDate);
-            } catch (ParseException e) {
-                throw new RuntimeException(e);
-            }
-        } else {
-            throw new RuntimeException("日期格式错误，请重试");
-        }
-    }
 
     /**
      * 获取指定日期的周一
@@ -275,8 +258,7 @@ public class TimeUtils {
      * @return
      */
     public int calculateTheWeekFromMondayOnwardsInYear(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         if (isEquals(calendar.getTime(), parseDate(calendar.get(Calendar.YEAR) + "-12-31"))) {
             calendar.setTime(increaseDays(calendar.getTime(), -1));
         }
@@ -284,8 +266,7 @@ public class TimeUtils {
     }
 
     public String getStartOfWeek(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int i = dayOfTheWeek(date);
         if (i == 1) {
             return dateToStringFormat(date);
@@ -295,9 +276,7 @@ public class TimeUtils {
     }
 
     public String getEndOfWeek(String stringDate) {
-        Calendar calendar = Calendar.getInstance();
         Date date = parseDate(stringDate);
-        calendar.setTime(date);
         int i = dayOfTheWeek(date);
         if (i == 7) {
             return dateToStringFormat(date);
@@ -308,8 +287,7 @@ public class TimeUtils {
 
 
     public String getEndOfWeek(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int i = dayOfTheWeek(date);
         if (i == 7) {
             return dateToStringFormat(date);
@@ -323,8 +301,7 @@ public class TimeUtils {
      */
     public String getStartOfWeek_inMonth(Date date) {
         Date tempDate = date;
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(tempDate);
+        Calendar calendar = getCalendar(date);
         int day = getDayInMonth(tempDate);
         if (day == 1) {
             return dateToStringFormat(tempDate);
@@ -347,8 +324,7 @@ public class TimeUtils {
      */
     public String getEndOfWeek_inMonth(Date date) {
         Date tempDate = date;
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(tempDate);
+        Calendar calendar = getCalendar(date);
         if (calendar.getActualMaximum(Calendar.DAY_OF_MONTH) == getDayInMonth(tempDate)) {
             return dateToStringFormat(tempDate);
         }
@@ -370,15 +346,13 @@ public class TimeUtils {
      */
     public String getStartOfMonth(String stringDate) {
         Date date = parseDate(stringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         return dateToStringFormat(calendar.getTime());
     }
 
     public String getStartOfMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         return dateToStringFormat(calendar.getTime());
     }
@@ -388,24 +362,21 @@ public class TimeUtils {
      */
     public String getEndOfMonth(String stringDate) {
         Date date = parseDate(stringDate);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, maxDay);
         return dateToStringFormat(calendar.getTime());
     }
 
     public String getEndOfMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         calendar.set(Calendar.DAY_OF_MONTH, maxDay);
         return dateToStringFormat(calendar.getTime());
     }
 
     public String getStartQuarter(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.YEAR, getYear(date));
         calendar.set(Calendar.MONTH, (getQuarter(date) * 3) - 3);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
@@ -416,8 +387,7 @@ public class TimeUtils {
      * 给一个时间，获取该季度的最后一个月的最后一天
      */
     public String getEndQuarter(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.YEAR, getYear(date));
         calendar.set(Calendar.MONTH, (getQuarter(date) * 3) - 1);
         calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
@@ -425,9 +395,8 @@ public class TimeUtils {
     }
 
     public String getEndQuarter(String stringDate) {
-        Calendar calendar = Calendar.getInstance();
         Date date = parseDate(stringDate);
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.YEAR, getYear(date));
         calendar.set(Calendar.MONTH, (getQuarter(date) * 3) - 1);
         calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
@@ -485,8 +454,7 @@ public class TimeUtils {
      * 当前日期在当前月的第几天
      */
     public int dayOfTheMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.get(Calendar.DAY_OF_MONTH);
     }
 
@@ -494,8 +462,7 @@ public class TimeUtils {
      * 当前日期在当前周的第几天
      */
     public int dayOfTheWeek(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         int i = calendar.get(Calendar.DAY_OF_WEEK);
         i = i - 1;
         if (i == 0) {
@@ -509,8 +476,7 @@ public class TimeUtils {
      * 从周末开始计算
      */
     public int weekOfMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.getActualMaximum(Calendar.WEEK_OF_MONTH);
     }
 
@@ -520,8 +486,7 @@ public class TimeUtils {
      * 不满一周也计算为一周
      */
     public int getWeekNumOfMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         int month = getMonth(date);
         int week = 0;
@@ -537,8 +502,7 @@ public class TimeUtils {
      * 传入日期 2023-04-01或者2023-04计算当月有多少天
      */
     public Integer daysOfTheMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
     }
 
@@ -594,8 +558,7 @@ public class TimeUtils {
     }
 
     public int compareTo(Date date1, Date date2) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date1);
+        Calendar calendar = getCalendar(date1);
         Calendar instance = Calendar.getInstance();
         instance.setTime(date2);
         return calendar.compareTo(instance);
@@ -627,8 +590,7 @@ public class TimeUtils {
      * @return
      */
     public Week judgingCrossMonth(Date date) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
+        Calendar calendar = getCalendar(date);
         Week week = new Week();
         int endOfMonth = getMonth(getEndOfWeek(date));
         int startOfMonth = getMonth(getStartOfWeek(date));
@@ -645,36 +607,4 @@ public class TimeUtils {
         private boolean flagCrossMonth;
     }
 
-
-    /**
-     * 不建议使用
-     * 格式化Date为pattern1
-     */
-    @Deprecated
-    public Date formatPattern1(Date date) {
-        return stringToDateFormat(dateToStringFormat(date));
-    }
-
-    /**
-     * 不建议使用
-     * 格式化日期 2023-04-01或2023-04
-     */
-    @Deprecated
-    public Date stringToDateFormat(String time) {
-        Date date = parseDate(time);
-        String strDate = dateToStringFormat(date);
-        Date parseDate;
-        String pattern;
-        if (strDate.split("-").length > 2) {
-            pattern = pattern2;
-        } else {
-            pattern = pattern1;
-        }
-        try {
-            parseDate = new SimpleDateFormat(pattern).parse(strDate);
-        } catch (ParseException e) {
-            throw new RuntimeException(e + " 日期格式错误，重新再试");
-        }
-        return parseDate;
-    }
 }
