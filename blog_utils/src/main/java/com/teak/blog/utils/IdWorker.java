@@ -68,7 +68,7 @@ public final class IdWorker {
     /**
      * 添加时钟回拨容忍阈值（3秒）
      */
-    private static final long MAX_BACKWARD_MS = 1000;
+    private static final long MAX_BACKWARD_MS = 3000;
     private final long workerId;
     /**
      * 数据标识id部分

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -40,15 +39,17 @@ public class AuditingPlugin implements Interceptor {
     }
 
     private static List<Field> getCachedFields(Class<?> clazz) {
-        return CLASS_FIELD_CACHE.computeIfAbsent(clazz, k -> {
-            List<Field> fields = new ArrayList<>();
-            Class<?> currentClass = clazz;
-            while (currentClass != null && currentClass != Object.class) {
-                Collections.addAll(fields, currentClass.getDeclaredFields());
-                currentClass = currentClass.getSuperclass();
-            }
-            return Collections.unmodifiableList(fields);
-        });
+        synchronized (CLASS_FIELD_CACHE) {
+            return CLASS_FIELD_CACHE.computeIfAbsent(clazz, k -> {
+                List<Field> fields = new ArrayList<>();
+                Class<?> currentClass = clazz;
+                while (currentClass != null && currentClass != Object.class) {
+                    Collections.addAll(fields, currentClass.getDeclaredFields());
+                    currentClass = currentClass.getSuperclass();
+                }
+                return Collections.unmodifiableList(fields);
+            });
+        }
     }
 
     @Override
@@ -144,7 +145,12 @@ public class AuditingPlugin implements Interceptor {
     private void handleSnowflakeAlgorithm(Field field, Object param) throws IllegalAccessException {
         if (field.get(param) == null) {
             log.debug("注入Snowflake ID");
-            field.set(param, idWorker.nextId());
+            // 确保字段类型匹配
+            if (field.getType().equals(Long.class)) {
+                field.set(param, idWorker.nextId());
+            } else {
+                log.warn("字段[{}]类型不匹配，需要Long类型", field.getName());
+            }
         }
     }
 
@@ -177,7 +183,7 @@ public class AuditingPlugin implements Interceptor {
     }
 
     private boolean prepareFieldAccess(Field field, Object param) {
-        boolean needSpecialAccess = (!Modifier.isPublic(field.getModifiers())
+        /*boolean needSpecialAccess = (!Modifier.isPublic(field.getModifiers())
                 || !Modifier.isPublic(field.getDeclaringClass().getModifiers())
                 || Modifier.isFinal(field.getModifiers()))
                 && !field.canAccess(param);
@@ -185,6 +191,11 @@ public class AuditingPlugin implements Interceptor {
         if (needSpecialAccess) {
             field.setAccessible(true);
         }
-        return needSpecialAccess;
+        return needSpecialAccess;*/
+        if (!field.canAccess(param)) {
+            field.setAccessible(true);
+            return true;
+        }
+        return false;
     }
 }

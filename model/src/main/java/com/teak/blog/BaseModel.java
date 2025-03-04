@@ -23,12 +23,12 @@ import java.util.Date;
 public class BaseModel {
 
     @Statue
-    private Integer status;
+    protected Integer status;
     @CreateTime
-    private Date createTime;
+    protected Date createTime;
     @UpdateTime
-    private Date updateTime;
+    protected Date updateTime;
     @TableLogic(value = "0", delval = "1")
     @IsDeleted
-    private Integer isDeleted;
+    protected Integer isDeleted;
 }

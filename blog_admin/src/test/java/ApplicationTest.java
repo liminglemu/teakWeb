@@ -1,3 +1,5 @@
+import cn.hutool.core.thread.ThreadUtil;
+import cn.hutool.core.util.RandomUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.teak.blog.BlogAdminApplication;
 import com.teak.blog.controller.XhProductController;
@@ -72,6 +74,62 @@ class ApplicationTest {
     }
 
     @Test
+    void test7() {
+
+        int count = 10;
+
+        List<Future<?>> futures = new ArrayList<>(count);
+        for (int i = 0; i < 10; i++) {
+            Future<?> future = ThreadUtil.execAsync(() -> {
+                ArrayList<ArticleDetail> articleDetails = new ArrayList<>();
+                for (int j = 0; j < count; j++) {
+                    ArticleDetail detail = new ArticleDetail();
+                    // 使用雪花算法生成ID
+                    detail.setId(null);
+                    detail.setArticleId(null);
+                    detail.setFileId(null);
+
+                    detail.setContent(RandomUtil.randomString("\\u4e00-\\u9fa5", 30));
+
+                    detail.setArticleCoverUrl("http://dashijian.oss-cn-beijing.aliyuncs.com/uploads/Screenshot%202024-08-04%20174752_20250302004714_7d704d5e.png?Expires=1741207634&OSSAccessKeyId=LTAI5t8tbEDxXwWupFqPaBEj&Signature=9U2yLxpItxaKcSOp%2B2AKl3zSCF8%3D");
+                    articleDetails.add(detail);
+                }
+                articleDetailService.saveBatch(articleDetails);
+            });
+            futures.add(future);
+        }
+        futures.forEach(future -> {
+            try {
+                future.get();
+            } catch (Exception e) {
+                log.error("线程执行异常：{}", e.getMessage(), e);
+            }
+        });
+    }
+
+    @Test
+    void test6() {
+        ArrayList<Future<?>> futures = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            int finalI = i;
+            Future<?> future = ThreadUtil.execAsync(() -> {
+                Thread currentThread = Thread.currentThread();
+                log.info("线程{}}执行中 | 线程ID:{} 线程名称:{}", finalI, currentThread.getId(), currentThread.getName());
+                ThreadUtil.sleep(100);
+            });
+            futures.add(future);
+        }
+
+        futures.forEach(future -> {
+            try {
+                future.get();
+            } catch (Exception e) {
+                log.error("线程执行异常：{}", e.getMessage(), e);
+            }
+        });
+    }
+
+    @Test
     void test5() {
         List<ArticleDetail> articleDetailList = articleDetailService.list();
     }
@@ -126,7 +184,7 @@ class ApplicationTest {
             detail.setFileId(null);
 
 //            detail.setContent("离职。看见对方留下。杰克逊对方公开。在进行覅/方向相反高跟鞋micg/kf");
-            detail.setContent(cn.hutool.core.util.RandomUtil.randomString("\\u4e00-\\u9fa5", 30));
+            detail.setContent(RandomUtil.randomString("\\u4e00-\\u9fa5", 30));
 
             detail.setArticleCoverUrl("http://dashijian.oss-cn-beijing.aliyuncs.com/uploads/Screenshot%202024-08-04%20174752_20250302004714_7d704d5e.png?Expires=1741207634&OSSAccessKeyId=LTAI5t8tbEDxXwWupFqPaBEj&Signature=9U2yLxpItxaKcSOp%2B2AKl3zSCF8%3D");
             result.add(detail);
