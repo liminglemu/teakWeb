@@ -1,8 +1,9 @@
 package com.teak.blog.result;
 
 import com.teak.blog.result.enums.GlobalResultEnums;
-import lombok.Data;
+import lombok.Getter;
 
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Map;
  * @version 1.0
  * @date 2023 /2/19
  */
-@Data
+@Getter
 public class GlobalResult {
 
     private Integer code;
@@ -20,7 +21,9 @@ public class GlobalResult {
     private Map<String, Object> data;
 
 
-    public GlobalResult() {
+    // 静态工厂方法（线程安全入口）
+    public static GlobalResult create() {
+        return new GlobalResult();
     }
 
     /**
@@ -40,62 +43,68 @@ public class GlobalResult {
         private static final GlobalResult globalResult = new GlobalResult();
     }*/
 
-    /**
-     * Ok global result.
-     *
-     * @param data the data
-     * @return the global result
-     */
-    public GlobalResult ok(Map<String, Object> data) {
-        this.code = GlobalResultEnums.SUCCESS.getCode();
-        this.message = GlobalResultEnums.SUCCESS.getMessage();
-        this.data = data;
-        return this;
+    // 成功响应（推荐使用不可变对象）
+    public static GlobalResult success(Map<String, Object> data) {
+        return new GlobalResult()
+                .setCode(GlobalResultEnums.SUCCESS.getCode())
+                .setMessage(GlobalResultEnums.SUCCESS.getMessage())
+                .setData(data);
     }
 
-    /**
-     * 构建自定义消息的全局结果对象
-     *
-     * @param data    需要封装的结果数据集合，以键值对形式存储的附加数据对象
-     * @param message 自定义的消息内容，用于覆盖默认的失败提示信息
-     * @return 当前GlobalResult实例，支持链式调用
-     * <p>
-     * 方法说明：
-     * 1. 固定设置结果为失败状态（设置code为FAIL枚举对应的错误码）
-     * 2. 使用自定义消息替换默认消息
-     * 3. 绑定传入的业务数据集合
-     */
-    public GlobalResult customMessage(Map<String, Object> data, String message) {
-        this.code = GlobalResultEnums.FAIL.getCode();
-        this.message = message;
-        this.data = data;
-        return this;
+    public static GlobalResult successWithMessage(Map<String, Object> data, String message) {
+        return new GlobalResult()
+                .setCode(GlobalResultEnums.SUCCESS.getCode())
+                .setMessage(GlobalResultEnums.SUCCESS.getMessage())
+                .setData(data);
     }
 
-    /**
-     * Fail global result.
-     *
-     * @param data the data
-     * @return the global result
-     */
-    public GlobalResult fail(Map<String, Object> data) {
-        this.code = GlobalResultEnums.FAIL.getCode();
-        this.message = GlobalResultEnums.FAIL.getMessage();
-        this.data = data;
-        return this;
+    // 失败响应（带默认消息）
+    public static GlobalResult error(Map<String, Object> data) {
+        return new GlobalResult()
+                .setCode(GlobalResultEnums.FAIL.getCode())
+                .setMessage(GlobalResultEnums.FAIL.getMessage())
+                .setData(data != null ? data : Collections.emptyMap());
     }
 
-    /**
-     * Forward global result.
-     *
-     * @param data the data
-     * @return the global result
-     */
-    public GlobalResult forward(Map<String, Object> data) {
-        this.code = GlobalResultEnums.FORWARD.getCode();
-        this.message = GlobalResultEnums.FORWARD.getMessage();
-        this.data = data;
-        return this;
+    // 自定义错误响应
+    public static GlobalResult errorWithMessage(Map<String, Object> data, String customMessage) {
+        return new GlobalResult()
+                .setCode(GlobalResultEnums.FAIL.getCode())
+                .setMessage(customMessage)
+                .setData(data);
+    }
+
+    // 重定向响应
+    public static GlobalResult redirect(Map<String, Object> data) {
+        return new GlobalResult()
+                .setCode(GlobalResultEnums.FORWARD.getCode())
+                .setMessage(GlobalResultEnums.FORWARD.getMessage())
+                .setData(data);
+    }
+
+    // 链式方法（返回新对象保证线程安全）
+    private GlobalResult setCode(Integer code) {
+        GlobalResult result = new GlobalResult();
+        result.code = code;
+        result.message = this.message;
+        result.data = this.data;
+        return result;
+    }
+
+    private GlobalResult setMessage(String message) {
+        GlobalResult result = new GlobalResult();
+        result.code = this.code;
+        result.message = message;
+        result.data = this.data;
+        return result;
+    }
+
+    private GlobalResult setData(Map<String, Object> data) {
+        GlobalResult result = new GlobalResult();
+        result.code = this.code;
+        result.message = this.message;
+        result.data = data != null ? Collections.unmodifiableMap(data) : null;
+        return result;
     }
 
 }

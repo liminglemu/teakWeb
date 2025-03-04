@@ -38,7 +38,7 @@ public class ArticleController {
         HashMap<String, Object> hashMap = new HashMap<>();
         Page<Article> page = articleService.getPage(pageNum, pageSize, category, status, userId);
         hashMap.put("page", page);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
     @PostMapping("/addArticle")
@@ -46,7 +46,7 @@ public class ArticleController {
         HashMap<String, Object> hashMap = new HashMap<>();
         Article article = articleService.addArticle(articleVo);
         hashMap.put("article", article);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
     @PostMapping("/delArticle")
@@ -54,14 +54,14 @@ public class ArticleController {
         HashMap<String, Object> hashMap = new HashMap<>();
         articleService.delArticle(id);
         hashMap.put("article", null);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
     @PostMapping("/updateArticle")
     public GlobalResult updateArticle(@RequestBody ArticleVo articleVo) {
         HashMap<String, Object> hashMap = new HashMap<>();
         Article article = articleService.addArticle(articleVo);
         hashMap.put("article", article);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
 }

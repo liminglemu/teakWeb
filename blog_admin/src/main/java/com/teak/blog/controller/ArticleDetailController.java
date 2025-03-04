@@ -37,7 +37,7 @@ public class ArticleDetailController {
 
        ArticleDetail articleDetail = articleDetailService.getArtDetailByArtId(articleId);
         hashMap.put("ArticleDetail", articleDetail);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
 

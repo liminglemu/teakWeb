@@ -54,7 +54,7 @@ public class AdminBlogController {
         concurrentHashMap.put("current", hospitalModeIPage.getCurrent());
         concurrentHashMap.put("size", hospitalModeIPage.getSize());
         log.info(hospitalModeIPage.getRecords().toString());
-        return new GlobalResult().ok(concurrentHashMap);
+        return GlobalResult.success(concurrentHashMap);
     }
 
     /**
@@ -67,7 +67,7 @@ public class AdminBlogController {
         List<HospitalMode> hospitalModeList = blogService.getList();
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("list", hospitalModeList);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
 }

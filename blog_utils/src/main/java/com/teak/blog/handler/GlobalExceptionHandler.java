@@ -68,6 +68,6 @@ public class GlobalExceptionHandler {
 
 
     private GlobalResult getResult(ConcurrentHashMap<String, Object> concurrentHashMap) {
-        return new GlobalResult().fail(concurrentHashMap);
+        return GlobalResult.error(concurrentHashMap);
     }
 }

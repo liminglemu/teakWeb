@@ -36,7 +36,7 @@ public class CategoryController {
         HashMap<String, Object> hashMap = new HashMap<>();
         List<Category> list = categoryService.getListById(id);
         hashMap.put("channelList", list);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
     @PostMapping("/addArticle")
@@ -48,7 +48,7 @@ public class CategoryController {
             category.setUserId(categoryVo.getUserId());
             categoryService.addArticle(category);
             hashMap.put("category", category);
-            return new GlobalResult().ok(hashMap);
+            return GlobalResult.success(hashMap);
         } catch (Exception e) {
             new GlobalExceptionHandler().handleException(e);
         }
@@ -64,7 +64,7 @@ public class CategoryController {
 
             category.setUpdateTime(null);
             categoryService.updateArticle(category);
-            return new GlobalResult().ok(null);
+            return GlobalResult.success(null);
         } catch (Exception e) {
             new GlobalExceptionHandler().handleException(e);
         }
@@ -75,7 +75,7 @@ public class CategoryController {
     public GlobalResult deleteArticle(@RequestBody Long id) {
         try {
             categoryService.removeById(id);
-            return new GlobalResult().ok(null);
+            return GlobalResult.success(null);
         } catch (Exception e) {
             new GlobalExceptionHandler().handleException(e);
         }

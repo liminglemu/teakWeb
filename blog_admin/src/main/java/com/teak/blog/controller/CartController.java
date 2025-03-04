@@ -33,6 +33,6 @@ public class CartController {
         List<Cart> carts = cartService.getList();
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("carts", carts);
-        return new  GlobalResult().customMessage(hashMap, "获取购物车列表成功");
+        return GlobalResult.successWithMessage(hashMap, "获取购物车列表成功");
     }
 }

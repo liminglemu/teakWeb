@@ -35,6 +35,6 @@ public class ImgController {
         List<Img> ImgList = imgService.getImgList();
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("ImgList", ImgList);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 }

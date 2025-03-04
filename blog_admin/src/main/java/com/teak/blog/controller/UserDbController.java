@@ -44,12 +44,12 @@ public class UserDbController {
             if (userDbList.isEmpty()) {
                 userDbService.save(userDb);
                 hashMap.put("userDb", userDb);
-                return new GlobalResult().ok(hashMap);
+                return GlobalResult.success(hashMap);
             } else {
-                return new GlobalResult().customMessage(null, "用户名已存在");
+                return GlobalResult.errorWithMessage(null, "用户名已存在");
             }
         } catch (Exception e) {
-            return new GlobalResult().customMessage(null, e.getMessage());
+            return GlobalResult.errorWithMessage(null, e.getMessage());
         }
     }
 
@@ -59,13 +59,13 @@ public class UserDbController {
         try {
             UserDb userDb = userDbService.finByNameAndPswd(registerVo);
             if (userDb == null) {
-                return new GlobalResult().customMessage(null, "用户名不存在或者密码错误");
+                return GlobalResult.errorWithMessage(null, "用户名不存在或者密码错误");
             } else {
                 hashMap.put("userDb", userDb);
-                return new GlobalResult().ok(hashMap);
+                return GlobalResult.success(hashMap);
             }
         } catch (Exception e) {
-            return new GlobalResult().customMessage(null, e.getMessage());
+            return GlobalResult.errorWithMessage(null, e.getMessage());
         }
     }
 
@@ -75,13 +75,13 @@ public class UserDbController {
         try {
             UserDb userDb = userDbService.getByToken(token);
             if (userDb == null) {
-                return new GlobalResult().customMessage(null, "用户不存在");
+                return GlobalResult.errorWithMessage(null, "用户不存在");
             } else {
                 hashMap.put("userDb", userDb);
-                return new GlobalResult().ok(hashMap);
+                return GlobalResult.success(hashMap);
             }
         } catch (Exception e) {
-            return new GlobalResult().customMessage(null, e.getMessage());
+            return GlobalResult.errorWithMessage(null, e.getMessage());
         }
     }
 

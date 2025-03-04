@@ -37,7 +37,7 @@ public class FileController {
         HashMap<String, Object> hashMap = new HashMap<>();
         FileModel fileModel = fileService.uploadFile(userId, file, directory);
         hashMap.put("fileModel", fileModel);
-        return new GlobalResult().ok(hashMap);
+        return GlobalResult.success(hashMap);
     }
 
     @DeleteMapping
