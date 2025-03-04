@@ -56,6 +56,7 @@ public class ArticleController {
         hashMap.put("article", null);
         return GlobalResult.success(hashMap);
     }
+
     @PostMapping("/updateArticle")
     public GlobalResult updateArticle(@RequestBody ArticleVo articleVo) {
         HashMap<String, Object> hashMap = new HashMap<>();

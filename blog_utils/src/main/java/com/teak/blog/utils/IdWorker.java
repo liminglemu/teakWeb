@@ -66,6 +66,15 @@ public final class IdWorker {
 
     private static final long SEQUENCE_MASK = ~(-1L << SEQUENCE_BITS);
     /**
+     * 添加时钟回拨容忍阈值（3秒）
+     */
+    private static final long MAX_BACKWARD_MS = 1000;
+    private final long workerId;
+    /**
+     * 数据标识id部分
+     */
+    private final long DATA_CENTER_ID;
+    /**
      * 上次生产id时间戳
      * 使用static修饰，当存在多个IdWorker实例时会导致时间戳状态共享，可能产生重复ID。应改为实例变量
      */
@@ -75,23 +84,57 @@ public final class IdWorker {
      */
     private long sequence = 0L;
 
-    private final long workerId;
-
-    /**
-     * 数据标识id部分
-     */
-    private final long DATA_CENTER_ID;
-
-    /**
-     *  添加时钟回拨容忍阈值（3秒）
-     *  */
-    private static final long MAX_BACKWARD_MS = 1000;
-
-
 
     public IdWorker() {
         this.DATA_CENTER_ID = getDatacenterId(MAX_DATA_CENTER_ID);
         this.workerId = getMaxWorkerId(DATA_CENTER_ID, MAX_WORKER_ID);
+    }
+
+    /**
+     * <p>
+     * 数据标识id部分
+     * </p>
+     */
+    private static long getDatacenterId(long maxDatacenterId) {
+        long id = 0L;
+        try {
+            InetAddress ip = InetAddress.getLocalHost();
+            NetworkInterface network = NetworkInterface.getByInetAddress(ip);
+            if (network == null) {
+                id = 1L;
+            } else {
+                byte[] mac = network.getHardwareAddress();
+                id = ((0x000000FF & (long) mac[mac.length - 1])
+                        | (0x0000FF00 & (((long) mac[mac.length - 2]) << 8))) >> 6;
+                id = id % (maxDatacenterId + 1);
+            }
+        } catch (Exception e) {
+            log.error("获取数据中心ID失败，使用随机回退策略", e);
+            // 添加随机fallback
+            return ThreadLocalRandom.current().nextLong(maxDatacenterId + 1);
+        }
+        return id;
+    }
+
+    /**
+     * <p>
+     * 获取 maxWorkerId
+     * </p>
+     */
+    private static long getMaxWorkerId(long dataCenterId, long maxWorkerId) {
+        StringBuilder mpid = new StringBuilder();
+        mpid.append(dataCenterId);
+        String name = ManagementFactory.getRuntimeMXBean().getName();
+        if (!name.isEmpty()) {
+            /*
+             * GET jvmPid
+             */
+            mpid.append(name.split("@")[0]);
+        }
+        /*
+         * MAC + PID 的 hashcode 获取16个低位
+         */
+        return (mpid.toString().hashCode() & 0xffff) % (maxWorkerId + 1);
     }
 
     /**
@@ -144,52 +187,5 @@ public final class IdWorker {
 
     private long timeGen() {
         return System.currentTimeMillis();
-    }
-
-    /**
-     * <p>
-     * 数据标识id部分
-     * </p>
-     */
-    private static long getDatacenterId(long maxDatacenterId) {
-        long id = 0L;
-        try {
-            InetAddress ip = InetAddress.getLocalHost();
-            NetworkInterface network = NetworkInterface.getByInetAddress(ip);
-            if (network == null) {
-                id = 1L;
-            } else {
-                byte[] mac = network.getHardwareAddress();
-                id = ((0x000000FF & (long) mac[mac.length - 1])
-                        | (0x0000FF00 & (((long) mac[mac.length - 2]) << 8))) >> 6;
-                id = id % (maxDatacenterId + 1);
-            }
-        } catch (Exception e) {
-            log.error("获取数据中心ID失败，使用随机回退策略", e);
-            // 添加随机fallback
-            return ThreadLocalRandom.current().nextLong(maxDatacenterId + 1);
-        }
-        return id;
-    }
-
-    /**
-     * <p>
-     * 获取 maxWorkerId
-     * </p>
-     */
-    private static long getMaxWorkerId(long dataCenterId, long maxWorkerId) {
-        StringBuilder mpid = new StringBuilder();
-        mpid.append(dataCenterId);
-        String name = ManagementFactory.getRuntimeMXBean().getName();
-        if (!name.isEmpty()) {
-            /*
-             * GET jvmPid
-             */
-            mpid.append(name.split("@")[0]);
-        }
-        /*
-         * MAC + PID 的 hashcode 获取16个低位
-         */
-        return (mpid.toString().hashCode() & 0xffff) % (maxWorkerId + 1);
     }
 }

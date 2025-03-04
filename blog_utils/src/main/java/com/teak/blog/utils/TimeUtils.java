@@ -66,6 +66,7 @@ public class TimeUtils {
     public String dateToStringFormat(Date date) {
         return DATE_FORMAT_CACHE.get().format(date);
     }
+
     public String dateToStringFormat(Date date, String pattern) {
         return new SimpleDateFormat(pattern).format(date);
     }

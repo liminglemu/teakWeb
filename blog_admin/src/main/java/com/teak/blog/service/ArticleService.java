@@ -16,9 +16,9 @@ import com.teak.blog.vo.ArticleVo;
  */
 public interface ArticleService extends IService<Article> {
 
-    Page<Article> getPage(int pageNum, int pageSize, String category, String status, Long userId) ;
+    Page<Article> getPage(int pageNum, int pageSize, String category, String status, Long userId);
 
     Article addArticle(ArticleVo articleVo);
 
-    void delArticle( Long id);
+    void delArticle(Long id);
 }

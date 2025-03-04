@@ -17,7 +17,7 @@ import java.util.List;
  * @Description:
  */
 @Repository
-public interface CategoryMapper  extends BaseMapper<Category> {
+public interface CategoryMapper extends BaseMapper<Category> {
     List<Category> getListById(Long id);
 
     Category getByCateName(@Param("category") String category, @Param("userId") Long userId);

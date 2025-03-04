@@ -14,11 +14,9 @@ import java.io.Serializable;
 @Data
 @TableName(value = "img")
 public class Img implements Serializable {
+    private static final long serialVersionUID = 1L;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
-
     private String imgName;
-
-    private static final long serialVersionUID = 1L;
 }

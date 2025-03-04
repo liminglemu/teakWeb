@@ -20,19 +20,14 @@ import java.math.BigDecimal;
 @TableName(value = "cart")
 @Data
 public class Cart implements Serializable {
+    private static final long serialVersionUID = 1L;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
-
     private String name;
-
     private BigDecimal price;
-
     private Long count;
-
     private String thumb;
-
-    private static final long serialVersionUID = 1L;
 
     @Override
     public String toString() {

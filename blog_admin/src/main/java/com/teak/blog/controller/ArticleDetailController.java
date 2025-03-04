@@ -35,7 +35,7 @@ public class ArticleDetailController {
 
         HashMap<String, Object> hashMap = new HashMap<>();
 
-       ArticleDetail articleDetail = articleDetailService.getArtDetailByArtId(articleId);
+        ArticleDetail articleDetail = articleDetailService.getArtDetailByArtId(articleId);
         hashMap.put("ArticleDetail", articleDetail);
         return GlobalResult.success(hashMap);
     }

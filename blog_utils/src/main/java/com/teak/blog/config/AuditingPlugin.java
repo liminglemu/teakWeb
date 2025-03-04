@@ -39,6 +39,18 @@ public class AuditingPlugin implements Interceptor {
         this.idWorker = idWorker;
     }
 
+    private static List<Field> getCachedFields(Class<?> clazz) {
+        return CLASS_FIELD_CACHE.computeIfAbsent(clazz, k -> {
+            List<Field> fields = new ArrayList<>();
+            Class<?> currentClass = clazz;
+            while (currentClass != null && currentClass != Object.class) {
+                Collections.addAll(fields, currentClass.getDeclaredFields());
+                currentClass = currentClass.getSuperclass();
+            }
+            return Collections.unmodifiableList(fields);
+        });
+    }
+
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
         log.info("当前事务状态: {}", TransactionSynchronizationManager.isActualTransactionActive());
@@ -51,7 +63,6 @@ public class AuditingPlugin implements Interceptor {
         processByCommandType(mappedStatement.getSqlCommandType(), param);
         return invocation.proceed();
     }
-
 
     private void processByCommandType(SqlCommandType commandType, Object param) {
         if (commandType == SqlCommandType.INSERT) {
@@ -165,7 +176,6 @@ public class AuditingPlugin implements Interceptor {
         }
     }
 
-
     private boolean prepareFieldAccess(Field field, Object param) {
         boolean needSpecialAccess = (!Modifier.isPublic(field.getModifiers())
                 || !Modifier.isPublic(field.getDeclaringClass().getModifiers())
@@ -176,17 +186,5 @@ public class AuditingPlugin implements Interceptor {
             field.setAccessible(true);
         }
         return needSpecialAccess;
-    }
-
-    private static List<Field> getCachedFields(Class<?> clazz) {
-        return CLASS_FIELD_CACHE.computeIfAbsent(clazz, k -> {
-            List<Field> fields = new ArrayList<>();
-            Class<?> currentClass = clazz;
-            while (currentClass != null && currentClass != Object.class) {
-                Collections.addAll(fields, currentClass.getDeclaredFields());
-                currentClass = currentClass.getSuperclass();
-            }
-            return Collections.unmodifiableList(fields);
-        });
     }
 }

@@ -32,19 +32,16 @@ import java.util.UUID;
 public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implements FileService {
     private final FileMapper fileMapper;
     private final OSS ossClient;
-
-    public FileServiceImpl(FileMapper fileMapper, OSS ossClient) {
-        this.fileMapper = fileMapper;
-        this.ossClient = ossClient;
-    }
-
-
     @Value("${oss.endpoint}")
     private String endpoint;
     @Value("${oss.bucketName}")
     private String bucketName;
     @Value("${oss.expireSeconds}")
     private int expireSeconds;
+    public FileServiceImpl(FileMapper fileMapper, OSS ossClient) {
+        this.fileMapper = fileMapper;
+        this.ossClient = ossClient;
+    }
 
     /**
      * 智能文件上传（自动重名处理）

@@ -39,6 +39,8 @@ import java.util.concurrent.Future;
 @Slf4j
 class ApplicationTest {
 
+    // 创建ThreadLocal实例（建议用static final修饰）
+    private static final ThreadLocal<UserDb> USER_CONTEXT = new ThreadLocal<>();
     private final XhProductController xhProductController;
     private final ArticleService articleService;
     private final ArticleDetailService articleDetailService;
@@ -131,9 +133,6 @@ class ApplicationTest {
         }
         articleDetailService.saveBatch(result);
     }
-
-    // 创建ThreadLocal实例（建议用static final修饰）
-    private static final ThreadLocal<UserDb> USER_CONTEXT = new ThreadLocal<>();
 
     // 示例：在多线程任务中使用
     @Test
