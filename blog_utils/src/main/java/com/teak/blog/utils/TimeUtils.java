@@ -125,8 +125,6 @@ public class TimeUtils {
         Calendar calendar = getCalendar(date);
         calendar.add(Calendar.YEAR, years);
 
-        // 修正后的闰年处理逻辑
-        int newYear = calendar.get(Calendar.YEAR);
         if (isFebruary29th(date) && !isLeapYear(calendar.getTime())) {
             calendar.set(Calendar.DAY_OF_MONTH, 28);
         }
