@@ -1,7 +1,6 @@
 package com.teak.blog.utils;
 
 import java.text.SimpleDateFormat;
-import java.util.Map;
 
 public class TimeDependentConstant {
     private TimeDependentConstant() {
