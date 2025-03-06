@@ -1,10 +1,8 @@
 package com.teak.blog;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.teak.blog.annotation.CreateTime;
-import com.teak.blog.annotation.IsDeleted;
-import com.teak.blog.annotation.Statue;
-import com.teak.blog.annotation.UpdateTime;
 import lombok.Data;
 
 import java.util.Date;
@@ -18,17 +16,18 @@ import java.util.Date;
  * @File: BaseModel.java
  * @Description:
  */
-
 @Data
 public class BaseModel {
-
-    @Statue
+    @TableField(fill = FieldFill.INSERT)
     protected Integer status;
-    @CreateTime
+
+    @TableField(fill = FieldFill.INSERT)
     protected Date createTime;
-    @UpdateTime
+
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     protected Date updateTime;
+
     @TableLogic(value = "0", delval = "1")
-    @IsDeleted
+    @TableField(fill = FieldFill.INSERT)
     protected Integer isDeleted;
 }

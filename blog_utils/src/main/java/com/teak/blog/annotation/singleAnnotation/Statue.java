@@ -1,4 +1,4 @@
-package com.teak.blog.annotation;
+package com.teak.blog.annotation.singleAnnotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -11,11 +11,11 @@ import java.lang.annotation.Target;
  * @Author: li zheng
  * @Date: 2025/2/25 00:14
  * @Project: teakWeb
- * @File: IsDeleted.java
+ * @File: Statue.java
  * @Description:
  */
 
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IsDeleted {
+public @interface Statue {
 }

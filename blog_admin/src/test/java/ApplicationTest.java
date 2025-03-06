@@ -1,5 +1,6 @@
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.RandomUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.teak.blog.BlogAdminApplication;
 import com.teak.blog.controller.XhProductController;
@@ -18,6 +19,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -74,20 +77,27 @@ class ApplicationTest {
     }
 
     @Test
+    @Transactional(rollbackFor = Exception.class)
+    @Rollback(value = false)
+    void test8() {
+        QueryWrapper<ArticleDetail> wrapper = new QueryWrapper<>();
+        List<ArticleDetail> articleDetailList = articleDetailService.list(wrapper.gt("id", 1896058355961565184L));
+        List<Long> list = articleDetailList.stream().map(ArticleDetail::getId).toList();
+        articleDetailService.removeByIds(list);
+    }
+
+    @Test
+    @Transactional
     void test7() {
 
-        int count = 10;
+        int count = 2;
 
         List<Future<?>> futures = new ArrayList<>(count);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             Future<?> future = ThreadUtil.execAsync(() -> {
                 ArrayList<ArticleDetail> articleDetails = new ArrayList<>();
                 for (int j = 0; j < count; j++) {
                     ArticleDetail detail = new ArticleDetail();
-                    // 使用雪花算法生成ID
-                    detail.setId(null);
-                    detail.setArticleId(null);
-                    detail.setFileId(null);
 
                     detail.setContent(RandomUtil.randomString("\\u4e00-\\u9fa5", 30));
 

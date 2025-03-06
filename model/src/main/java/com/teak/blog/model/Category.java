@@ -3,7 +3,7 @@ package com.teak.blog.model;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teak.blog.BaseModel;
-import com.teak.blog.annotation.SnowflakeAlgorithm;
+import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

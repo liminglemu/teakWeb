@@ -1,22 +1,5 @@
 package com.teak.blog.config;
 
-import com.teak.blog.annotation.*;
-import com.teak.blog.utils.IdWorker;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.executor.Executor;
-import org.apache.ibatis.mapping.MappedStatement;
-import org.apache.ibatis.mapping.SqlCommandType;
-import org.apache.ibatis.plugin.Interceptor;
-import org.apache.ibatis.plugin.Intercepts;
-import org.apache.ibatis.plugin.Invocation;
-import org.apache.ibatis.plugin.Signature;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.support.TransactionSynchronizationManager;
-
-import java.lang.reflect.Field;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-
 /**
  * Created with: IntelliJ IDEA
  *
@@ -26,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @File: AuditingPlugin.java
  * @Description:
  */
-@Slf4j
+/*@Slf4j
 @Intercepts({@Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})})
 @Component
 public class AuditingPlugin implements Interceptor {
@@ -183,19 +166,10 @@ public class AuditingPlugin implements Interceptor {
     }
 
     private boolean prepareFieldAccess(Field field, Object param) {
-        /*boolean needSpecialAccess = (!Modifier.isPublic(field.getModifiers())
-                || !Modifier.isPublic(field.getDeclaringClass().getModifiers())
-                || Modifier.isFinal(field.getModifiers()))
-                && !field.canAccess(param);
-
-        if (needSpecialAccess) {
-            field.setAccessible(true);
-        }
-        return needSpecialAccess;*/
         if (!field.canAccess(param)) {
             field.setAccessible(true);
             return true;
         }
         return false;
     }
-}
+}*/

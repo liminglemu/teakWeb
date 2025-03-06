@@ -1,4 +1,4 @@
-package com.teak.blog.annotation;
+package com.teak.blog.annotation.singleAnnotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -9,12 +9,12 @@ import java.lang.annotation.Target;
  * Created with: IntelliJ IDEA
  *
  * @Author: li zheng
- * @Date: 2025/2/23 16:02
+ * @Date: 2025/2/23 19:04
  * @Project: teakWeb
- * @File: SnowflakeAlgorithm.java
+ * @File: CreateTime.java
  * @Description:
  */
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface SnowflakeAlgorithm {
+public @interface CreateTime {
 }

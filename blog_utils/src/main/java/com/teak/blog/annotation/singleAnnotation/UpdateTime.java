@@ -1,4 +1,4 @@
-package com.teak.blog.annotation;
+package com.teak.blog.annotation.singleAnnotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
  * @File: UpdateTime.java
  * @Description:
  */
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UpdateTime {
 }
