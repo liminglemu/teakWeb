@@ -2,9 +2,13 @@ package com.teak.blog.config;
 
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
-import org.springframework.beans.factory.annotation.Value;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 
 /**
  * Created with: IntelliJ IDEA
@@ -15,23 +19,23 @@ import org.springframework.context.annotation.Configuration;
  * @File: OssConfig.java
  * @Description:
  */
+@Slf4j
 @Configuration
+@Setter
+@Getter
+@ConfigurationProperties(prefix = "oss")
 public class OssConfig {
-    @Value("${oss.endpoint}")
+
     private String endpoint;
 
-    @Value("${oss.accessKeyId}")
-    private String accessKeyId;
-
-    @Value("${oss.accessKeySecret}")
-    private String accessKeySecret;
-
-    @Value("${oss.bucketName}")
     private String bucketName;
 
 
     @Bean
     public OSS ossClient() {
-        return new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
+        log.info("初始化Oss");
+        log.info("endpoint:{}", endpoint);
+        log.info("bucketName:{}", bucketName);
+        return new OSSClientBuilder().build(endpoint, "LTAI5t8tbEDxXwWupFqPaBEj", "ETendtTuR2F84iZPvEeJDbChDr428C");
     }
 }
