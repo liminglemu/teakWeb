@@ -15,9 +15,6 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-    # 新增全局类型转换配置
-    generator:
-      write_numbers_as_strings: true
 mybatis-plus:
   # 确保 SqlSession 由 Spring 管理
   mapper-locations: classpath*:mapper/**/*.xml
