@@ -21,6 +21,9 @@ public class BaseModel {
     @TableField(fill = FieldFill.INSERT)
     protected Integer status;
 
+    @TableField(exist = false)
+    protected String statusString;
+
     @TableField(fill = FieldFill.INSERT)
     protected Date createTime;
 
@@ -30,4 +33,7 @@ public class BaseModel {
     @TableLogic(value = "0", delval = "1")
     @TableField(fill = FieldFill.INSERT)
     protected Integer isDeleted;
+
+    @TableField(exist = false)
+    protected String isDeletedString;
 }

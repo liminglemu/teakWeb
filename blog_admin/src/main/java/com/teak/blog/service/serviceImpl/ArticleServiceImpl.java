@@ -89,6 +89,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
             page.getRecords().forEach(article -> {
                 article.setCateName(cateNameMap.get(article.getCateId()));
                 article.setUserName(currentUser.getUserName());
+                if (article.getStatus() == 0) {
+                    article.setStatusString("草稿");
+                } else if (article.getStatus() == 1) {
+                    article.setStatusString("已发布");
+                }
             });
         }
 
@@ -103,6 +108,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         Category category = categoryMapper.getByCateName(articleVo.getCategoryName(), articleVo.getUserId());
         article.setCateId(category.getId());
+        article.setStatus(Integer.valueOf(articleVo.getStatus()));
         articleMapper.insert(article);
 
         ArticleDetail articleDetail = new ArticleDetail();
