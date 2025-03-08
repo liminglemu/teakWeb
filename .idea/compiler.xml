@@ -15,10 +15,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="blog_admin" options="-parameters -Xlint:all" />
-      <module name="blog_utils" options="-parameters -Xlint:all" />
-      <module name="model" options="-parameters -Xlint:all" />
-      <module name="teakweb-parent" options="-parameters -Xlint:all" />
+      <module name="blog_admin" options="-parameters" />
+      <module name="blog_utils" options="-parameters" />
+      <module name="model" options="-parameters" />
+      <module name="teakweb-parent" options="" />
     </option>
   </component>
 </project>

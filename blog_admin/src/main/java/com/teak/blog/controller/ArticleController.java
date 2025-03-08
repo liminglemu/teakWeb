@@ -30,13 +30,12 @@ public class ArticleController {
         this.articleService = articleService;
     }
 
-    @GetMapping("/getArticlePage/{date}")
-    public GlobalResult getPage(@PathVariable Date date, @RequestParam(defaultValue = "1") int pageNum,
+    @GetMapping("/getArticlePage")
+    public GlobalResult getPage(@RequestParam(defaultValue = "1") int pageNum,
                                 @RequestParam(defaultValue = "5") int pageSize,
                                 @RequestParam(required = false) String status,
                                 @RequestParam(required = false) String category,
                                 @RequestParam Long userId) {
-        log.info("date:{}", date);
         HashMap<String, Object> hashMap = new HashMap<>();
         Page<Article> page = articleService.getPage(pageNum, pageSize, category, status, userId);
         hashMap.put("page", page);
