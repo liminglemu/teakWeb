@@ -1,11 +1,10 @@
-package com.teak.blog.model;
+package com.teak.blog.entity.model;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.teak.blog.BaseModel;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
+import com.teak.blog.entity.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -25,14 +24,12 @@ import java.io.Serializable;
 @TableName(value = "article_detail")
 public class ArticleDetail extends BaseModel implements Serializable {
     @TableField(fill = FieldFill.INSERT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
 
     private String content;
 
     @TableField(fill = FieldFill.INSERT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long articleId;
 
@@ -42,7 +39,6 @@ public class ArticleDetail extends BaseModel implements Serializable {
     private String articleCoverUrl;
 
     @TableField(fill = FieldFill.INSERT)
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long fileId;
 

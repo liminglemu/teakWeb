@@ -1,4 +1,4 @@
-package com.teak.blog.vo;
+package com.teak.blog.entity.vo;
 
 import lombok.Data;
 

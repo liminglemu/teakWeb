@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.teak.blog.mapper.ArticleDetailMapper">
-    <resultMap id="BaseResultMap" type="com.teak.blog.model.ArticleDetail">
+    <resultMap id="BaseResultMap" type="com.teak.blog.entity.model.ArticleDetail">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="content" property="content" jdbcType="VARCHAR"/>
         <result column="article_id" property="articleId" jdbcType="VARCHAR"/>
         <result column="article_cover_url" property="articleCoverUrl" jdbcType="VARCHAR"/>
         <result column="file_id" property="fileId" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getArtDetailByArtId" resultType="com.teak.blog.model.ArticleDetail">
+    <select id="getArtDetailByArtId" resultType="com.teak.blog.entity.model.ArticleDetail">
         select a.id,
                a.content,
                a.article_id,

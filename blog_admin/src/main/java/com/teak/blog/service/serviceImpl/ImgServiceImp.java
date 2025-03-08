@@ -1,8 +1,8 @@
 package com.teak.blog.service.serviceImpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.Img;
 import com.teak.blog.mapper.ImgDao;
-import com.teak.blog.model.Img;
 import com.teak.blog.service.ImgService;
 import org.springframework.stereotype.Service;
 

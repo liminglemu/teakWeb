@@ -1,8 +1,7 @@
-package com.teak.blog.model;
+package com.teak.blog.entity.model;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +19,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HospitalMode {
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
 

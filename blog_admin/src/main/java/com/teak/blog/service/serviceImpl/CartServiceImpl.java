@@ -1,8 +1,8 @@
 package com.teak.blog.service.serviceImpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.Cart;
 import com.teak.blog.mapper.CartMapper;
-import com.teak.blog.model.Cart;
 import com.teak.blog.service.CartService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

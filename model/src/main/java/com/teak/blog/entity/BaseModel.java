@@ -1,4 +1,4 @@
-package com.teak.blog;
+package com.teak.blog.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

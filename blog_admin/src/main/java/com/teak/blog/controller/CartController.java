@@ -1,6 +1,6 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.Cart;
+import com.teak.blog.entity.model.Cart;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.CartService;
 import org.springframework.web.bind.annotation.GetMapping;

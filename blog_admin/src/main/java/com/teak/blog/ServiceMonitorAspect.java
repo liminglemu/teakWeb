@@ -30,7 +30,8 @@ public class ServiceMonitorAspect {
         Object result = joinPoint.proceed();
         long duration = System.currentTimeMillis() - startTime;
 
-        log.info("[性能监控] {}.{} 执行耗时: {}ms",
+        log.info("[当前线程]{}|[性能监控] {}.{} 执行耗时: {}ms",
+                Thread.currentThread().getName(),
                 joinPoint.getSignature().getDeclaringTypeName(),
                 joinPoint.getSignature().getName(),
                 duration);

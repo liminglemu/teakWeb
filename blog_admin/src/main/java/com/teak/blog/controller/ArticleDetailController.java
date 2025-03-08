@@ -1,6 +1,6 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.ArticleDetail;
+import com.teak.blog.entity.model.ArticleDetail;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
 import lombok.extern.slf4j.Slf4j;

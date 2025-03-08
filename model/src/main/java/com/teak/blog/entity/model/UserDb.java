@@ -1,9 +1,8 @@
-package com.teak.blog.model;
+package com.teak.blog.entity.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.teak.blog.BaseModel;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
+import com.teak.blog.entity.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -22,7 +21,6 @@ import java.io.Serializable;
 @Data
 @TableName(value = "user_db")
 public class UserDb extends BaseModel implements Serializable {
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
 
@@ -36,7 +34,6 @@ public class UserDb extends BaseModel implements Serializable {
      */
     private String password;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long token;
 

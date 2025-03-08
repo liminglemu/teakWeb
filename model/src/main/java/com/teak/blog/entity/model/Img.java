@@ -1,7 +1,6 @@
-package com.teak.blog.model;
+package com.teak.blog.entity.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import lombok.Data;
 
@@ -15,7 +14,6 @@ import java.io.Serializable;
 @TableName(value = "img")
 public class Img implements Serializable {
     private static final long serialVersionUID = 1L;
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @SnowflakeAlgorithm
     private Long id;
     private String imgName;

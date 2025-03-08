@@ -1,8 +1,8 @@
 package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.teak.blog.model.UserDb;
-import com.teak.blog.vo.RegisterVo;
+import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.RegisterVo;
 
 import java.util.List;
 

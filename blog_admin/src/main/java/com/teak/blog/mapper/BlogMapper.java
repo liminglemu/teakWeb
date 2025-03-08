@@ -1,7 +1,7 @@
 package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.teak.blog.model.HospitalMode;
+import com.teak.blog.entity.model.HospitalMode;
 import org.springframework.stereotype.Repository;
 
 /**

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.teak.blog.mapper.UserDbMapper">
-    <resultMap id="BaseResultMap" type="com.teak.blog.model.UserDb">
+    <resultMap id="BaseResultMap" type="com.teak.blog.entity.model.UserDb">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="user_name" jdbcType="VARCHAR" property="userName"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
         <result column="picture" jdbcType="VARCHAR" property="picture"/>
     </resultMap>
-    <select id="finListByName" resultType="com.teak.blog.model.UserDb">
+    <select id="finListByName" resultType="com.teak.blog.entity.model.UserDb">
         select *
         from user_db
         where user_name = #{userName}
     </select>
-    <select id="finByNameAndPswd" resultType="com.teak.blog.model.UserDb">
+    <select id="finByNameAndPswd" resultType="com.teak.blog.entity.model.UserDb">
         select *
         from user_db
         where user_name = #{userName}
           and password = #{password}
     </select>
-    <select id="getByToken" resultType="com.teak.blog.model.UserDb">
+    <select id="getByToken" resultType="com.teak.blog.entity.model.UserDb">
         select *
         from user_db
         where token = #{token}

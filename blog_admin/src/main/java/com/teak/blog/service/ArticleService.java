@@ -2,8 +2,8 @@ package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.teak.blog.model.Article;
-import com.teak.blog.vo.ArticleVo;
+import com.teak.blog.entity.model.Article;
+import com.teak.blog.entity.vo.ArticleVo;
 
 /**
  * Created with: IntelliJ IDEA

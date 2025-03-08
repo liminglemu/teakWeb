@@ -1,7 +1,7 @@
 package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.teak.blog.model.XhProduct;
+import com.teak.blog.entity.model.XhProduct;
 
 /**
  * Created with: IntelliJ IDEA

@@ -26,14 +26,14 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.5</version>  <!-- 升级到兼容 Spring Boot 2.7 的版本 -->
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!-- Lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.30</version>
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -41,14 +41,14 @@
             <dependency>
                 <groupId>com.mysql</groupId>
                 <artifactId>mysql-connector-j</artifactId>
-                <version>8.0.33</version>
+                <version>${mysql.version}</version>
             </dependency>
 
             <!-- Jackson -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>2.15.2</version>  <!-- 与 Spring Boot 2.7 版本对齐 -->
+                <artifactId>jackson-databind</artifactId>
+                <version>2.15.3</version> <!-- 与Spring Boot对齐 -->
             </dependency>
 
             <dependency>
@@ -75,9 +75,10 @@
         <java.version>17</java.version>  <!-- 设置 Java 17 -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
-        <mysql.version>8.0.33</mysql.version>
-        <lombok.version>1.18.30</lombok.version>
+        <spring-boot.version>2.7.19</spring-boot.version> <!-- 升级到最新稳定版 -->
+        <mybatis-plus.version>3.5.6</mybatis-plus.version> <!-- 兼容Spring Boot 2.7 -->
+        <mysql.version>8.0.33</mysql.version> <!-- 最新版 -->
+        <lombok.version>1.18.32</lombok.version> <!-- LTS版本 -->
     </properties>
 
     <build>
@@ -86,6 +87,47 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <meminitial>128m</meminitial>
+                    <maxmem>512m</maxmem>
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>10</threadCount>
+                </configuration>
+            </plugin>
+
+            <!--引入Maven Enforcer插件 防止依赖冲突-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-dependency</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedUndefinedDependencies/>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

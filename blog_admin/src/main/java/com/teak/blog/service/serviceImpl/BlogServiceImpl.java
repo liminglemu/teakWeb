@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.HospitalMode;
 import com.teak.blog.mapper.BlogMapper;
-import com.teak.blog.model.HospitalMode;
 import com.teak.blog.service.BlogService;
 import org.springframework.stereotype.Service;
 

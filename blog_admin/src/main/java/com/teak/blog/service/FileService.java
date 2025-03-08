@@ -1,7 +1,7 @@
 package com.teak.blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.teak.blog.model.FileModel;
+import com.teak.blog.entity.model.FileModel;
 import org.springframework.web.multipart.MultipartFile;
 
 /**

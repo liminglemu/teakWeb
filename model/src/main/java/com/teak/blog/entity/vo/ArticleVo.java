@@ -1,6 +1,5 @@
-package com.teak.blog.vo;
+package com.teak.blog.entity.vo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 /**
@@ -16,11 +15,9 @@ import lombok.Data;
 public class ArticleVo {
     private Long id;
     private String title;
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private String categoryName;
     private String content;
     private String articleCoverUrl;
     private String status;
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long userId;
 }

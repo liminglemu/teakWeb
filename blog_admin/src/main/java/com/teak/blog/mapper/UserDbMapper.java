@@ -1,8 +1,8 @@
 package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.teak.blog.model.UserDb;
-import com.teak.blog.vo.RegisterVo;
+import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.RegisterVo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

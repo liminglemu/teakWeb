@@ -1,8 +1,7 @@
-package com.teak.blog.vo;
+package com.teak.blog.entity.vo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.teak.blog.BaseModel;
+import com.teak.blog.entity.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,7 +22,6 @@ public class ArticleAndDetailVo extends BaseModel {
     /**
      * 详情的id
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
 
     /**
@@ -34,7 +32,6 @@ public class ArticleAndDetailVo extends BaseModel {
     /**
      * 文章分类Id
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long cateId;
 
     @TableField(exist = false)

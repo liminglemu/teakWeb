@@ -1,7 +1,7 @@
 package com.teak.blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.teak.blog.model.Img;
+import com.teak.blog.entity.model.Img;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,10 +1,10 @@
 package com.teak.blog.service.serviceImpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.RegisterVo;
 import com.teak.blog.mapper.UserDbMapper;
-import com.teak.blog.model.UserDb;
 import com.teak.blog.service.UserDbService;
-import com.teak.blog.vo.RegisterVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

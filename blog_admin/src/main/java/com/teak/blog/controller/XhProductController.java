@@ -1,7 +1,7 @@
 package com.teak.blog.controller;
 
+import com.teak.blog.entity.model.XhProduct;
 import com.teak.blog.handler.GlobalExceptionHandler;
-import com.teak.blog.model.XhProduct;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.XhProductService;
 import lombok.extern.slf4j.Slf4j;

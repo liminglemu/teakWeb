@@ -1,8 +1,8 @@
 package com.teak.blog.service.serviceImpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.Category;
 import com.teak.blog.mapper.CategoryMapper;
-import com.teak.blog.model.Category;
 import com.teak.blog.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

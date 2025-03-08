@@ -2,8 +2,8 @@ package com.teak.blog.service.serviceImpl;
 
 import com.aliyun.oss.OSS;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teak.blog.entity.model.FileModel;
 import com.teak.blog.mapper.FileMapper;
-import com.teak.blog.model.FileModel;
 import com.teak.blog.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,8 +32,6 @@ import java.util.UUID;
 public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implements FileService {
     private final FileMapper fileMapper;
     private final OSS ossClient;
-    @Value("${oss.endpoint}")
-    private String endpoint;
     @Value("${oss.bucketName}")
     private String bucketName;
     @Value("${oss.expireSeconds}")
@@ -121,10 +119,6 @@ public class FileServiceImpl extends ServiceImpl<FileMapper, FileModel> implemen
         Date expiration = new Date(System.currentTimeMillis() + expireSeconds * 1000L);
         URL url = ossClient.generatePresignedUrl(bucketName, objectKey, expiration);
         return url.toString();
-        /*return String.format("https://%s.%s/%s",
-                bucketName,
-                endpoint.replace("https://", ""),
-                objectKey);*/
     }
 
     /**

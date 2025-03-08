@@ -1,7 +1,7 @@
 package com.teak.blog.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.teak.blog.model.HospitalMode;
+import com.teak.blog.entity.model.HospitalMode;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.BlogService;
 import lombok.extern.slf4j.Slf4j;

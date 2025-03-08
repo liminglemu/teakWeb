@@ -1,10 +1,10 @@
 package com.teak.blog.controller;
 
+import com.teak.blog.entity.model.Category;
+import com.teak.blog.entity.vo.CategoryVo;
 import com.teak.blog.handler.GlobalExceptionHandler;
-import com.teak.blog.model.Category;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.CategoryService;
-import com.teak.blog.vo.CategoryVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;

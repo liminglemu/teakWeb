@@ -1,9 +1,9 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.UserDb;
+import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.RegisterVo;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.UserDbService;
-import com.teak.blog.vo.RegisterVo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

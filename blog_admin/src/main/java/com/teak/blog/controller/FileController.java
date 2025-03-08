@@ -1,6 +1,6 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.FileModel;
+import com.teak.blog.entity.model.FileModel;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.FileService;
 import org.springframework.http.ResponseEntity;

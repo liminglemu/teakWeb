@@ -1,6 +1,6 @@
 package com.teak.blog.controller;
 
-import com.teak.blog.model.Img;
+import com.teak.blog.entity.model.Img;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ImgService;
 import lombok.extern.slf4j.Slf4j;
