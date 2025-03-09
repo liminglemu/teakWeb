@@ -28,7 +28,7 @@ public class AsyncConfig implements AsyncConfigurer {
     private ThreadPoolExecutor executor;
 
     @Override
-    @Bean("executorService")
+//    @Bean("executorService")
     public ExecutorService getAsyncExecutor() {
         // 定义线程池
         // 核心线程数
