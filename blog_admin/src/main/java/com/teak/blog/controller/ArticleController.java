@@ -7,8 +7,9 @@ import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
 
-import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -36,6 +37,11 @@ public class ArticleController {
                                 @RequestParam(required = false) String status,
                                 @RequestParam(required = false) String category,
                                 @RequestParam Long userId) {
+
+        /*这里对当前线程里的数据进行获取*/
+        String threadData = (String) RequestContextHolder.currentRequestAttributes().getAttribute("THREAD_DATA", RequestAttributes.SCOPE_REQUEST);
+        log.info("threadData:{}", threadData);
+
         HashMap<String, Object> hashMap = new HashMap<>();
         Page<Article> page = articleService.getPage(pageNum, pageSize, category, status, userId);
         hashMap.put("page", page);

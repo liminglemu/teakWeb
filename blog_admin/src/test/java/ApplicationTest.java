@@ -6,7 +6,6 @@ import com.teak.blog.BlogAdminApplication;
 import com.teak.blog.controller.XhProductController;
 import com.teak.blog.entity.model.Article;
 import com.teak.blog.entity.model.ArticleDetail;
-import com.teak.blog.entity.model.Cart;
 import com.teak.blog.entity.model.UserDb;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
@@ -15,20 +14,16 @@ import com.teak.blog.utils.IdWorker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 /**
  * Created with: IntelliJ IDEA
@@ -50,30 +45,38 @@ class ApplicationTest {
     private final ArticleService articleService;
     private final ArticleDetailService articleDetailService;
     private final ExecutorService executorService;
+    @Autowired
+    private IdWorker idWorker;
 
     public static void main(String[] args) {
-        Cart cart = new Cart();
-        cart.setId(1L);
-        cart.setName("测试");
-        cart.setPrice(new BigDecimal("100.00"));
-        cart.setCount(1L);
-        cart.setThumb("https://www.baidu.com");
+        HashSet<Integer> integers = new HashSet<>();
+        integers.add(1);
+        boolean add2 = integers.add(1);
+        log.info("add:{}", add2);
 
-        Cart cart1 = new Cart();
-        cart1 = cart;
+    }
 
-        cart1.setId(2L);
-        cart1.setName("测试1");
-
-        log.info("cart:{}", cart);
-        log.info("cart1:{}", cart1);
-
-        Cart cart2 = new Cart();
-        BeanUtils.copyProperties(cart, cart2);
-        cart2.setId(3L);
-        cart2.setName("测试2");
-        log.info("cart2:{}", cart2);
-
+    @Test
+    void test9() {
+        ConcurrentHashMap<Long, Long> hashMap = new ConcurrentHashMap<>();
+        ArrayList<Future<?>> futures = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            Future<?> future = ThreadUtil.execAsync(() -> {
+                for (int j = 0; j < 10000; j++) {
+                    long l = idWorker.nextId();
+                    hashMap.putIfAbsent(l, l);
+                }
+            });
+            futures.add(future);
+        }
+        futures.forEach(future -> {
+            try {
+                future.get();
+            } catch (Exception e) {
+                log.error("线程执行异常：{}", e.getMessage(), e);
+            }
+        });
+        log.info("hashMap:{}", hashMap.size());
     }
 
     @Test
