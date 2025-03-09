@@ -1,6 +1,10 @@
 server:
   port: 8001
   address: 0.0.0.0
+  tomcat:
+    threads:
+      min-spare: 10
+      max: 200
 spring:
   main:
     lazy-initialization: true #启用懒加载
@@ -26,3 +30,13 @@ mybatis-plus:
 oss.endpoint: oss-cn-beijing.aliyuncs.com
 oss.bucketName: dashijian
 oss.expireSeconds: 360000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health
+  metrics:
+    enable:
+      jvm:
+        memory:
+          used: true
