@@ -57,6 +57,32 @@ class ApplicationTest {
     }
 
     @Test
+    void test10() {
+        ConcurrentHashMap<Long, Long> hashMap = new ConcurrentHashMap<>();
+        ArrayList<Future<?>> futures = new ArrayList<>();
+        for (int i = 0; i < 500; i++) {
+
+            Future<?> future = executorService.submit(() -> {
+                for (int j = 0; j < 1000; j++) {
+                    long l = idWorker.nextId();
+                    hashMap.putIfAbsent(l, l);
+                }
+            });
+
+            futures.add(future);
+        }
+        futures.forEach(future -> {
+            try {
+                future.get();
+            } catch (Exception e) {
+                log.error("线程执行异常：{}", e.getMessage(), e);
+            }
+        });
+        log.info("hashMap:{}", hashMap.size());
+
+    }
+
+    @Test
     void test9() {
         ConcurrentHashMap<Long, Long> hashMap = new ConcurrentHashMap<>();
         ArrayList<Future<?>> futures = new ArrayList<>();
@@ -94,7 +120,6 @@ class ApplicationTest {
     void test7() {
 
         int count = 2;
-
         List<Future<?>> futures = new ArrayList<>(count);
         for (int i = 0; i < 2; i++) {
             Future<?> future = ThreadUtil.execAsync(() -> {
