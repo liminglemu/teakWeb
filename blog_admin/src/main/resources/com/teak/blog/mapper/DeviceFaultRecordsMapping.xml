@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teak.blog.mapper.DeviceFaultRecordsMapping">
+    <resultMap id="BaseResultMap" type="com.teak.blog.entity.model.DeviceFaultRecords">
+        <id column="record_id" property="recordId" jdbcType="BIGINT"/>
+        <result column="fault_id" property="faultId" jdbcType="VARCHAR"/>
+        <result column="device_id" property="deviceId" jdbcType="BIGINT"/>
+        <result column="fault_type" property="faultType" jdbcType="INTEGER"/>
+        <result column="fault_level" property="faultLevel" jdbcType="INTEGER"/>
+        <result column="occur_time" property="occurTime" jdbcType="TIMESTAMP"/>
+        <result column="op_type" property="opType" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="getDeviceFaultRecordsByTime" resultType="com.teak.blog.entity.model.DeviceFaultRecords">
+        select *
+        from device_fault_records
+        where occur_time >= #{startTime}
+          and  <![CDATA[occur_time <= #{endTime}]]>
+    </select>
+
+
+</mapper>

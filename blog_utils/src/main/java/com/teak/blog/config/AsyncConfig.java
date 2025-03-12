@@ -32,6 +32,8 @@ public class AsyncConfig implements AsyncConfigurer {
     @Bean("executorService")
     public ExecutorService getAsyncExecutor() {
         // 定义线程池
+        /*CPU密集型：corePoolSize=CPU核数+1(避免过多线程竞争CPU)
+        IO密集型：corePoolSize=CPU核数x2(或更高，具体看IO等待时间)*/
         // 核心线程数,设置为核心数量乘2，避免线程频繁创建销毁
         int corePoolSize = Runtime.getRuntime().availableProcessors() * 2;
         // 最大线程数

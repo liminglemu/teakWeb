@@ -10,6 +10,7 @@ import com.teak.blog.entity.model.UserDb;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
 import com.teak.blog.service.ArticleService;
+import com.teak.blog.service.DeviceFaultRecordsService;
 import com.teak.blog.utils.IdWorker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,10 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.*;
@@ -45,22 +49,35 @@ class ApplicationTest {
     private final ArticleService articleService;
     private final ArticleDetailService articleDetailService;
     private final ExecutorService executorService;
+    private final DeviceFaultRecordsService deviceFaultRecordsService;
     @Autowired
     private IdWorker idWorker;
 
     public static void main(String[] args) {
-        HashSet<Integer> integers = new HashSet<>();
-        integers.add(1);
-        boolean add2 = integers.add(1);
-        log.info("add:{}", add2);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        /*try {
+            Date date1 = simpleDateFormat.parse("2024-04-09 12:48:24.886");
+            Date date2 = simpleDateFormat.parse("2024-04-09 13:23:46.619");
 
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }*/
+
+        String format = simpleDateFormat.format(new Date(503979602));
+        log.info("format:{}", format);
+
+    }
+
+    @Test
+    void test11() {
+        deviceFaultRecordsService.getDeviceFaultRecords("2020-01-01 00:00:00", "2025-02-01 12:30:30");
     }
 
     @Test
     void test10() {
         ConcurrentHashMap<Long, Long> hashMap = new ConcurrentHashMap<>();
         ArrayList<Future<?>> futures = new ArrayList<>();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 200; i++) {
 
             Future<?> future = executorService.submit(() -> {
                 for (int j = 0; j < 1000; j++) {
