@@ -28,6 +28,19 @@ import java.util.concurrent.atomic.AtomicLong;
 public class AsyncConfig implements AsyncConfigurer {
     private ThreadPoolExecutor executor;
 
+    private static void rejectedExecution(Runnable runnable, ThreadPoolExecutor executor) {
+        if (executor.isShutdown()) {
+            log.warn("线程池已关闭，拒绝新任务: {}", runnable);
+        } else {
+            log.warn("线程池过载，触发拒绝策略. ActiveThreads={}, QueueSize={}, TaskCount={}",
+                    executor.getActiveCount(),
+                    executor.getQueue().size(),
+                    executor.getTaskCount());// 降级策略：转移到备用队列或记录错误
+            // 此处示例：记录到Redis或发送告警
+            log.error("任务被拒绝，请检查系统负载. Task: {}", runnable);
+        }
+    }
+
     @Override
     @Bean("executorService")
     public ExecutorService getAsyncExecutor() {
@@ -35,7 +48,7 @@ public class AsyncConfig implements AsyncConfigurer {
         /*CPU密集型：corePoolSize=CPU核数+1(避免过多线程竞争CPU)
         IO密集型：corePoolSize=CPU核数x2(或更高，具体看IO等待时间)*/
         // 核心线程数,设置为核心数量乘2，避免线程频繁创建销毁
-        int corePoolSize = Runtime.getRuntime().availableProcessors() * 2;
+        int corePoolSize = Runtime.getRuntime().availableProcessors() + 1;
         // 最大线程数
         int maxPoolSize = 60;
         // 闲置线程存活时间
@@ -57,28 +70,14 @@ public class AsyncConfig implements AsyncConfigurer {
         };
 
         // 拒绝策略（分级处理）
-        RejectedExecutionHandler rejectionHandler = (runnable, executor) -> {
-            if (executor.isShutdown()) {
-                log.warn("线程池已关闭，拒绝新任务: {}", runnable);
-                return;
-            }
-
-            log.warn("线程池过载，触发拒绝策略. ActiveThreads={}, QueueSize={}, TaskCount={}",
-                    executor.getActiveCount(),
-                    executor.getQueue().size(),
-                    executor.getTaskCount());
-
-            // 降级策略：转移到备用队列或记录错误
-            // 此处示例：记录到Redis或发送告警
-            log.error("任务被拒绝，请检查系统负载. Task: {}", runnable);
-        };
+        RejectedExecutionHandler rejectionHandler = AsyncConfig::rejectedExecution;
 
         executor = new ThreadPoolExecutor(
                 corePoolSize,
                 maxPoolSize,
                 keepAliveSeconds,
                 TimeUnit.SECONDS,
-                new LinkedBlockingQueue<>(queueCapacity),  // 更改为无界队列需谨慎
+                new ArrayBlockingQueue<>(queueCapacity),  // 更改为无界队列需谨慎
                 threadFactory,
                 rejectionHandler
         );
@@ -92,9 +91,7 @@ public class AsyncConfig implements AsyncConfigurer {
 
     @Override
     public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
-        return (ex, method, params) -> {
-            log.error("异步方法执行失败: {} [Params: {}]", method.getName(), params, ex);
-        };
+        return (ex, method, params) -> log.error("异步方法执行失败: {} [Params: {}]", method.getName(), params, ex);
     }
 
 
