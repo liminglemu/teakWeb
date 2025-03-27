@@ -54,7 +54,7 @@ public class GlobalResult {
     public static GlobalResult successWithMessage(Map<String, Object> data, String message) {
         return new GlobalResult()
                 .setCode(GlobalResultEnums.SUCCESS.getCode())
-                .setMessage(GlobalResultEnums.SUCCESS.getMessage())
+                .setMessage(message)
                 .setData(data);
     }
 

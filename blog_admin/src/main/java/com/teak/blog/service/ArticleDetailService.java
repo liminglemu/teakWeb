@@ -15,4 +15,7 @@ import com.teak.blog.entity.model.ArticleDetail;
 public interface ArticleDetailService extends IService<ArticleDetail> {
     ArticleDetail getArtDetailByArtId(Long articleId);
 
+    void redisInstallTest(String key, Object value);
+
+    Object redisGetTest(String key);
 }

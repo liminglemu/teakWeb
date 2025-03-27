@@ -12,11 +12,25 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.2.9:3306/mybatisDB?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.2.40:3306/mybatisDB?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     hikari:
       minimum-idle: 5
       maximum-pool-size: 20 # 最大连接数
       leak-detection-threshold: 5000 # 检测泄露时间
+  cache:
+    redis:
+      cache-null-values: false #是否缓存空值
+      time-to-live: 3600000 # 默认缓存过期时间
+  redis:
+    host: 192.168.2.40
+    port: 6379
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: 8  # 最大连接数（根据负载调整）
+        max-idle: 8   # 最大空闲连接
+        min-idle: 0   # 最小空闲连接
+        max-wait: 2000ms  # 获取连接最大等待时间
   profiles:
     active: dev
 mybatis-plus:

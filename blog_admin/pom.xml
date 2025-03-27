@@ -42,6 +42,12 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
 
+        <!-- Redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!-- 内部模块依赖 -->
         <dependency>
             <groupId>org.example</groupId>

@@ -13,12 +13,6 @@
 
     <dependencies>
 
-        <!-- 数据持久化层依赖 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-
         <!-- 序列化注解支持 -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

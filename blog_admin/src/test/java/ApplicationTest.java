@@ -18,14 +18,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -52,6 +51,8 @@ class ApplicationTest {
     private final DeviceFaultRecordsService deviceFaultRecordsService;
     @Autowired
     private IdWorker idWorker;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
 
     public static void main(String[] args) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -66,6 +67,31 @@ class ApplicationTest {
         String format = simpleDateFormat.format(new Date(503979602));
         log.info("format:{}", format);
 
+    }
+
+    @Test
+    void test12() {
+//        articleDetailService.redisInstallTest(String.valueOf(l), "我是redis数据的value，你能在redis中获取到我吗？");
+//        String revised = articleDetailService.redisGetTest("1905178472776019968");
+        ArrayList<ArticleDetail> articleDetails = new ArrayList<>();
+        ArticleDetail articleDetail1 = new ArticleDetail();
+        ArticleDetail articleDetail2 = new ArticleDetail();
+        ArticleDetail articleDetail3 = new ArticleDetail();
+        articleDetails.add(articleDetail1);
+        articleDetails.add(articleDetail2);
+        articleDetails.add(articleDetail3);
+
+        articleDetails.forEach(articleDetail -> {
+            long l = idWorker.nextId();
+            articleDetail.setId(l);
+            articleDetail.setContent("我是redis数据的value，你能在redis中获取到我吗？" + l);
+            articleDetail.setArticleName(articleDetail.getClass().getName());
+        });
+
+        redisTemplate.opsForValue().set("articleDetail", articleDetails);
+        // 获取时直接指定类型（自动反序列化）
+        List<ArticleDetail> revised = (List<ArticleDetail>) redisTemplate.opsForValue().get("articleDetail");
+        log.info("反序列化结果：{}", revised);
     }
 
     @Test
