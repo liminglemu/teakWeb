@@ -97,8 +97,7 @@ class ApplicationTest {
 
     @Test
     void test11() {
-        List<DeviceFaultRecordsVo> deviceFaultRecords = deviceFaultRecordsService.getDeviceFaultRecords("2020-01-01 00:00:00", "2025-02-01 12:30:30");
-        log.info("deviceFaultRecords:{}", deviceFaultRecords);
+        deviceFaultRecordsService.getDeviceFaultRecords("2020-01-01 00:00:00", "2025-02-01 12:30:30");
     }
 
     @Test
