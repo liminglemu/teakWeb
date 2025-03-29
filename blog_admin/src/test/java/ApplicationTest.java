@@ -7,6 +7,7 @@ import com.teak.blog.controller.XhProductController;
 import com.teak.blog.entity.model.Article;
 import com.teak.blog.entity.model.ArticleDetail;
 import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.DeviceFaultRecordsVo;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
 import com.teak.blog.service.ArticleService;
@@ -96,7 +97,8 @@ class ApplicationTest {
 
     @Test
     void test11() {
-        deviceFaultRecordsService.getDeviceFaultRecords("2020-01-01 00:00:00", "2025-02-01 12:30:30");
+        List<DeviceFaultRecordsVo> deviceFaultRecords = deviceFaultRecordsService.getDeviceFaultRecords("2020-01-01 00:00:00", "2025-02-01 12:30:30");
+        log.info("deviceFaultRecords:{}", deviceFaultRecords);
     }
 
     @Test
