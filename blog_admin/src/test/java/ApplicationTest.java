@@ -7,7 +7,6 @@ import com.teak.blog.controller.XhProductController;
 import com.teak.blog.entity.model.Article;
 import com.teak.blog.entity.model.ArticleDetail;
 import com.teak.blog.entity.model.UserDb;
-import com.teak.blog.entity.vo.DeviceFaultRecordsVo;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
 import com.teak.blog.service.ArticleService;

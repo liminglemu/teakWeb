@@ -3,14 +3,17 @@ package com.teak.blog;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
 
 /**
  * Created with: IntelliJ IDEA
@@ -27,6 +30,12 @@ import java.util.stream.Collectors;
 public class ServiceMonitorAspect {
 
     private static final ObjectMapper mapper = new ObjectMapper();
+    private final ExecutorService executorService;
+
+    public ServiceMonitorAspect(ExecutorService executorService) {
+        this.executorService = executorService;
+    }
+
     @Pointcut("execution(public * com.teak.blog.service.*.*(..))")
     public void ServiceMonitor() {
     }
@@ -34,28 +43,47 @@ public class ServiceMonitorAspect {
     @Around("ServiceMonitor()")
     public Object unifiedMonitor(ProceedingJoinPoint joinPoint) throws Throwable {
         // 方法签名记录
-        Signature signature = joinPoint.getSignature();
+        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
+
+        String[] paramNames = signature.getParameterNames(); // 获取参数名称数组
+        Object[] paramValues = joinPoint.getArgs(); // 获取参数值数组
+
+        // 构建参数键值对
+        Map<String, Object> paramMap = new LinkedHashMap<>();
+        for (int i = 0; i < paramNames.length; i++) {
+            paramMap.put(paramNames[i], paramValues[i]);
+        }
+
         String className = signature.getDeclaringTypeName();
         String methodName = signature.getName();
         String fullMethodName = className + "::" + methodName;
 
         // 参数记录
-        String params = mapper.writeValueAsString(joinPoint.getArgs());
-        log.info("方法 [{}] 参数详情: {}", fullMethodName, params);
+        String params = mapper.writeValueAsString(paramMap);
 
-        // 性能监控
-        long startTime = System.currentTimeMillis();
+        ArrayList<Future<?>> futures = new ArrayList<>();
+
+        futures.add(
+                executorService.submit(() -> log.info("方法 [{}] 参数详情: {}", fullMethodName, params))
+        );
+
+        // 精准计时开始
         long nanoStart = System.nanoTime();
-
-        Object result = joinPoint.proceed();
-
-        // 耗时计算
-        long duration = System.currentTimeMillis() - startTime;
+        Object result = joinPoint.proceed();  // 仅测量业务方法
         long nanoCost = (System.nanoTime() - nanoStart) / 1_000_000;
 
-        // 日志输出
-        log.info("[性能监控] {}.{} 执行耗时: {}ms", className, methodName, duration);
-        log.info("方法 [{}] 返回: {}", fullMethodName, mapper.writeValueAsString(result));
+        // 统一使用纳秒计时
+        futures.add(
+                executorService.submit(() -> log.info("[性能监控] {}.{} 执行耗时: {}ms", className, methodName, nanoCost))
+        );
+        String resultJson = mapper.writeValueAsString(result);
+        futures.add(
+                executorService.submit(() -> log.info("方法 [{}] 返回: {}", fullMethodName, resultJson))
+        );
+
+        for (Future<?> future : futures) {
+            future.get();
+        }
 
         // 超时告警
         if (nanoCost > 1000) {
@@ -65,53 +93,4 @@ public class ServiceMonitorAspect {
         return result;
     }
 
-
-    /*@Around("ServiceMonitor()")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-        long startTime = System.currentTimeMillis();
-        Object result = joinPoint.proceed();
-        long duration = System.currentTimeMillis() - startTime;
-
-        log.info("[当前线程]{}|[性能监控] {}.{} 执行耗时: {}ms",
-                Thread.currentThread().getName(),
-                joinPoint.getSignature().getDeclaringTypeName(),
-                joinPoint.getSignature().getName(),
-                duration);
-
-        return result;
-    }
-
-    // 环绕增强逻辑
-    @Around("ServiceMonitor()")
-    public Object logMethodName(ProceedingJoinPoint joinPoint) throws Throwable {
-        Signature signature = joinPoint.getSignature();
-        // 组合类名+方法名
-        String className = signature.getDeclaringTypeName(); // 获取类全限定名
-        String methodName = signature.getName();
-        String fullMethodName = String.format("%s::%s", className, methodName);
-
-        Object[] args = joinPoint.getArgs();
-        String params = Arrays.stream(args)
-                .map(arg -> ToStringBuilder.reflectionToString(arg, ToStringStyle.SHORT_PREFIX_STYLE))
-                .collect(Collectors.joining(", "));
-        log.info("方法 [{}] 参数详情: {}", fullMethodName, params);
-        Object result = joinPoint.proceed();
-
-        String resultJson = mapper.writeValueAsString(result);
-        log.info("方法 [{}] 返回: {}", fullMethodName, resultJson);
-        return result;
-    }
-
-    @Around("ServiceMonitor()")
-    public Object performanceMonitor(ProceedingJoinPoint joinPoint) throws Throwable {
-        long start = System.nanoTime();
-        try {
-            return joinPoint.proceed();
-        } finally {
-            long cost = (System.nanoTime() - start) / 1_000_000;
-            if (cost > 1000) { // 超过1秒告警
-                log.warn("{} 超时！超时！超时！ {} ms", joinPoint.getSignature().toShortString(), cost);
-            }
-        }
-    }*/
 }

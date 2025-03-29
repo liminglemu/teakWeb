@@ -2,8 +2,6 @@ package com.teak.blog.entity.vo;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * Created with: IntelliJ IDEA
  *

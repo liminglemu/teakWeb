@@ -1,0 +1,4 @@
+2025-03-29 16:27:26.097 [main] WARN  com.teak.blog.ServiceMonitorAspect - [超时告警] DeviceFaultRecordsServiceImpl#getDeviceFaultRecords 耗时 756855500ms (阈值: 1000ms)
+2025-03-29 16:28:54.443 [main] WARN  com.teak.blog.ServiceMonitorAspect - [超时告警] DeviceFaultRecordsServiceImpl#getDeviceFaultRecords 耗时 771406800ms (阈值: 1000ms)
+2025-03-29 16:29:33.254 [main] WARN  com.teak.blog.ServiceMonitorAspect - [超时告警] DeviceFaultRecordsServiceImpl#getDeviceFaultRecords 耗时 690236000ms (阈值: 1000ms)
+2025-03-29 17:02:54.930 [main] WARN  com.teak.blog.ServiceMonitorAspect - DeviceFaultRecordsServiceImpl.getDeviceFaultRecords(..) 超时警告！耗时 1026 ms
