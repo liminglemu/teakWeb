@@ -1,0 +1,430 @@
+2025-03-29 15:25:14.658 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 23456 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 15:25:14.658 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 23456 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 15:25:14.660 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 15:25:14.660 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 15:25:15.372 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 15:25:15.372 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 15:25:15.375 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 15:25:15.375 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 15:25:15.407 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2025-03-29 15:25:15.407 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2025-03-29 15:25:16.183 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 15:25:16.183 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 15:25:16.190 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:25:16.190 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:25:16.191 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 15:25:16.191 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 15:25:16.192 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 15:25:16.192 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 15:25:16.280 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 15:25:16.280 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1580 ms
+2025-03-29 15:25:16.280 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 15:25:16.280 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1580 ms
+2025-03-29 15:25:16.775 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 15:25:16.775 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 15:25:17.102 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:25:17.102 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:25:17.116 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 15:25:17.116 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 15:25:17.161 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 2.919 seconds (JVM running for 3.437)
+2025-03-29 15:25:17.161 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 2.919 seconds (JVM running for 3.437)
+2025-03-29 15:25:17.171 [main] INFO  com.teak.blog.BlogAdminApplication -                                                                                
+                                                                               
+    ___                                 ,-.          .---.                     
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,    
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|    
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :    
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :    
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-. 
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  | 
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / : 
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: | 
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ : 
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    | 
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /  
+             `----'   `--`---'                  '---"       `----'  `-'----'   
+                                                                               
+2025-03-29 15:25:17.171 [main] INFO  com.teak.blog.BlogAdminApplication -                                                                                
+                                                                               
+    ___                                 ,-.          .---.                     
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,    
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|    
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :    
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :    
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-. 
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  | 
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / : 
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: | 
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ : 
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    | 
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /  
+             `----'   `--`---'                  '---"       `----'  `-'----'   
+                                                                               
+2025-03-29 15:25:17.354 [RMI TCP Connection(1)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 15:25:17.354 [RMI TCP Connection(1)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 15:25:17.354 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 15:25:17.354 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 15:25:17.381 [RMI TCP Connection(2)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 15:25:17.381 [RMI TCP Connection(2)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 15:25:17.516 [RMI TCP Connection(1)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 15:25:17.516 [RMI TCP Connection(1)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 15:25:17.604 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 250 ms
+2025-03-29 15:25:17.604 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 250 ms
+2025-03-29 15:25:17.654 [RMI TCP Connection(2)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 15:25:17.654 [RMI TCP Connection(2)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 15:25:57.404 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-03-29 15:25:57.404 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-03-29 15:25:57.405 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-03-29 15:25:57.405 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-03-29 15:25:57.522 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-29 15:25:57.522 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-29 15:25:57.528 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-29 15:25:57.528 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-29 15:26:02.187 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 27776 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 15:26:02.187 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 27776 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 15:26:02.189 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 15:26:02.189 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 15:26:02.863 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 15:26:02.863 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 15:26:02.865 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 15:26:02.865 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 15:26:02.891 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-03-29 15:26:02.891 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2025-03-29 15:26:03.633 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 15:26:03.633 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 15:26:03.639 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:26:03.639 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:26:03.640 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 15:26:03.640 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 15:26:03.641 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 15:26:03.641 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 15:26:03.720 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 15:26:03.720 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 15:26:03.721 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1498 ms
+2025-03-29 15:26:03.721 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1498 ms
+2025-03-29 15:26:04.162 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 15:26:04.162 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 15:26:04.463 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:26:04.463 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 15:26:04.478 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 15:26:04.478 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 15:26:04.517 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 2.687 seconds (JVM running for 3.11)
+2025-03-29 15:26:04.517 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 2.687 seconds (JVM running for 3.11)
+2025-03-29 15:26:04.527 [main] INFO  com.teak.blog.BlogAdminApplication - 
+
+    ___                                 ,-.          .---.
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-.
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  |
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / :
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: |
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ :
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    |
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /
+             `----'   `--`---'                  '---"       `----'  `-'----'
+
+2025-03-29 15:26:04.527 [main] INFO  com.teak.blog.BlogAdminApplication - 
+
+    ___                                 ,-.          .---.
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-.
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  |
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / :
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: |
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ :
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    |
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /
+             `----'   `--`---'                  '---"       `----'  `-'----'
+
+2025-03-29 15:26:04.965 [RMI TCP Connection(1)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 15:26:04.965 [RMI TCP Connection(1)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 15:26:04.965 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 15:26:04.965 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 15:26:04.988 [RMI TCP Connection(3)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 15:26:04.988 [RMI TCP Connection(3)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 15:26:05.093 [RMI TCP Connection(1)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 15:26:05.093 [RMI TCP Connection(1)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 15:26:05.162 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 196 ms
+2025-03-29 15:26:05.162 [RMI TCP Connection(1)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 196 ms
+2025-03-29 15:26:05.225 [RMI TCP Connection(3)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 15:26:05.225 [RMI TCP Connection(3)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 17:26:26.320 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 44500 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 17:26:26.320 [main] INFO  com.teak.blog.BlogAdminApplication - Starting BlogAdminApplication using Java 17.0.14 on Teak with PID 44500 (D:\IdeaProjects\teakWeb\blog_admin\target\classes started by 14014 in D:\IdeaProjects\teakWeb)
+2025-03-29 17:26:26.323 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 17:26:26.323 [main] INFO  com.teak.blog.BlogAdminApplication - The following 1 profile is active: "dev"
+2025-03-29 17:26:27.049 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 17:26:27.049 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-03-29 17:26:27.051 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 17:26:27.051 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-03-29 17:26:27.084 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-03-29 17:26:27.084 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-03-29 17:26:27.936 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 17:26:27.936 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+2025-03-29 17:26:27.943 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 17:26:27.943 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 17:26:27.945 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 17:26:27.945 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-29 17:26:27.946 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 17:26:27.946 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-03-29 17:26:28.043 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 17:26:28.043 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-29 17:26:28.043 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1670 ms
+2025-03-29 17:26:28.043 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1670 ms
+2025-03-29 17:26:28.575 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 17:26:28.575 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-03-29 17:26:28.966 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 17:26:28.966 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8001"]
+2025-03-29 17:26:28.992 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 17:26:28.992 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+2025-03-29 17:26:29.047 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 3.139 seconds (JVM running for 3.61)
+2025-03-29 17:26:29.047 [main] INFO  com.teak.blog.BlogAdminApplication - Started BlogAdminApplication in 3.139 seconds (JVM running for 3.61)
+2025-03-29 17:26:29.059 [main] INFO  com.teak.blog.BlogAdminApplication - 
+
+    ___                                 ,-.          .---.
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-.
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  |
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / :
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: |
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ :
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    |
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /
+             `----'   `--`---'                  '---"       `----'  `-'----'
+
+2025-03-29 17:26:29.059 [main] INFO  com.teak.blog.BlogAdminApplication - 
+
+    ___                                 ,-.          .---.
+  ,--.'|_                           ,--/ /|         /. ./|            ,---,
+  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|
+  :  : ' :                        :  : ' /     /__./ \ : |          |   | :
+.;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \' .   ,---.  :   : :
+|  |   |     /     \   /       \  '  |  : /___/ \ |    ' '  /     \ :     |,-.
+:__,'| :    /    /  | .--.  .-. | |  |   \;   \  \;      : /    /  ||   : '  |
+  '  : |__ .    ' / |  \__\/: . . '  : |. \\   ;  `      |.    ' / ||   |  / :
+  |  | '.'|'   ;   /|  ," .--.; | |  | ' \ \.   \    .\  ;'   ;   /|'   : |: |
+  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \   \   ' \ |'   |  / ||   | '/ :
+  |  ,   / |   :    |;  :   .'   \;  |,'      :   '  |--" |   :    ||   :    |
+   ---`-'   \   \  / |  ,     .-./'--'         \   \ ;     \   \  / /    \  /
+             `----'   `--`---'                  '---"       `----'  `-'----'
+
+2025-03-29 17:26:29.452 [RMI TCP Connection(2)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 17:26:29.452 [RMI TCP Connection(2)-192.168.2.40] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-29 17:26:29.453 [RMI TCP Connection(2)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 17:26:29.453 [RMI TCP Connection(2)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-29 17:26:29.478 [RMI TCP Connection(4)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 17:26:29.478 [RMI TCP Connection(4)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-29 17:26:29.577 [RMI TCP Connection(2)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 17:26:29.577 [RMI TCP Connection(2)-192.168.2.40] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-03-29 17:26:29.654 [RMI TCP Connection(2)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 201 ms
+2025-03-29 17:26:29.654 [RMI TCP Connection(2)-192.168.2.40] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 201 ms
+2025-03-29 17:26:29.723 [RMI TCP Connection(4)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 17:26:29.723 [RMI TCP Connection(4)-192.168.2.40] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-29 17:27:11.028 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:11.028 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:11.097 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:11.097 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:11.109 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:11.109 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:11.140 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":10,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:11.140 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":10,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:11.394 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 253ms
+2025-03-29 17:27:11.394 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 253ms
+2025-03-29 17:27:11.425 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":10,"current":1,"pages":2}
+2025-03-29 17:27:11.425 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":10,"current":1,"pages":2}
+2025-03-29 17:27:11.454 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:11.454 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:11.454 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:11.454 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:27.951 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:27.951 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:27.952 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:27.952 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:27.952 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:27.952 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:27.955 [AsyncPool-3] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:27.955 [AsyncPool-3] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:27.974 [AsyncPool-4] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 19ms
+2025-03-29 17:27:27.974 [AsyncPool-4] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 19ms
+2025-03-29 17:27:27.975 [AsyncPool-5] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":1,"pages":6}
+2025-03-29 17:27:27.975 [AsyncPool-5] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":1,"pages":6}
+2025-03-29 17:27:27.978 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:27.978 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:27.978 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:27.978 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:40.168 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:40.168 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:40.169 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:40.169 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:40.169 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:40.169 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:40.172 [AsyncPool-6] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":2,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:40.172 [AsyncPool-6] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":2,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:40.186 [AsyncPool-10] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":2,"pages":6}
+2025-03-29 17:27:40.186 [AsyncPool-10] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":2,"pages":6}
+2025-03-29 17:27:40.186 [AsyncPool-7] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 13ms
+2025-03-29 17:27:40.186 [AsyncPool-7] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 13ms
+2025-03-29 17:27:40.188 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:40.188 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:40.189 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:40.189 [http-nio-0.0.0.0-8001-exec-3] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:41.247 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:41.247 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:41.248 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:41.248 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:41.248 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:41.248 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:41.250 [AsyncPool-9] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":3,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:41.250 [AsyncPool-9] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":3,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:41.267 [AsyncPool-8] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 16ms
+2025-03-29 17:27:41.267 [AsyncPool-8] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 16ms
+2025-03-29 17:27:41.268 [AsyncPool-11] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":3,"pages":6}
+2025-03-29 17:27:41.268 [AsyncPool-11] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":3,"pages":6}
+2025-03-29 17:27:41.271 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:41.271 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:41.271 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:41.271 [http-nio-0.0.0.0-8001-exec-4] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.165 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:42.165 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:42.166 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.166 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.167 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:42.167 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:42.170 [AsyncPool-12] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":4,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:42.170 [AsyncPool-12] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":4,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:42.183 [AsyncPool-13] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 13ms
+2025-03-29 17:27:42.183 [AsyncPool-13] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 13ms
+2025-03-29 17:27:42.184 [AsyncPool-14] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":4,"pages":6}
+2025-03-29 17:27:42.184 [AsyncPool-14] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":4,"pages":6}
+2025-03-29 17:27:42.187 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:42.187 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:42.188 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.188 [http-nio-0.0.0.0-8001-exec-5] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.712 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:42.712 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:42.713 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.713 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.713 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:42.713 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:42.716 [AsyncPool-15] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":5,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:42.716 [AsyncPool-15] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":5,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:42.725 [AsyncPool-20] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 9ms
+2025-03-29 17:27:42.725 [AsyncPool-20] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 9ms
+2025-03-29 17:27:42.725 [AsyncPool-17] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":5,"pages":6}
+2025-03-29 17:27:42.725 [AsyncPool-17] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":5,"pages":6}
+2025-03-29 17:27:42.728 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:42.728 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:42.729 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:42.729 [http-nio-0.0.0.0-8001-exec-6] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:43.676 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:43.676 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:43.677 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:43.677 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:43.678 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:43.678 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:43.679 [AsyncPool-22] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":6,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:43.679 [AsyncPool-22] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":6,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:43.690 [AsyncPool-19] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 10ms
+2025-03-29 17:27:43.690 [AsyncPool-16] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":1,"statusString":"已发布","createTime":1741269921000,"updateTime":1741269921000,"isDeleted":0,"isDeletedString":null,"id":1897649706481651714,"title":"新测试6","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":1,"statusString":"已发布","createTime":1741275750000,"updateTime":1741275750000,"isDeleted":0,"isDeletedString":null,"id":1897674152894435330,"title":"新测试6","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":6,"pages":6}
+2025-03-29 17:27:43.690 [AsyncPool-19] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 10ms
+2025-03-29 17:27:43.690 [AsyncPool-16] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":1,"statusString":"已发布","createTime":1741269921000,"updateTime":1741269921000,"isDeleted":0,"isDeletedString":null,"id":1897649706481651714,"title":"新测试6","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":1,"statusString":"已发布","createTime":1741275750000,"updateTime":1741275750000,"isDeleted":0,"isDeletedString":null,"id":1897674152894435330,"title":"新测试6","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":6,"pages":6}
+2025-03-29 17:27:43.693 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:43.693 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:43.693 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:43.693 [http-nio-0.0.0.0-8001-exec-7] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:44.216 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:44.216 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:44.217 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:44.217 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:44.218 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:44.218 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:44.220 [AsyncPool-21] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":5,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:44.220 [AsyncPool-21] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":5,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:44.230 [AsyncPool-18] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 9ms
+2025-03-29 17:27:44.230 [AsyncPool-18] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 9ms
+2025-03-29 17:27:44.230 [AsyncPool-23] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":5,"pages":6}
+2025-03-29 17:27:44.230 [AsyncPool-23] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741269578000,"updateTime":1741269578000,"isDeleted":0,"isDeletedString":null,"id":1897648267959779330,"title":"新测试4","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269840000,"updateTime":1741269840000,"isDeleted":0,"isDeletedString":null,"id":1897649364515856386,"title":"新测试5","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":5,"pages":6}
+2025-03-29 17:27:44.234 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:44.234 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:44.234 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:44.234 [http-nio-0.0.0.0-8001-exec-8] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.074 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:45.074 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:45.075 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.075 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.075 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:45.075 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:45.077 [AsyncPool-24] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":4,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:45.077 [AsyncPool-24] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":4,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:45.088 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 10ms
+2025-03-29 17:27:45.088 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 10ms
+2025-03-29 17:27:45.088 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":4,"pages":6}
+2025-03-29 17:27:45.088 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1741246377000,"updateTime":1741246377000,"isDeleted":0,"isDeletedString":null,"id":1897550954616635394,"title":"新测试标题","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1741269098000,"updateTime":1741269098000,"isDeleted":0,"isDeletedString":null,"id":1897646254446395394,"title":"新测试3","cateId":1897550544090742785,"cateName":"新测试","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":4,"pages":6}
+2025-03-29 17:27:45.090 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:45.090 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:45.090 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.090 [http-nio-0.0.0.0-8001-exec-9] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.342 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:45.342 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:45.342 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.342 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.343 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:45.343 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:45.344 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":3,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:45.344 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":3,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:45.356 [AsyncPool-3] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 11ms
+2025-03-29 17:27:45.356 [AsyncPool-3] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 11ms
+2025-03-29 17:27:45.356 [AsyncPool-4] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":3,"pages":6}
+2025-03-29 17:27:45.356 [AsyncPool-4] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740848209000,"updateTime":1740848209000,"isDeleted":0,"isDeletedString":null,"id":1895880915696590848,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740890514000,"updateTime":1740890514000,"isDeleted":0,"isDeletedString":null,"id":1896058355940593664,"title":"docker测试","cateId":1895881640912723968,"cateName":"新课题","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":3,"pages":6}
+2025-03-29 17:27:45.360 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:45.360 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:45.360 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:45.360 [http-nio-0.0.0.0-8001-exec-10] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.282 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:46.282 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:46.283 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.283 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.283 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:46.283 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:46.285 [AsyncPool-5] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":2,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:46.285 [AsyncPool-5] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":2,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:46.294 [AsyncPool-6] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 8ms
+2025-03-29 17:27:46.294 [AsyncPool-6] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 8ms
+2025-03-29 17:27:46.294 [AsyncPool-10] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":2,"pages":6}
+2025-03-29 17:27:46.294 [AsyncPool-10] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740847771000,"updateTime":1740847771000,"isDeleted":0,"isDeletedString":null,"id":1895879079556030464,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740848160000,"updateTime":1740848160000,"isDeleted":0,"isDeletedString":null,"id":1895880709546549248,"title":"学习好累","cateId":1894730173338107904,"cateName":"打赏课2","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":2,"pages":6}
+2025-03-29 17:27:46.296 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:46.296 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:46.297 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.297 [http-nio-0.0.0.0-8001-exec-1] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.668 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:46.668 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.filter.CustomFilter - 请求处理：执行过滤器逻辑
+2025-03-29 17:27:46.669 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.669 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求预处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.669 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:46.669 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.controller.ArticleController - threadData:我存储了线程数据你能获取吗
+2025-03-29 17:27:46.672 [AsyncPool-7] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:46.672 [AsyncPool-7] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 参数详情: {"pageNum":1,"pageSize":2,"category":null,"status":null,"userId":1894330079119998976}
+2025-03-29 17:27:46.684 [AsyncPool-8] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":1,"pages":6}
+2025-03-29 17:27:46.683 [AsyncPool-9] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 11ms
+2025-03-29 17:27:46.683 [AsyncPool-9] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.ArticleServiceImpl.getPage 执行耗时: 11ms
+2025-03-29 17:27:46.684 [AsyncPool-8] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.ArticleServiceImpl::getPage] 返回: {"records":[{"status":0,"statusString":"草稿","createTime":1740846127000,"updateTime":1740846127000,"isDeleted":0,"isDeletedString":null,"id":1895872184137105408,"title":"案例2","cateId":1894731246425620480,"cateName":"星球1","userId":1894330079119998976,"userName":"admi"},{"status":0,"statusString":"草稿","createTime":1740847635000,"updateTime":1740847635000,"isDeleted":0,"isDeletedString":null,"id":1895878510271537152,"title":"新的开始","cateId":1894654907110666240,"cateName":"新语文","userId":1894330079119998976,"userName":"admi"}],"total":12,"size":2,"current":1,"pages":6}
+2025-03-29 17:27:46.687 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:46.687 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求postHandle处理：modelAndView org.apache.catalina.connector.ResponseFacade@1ea75932
+2025-03-29 17:27:46.687 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:27:46.687 [http-nio-0.0.0.0-8001-exec-2] INFO  com.teak.blog.interceptor.CustomInterceptor - 请求afterCompletion处理：拦截到请求 /api/article/getArticlePage
+2025-03-29 17:28:41.173 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-03-29 17:28:41.173 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-03-29 17:28:41.174 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-03-29 17:28:41.174 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-03-29 17:28:41.300 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-29 17:28:41.300 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-29 17:28:41.315 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-29 17:28:41.315 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

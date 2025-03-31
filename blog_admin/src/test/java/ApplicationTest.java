@@ -73,7 +73,7 @@ class ApplicationTest {
     void test12() {
 //        articleDetailService.redisInstallTest(String.valueOf(l), "我是redis数据的value，你能在redis中获取到我吗？");
 //        String revised = articleDetailService.redisGetTest("1905178472776019968");
-        ArrayList<ArticleDetail> articleDetails = new ArrayList<>();
+        /*ArrayList<ArticleDetail> articleDetails = new ArrayList<>();
         ArticleDetail articleDetail1 = new ArticleDetail();
         ArticleDetail articleDetail2 = new ArticleDetail();
         ArticleDetail articleDetail3 = new ArticleDetail();
@@ -88,7 +88,7 @@ class ApplicationTest {
             articleDetail.setArticleName(articleDetail.getClass().getName());
         });
 
-        redisTemplate.opsForValue().set("articleDetail", articleDetails);
+        redisTemplate.opsForValue().set("articleDetail", articleDetails);*/
         // 获取时直接指定类型（自动反序列化）
         List<ArticleDetail> revised = (List<ArticleDetail>) redisTemplate.opsForValue().get("articleDetail");
         log.info("反序列化结果：{}", revised);
