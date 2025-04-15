@@ -1,13 +1,13 @@
 package com.teak.blog.interceptor;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created with: IntelliJ IDEA
@@ -25,7 +25,6 @@ public class CustomInterceptor implements HandlerInterceptor {
         // 预处理逻辑（如参数校验、权限检查）
         log.info("请求预处理：拦截到请求 {}", request.getRequestURI());
         /*可以在当前线程进行数据传输*/
-//        RequestAttributes attributes = new ServletRequestAttributes(request);
         RequestAttributes attributes = RequestContextHolder.currentRequestAttributes();
         attributes.setAttribute("THREAD_DATA", "我存储了线程数据你能获取吗", RequestAttributes.SCOPE_REQUEST);
 

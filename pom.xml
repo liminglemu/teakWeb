@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.18</version>  <!-- 升级到支持 Java 17 的版本 -->
+        <version>3.0.5</version>  <!-- 升级到支持 Java 17 的版本 -->
     </parent>
 
     <dependencyManagement>
@@ -81,6 +81,12 @@
                 <artifactId>hutool-all</artifactId>
                 <version>5.8.20</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>3.1.8</version> <!-- 使用最新版本 -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -88,7 +94,7 @@
         <java.version>17</java.version>  <!-- 设置 Java 17 -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <spring-boot.version>2.7.18</spring-boot.version> <!-- 升级到最新稳定版 -->
+        <spring-boot.version>3.0.5</spring-boot.version> <!-- 升级到最新稳定版 -->
         <mybatis-plus.version>3.5.6</mybatis-plus.version> <!-- 兼容Spring Boot 2.7 -->
         <mysql.version>8.0.33</mysql.version> <!-- 最新版 -->
         <lombok.version>1.18.32</lombok.version> <!-- LTS版本 -->

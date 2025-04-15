@@ -33,7 +33,7 @@ public class OssConfig {
 
     @Bean
     public OSS ossClient() {
-        log.info("初始化Oss");
+        log.info("✅ 初始化Oss");
         log.info("endpoint:{}", endpoint);
         log.info("bucketName:{}", bucketName);
         return new OSSClientBuilder().build(endpoint, "LTAI5t8tbEDxXwWupFqPaBEj", "ETendtTuR2F84iZPvEeJDbChDr428C");

@@ -12,6 +12,8 @@ import com.teak.blog.service.ArticleDetailService;
 import com.teak.blog.service.ArticleService;
 import com.teak.blog.service.DeviceFaultRecordsService;
 import com.teak.blog.utils.IdWorker;
+import com.teak.blog.utils.TeakUtils;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -49,6 +51,7 @@ class ApplicationTest {
     private final ArticleDetailService articleDetailService;
     private final ExecutorService executorService;
     private final DeviceFaultRecordsService deviceFaultRecordsService;
+    private final TeakUtils teakUtils;
     @Autowired
     private IdWorker idWorker;
     @Autowired
@@ -67,6 +70,43 @@ class ApplicationTest {
         String format = simpleDateFormat.format(new Date(503979602));
         log.info("format:{}", format);
 
+    }
+
+    // 测试用内部类
+    @Data
+    static class TestDTO {
+        private String name;
+        private Integer age;
+        private Boolean isAdmin;
+    }
+
+    @Data
+    static class TestEntity {
+        private String name;
+        private Integer age;
+        private Boolean isAdmin;
+        private String existingField = "original";
+    }
+
+    @Test
+    void test13() {
+        // Arrange
+        TestDTO source = new TestDTO();
+        source.setName("John");
+        source.setAge(null); // 空字段
+        source.setIsAdmin(true);
+
+        TestEntity target = new TestEntity();
+        target.setName("Original");
+        target.setAge(20);
+
+        // Act
+        teakUtils.updateFromDto(source, target);
+
+        log.info("target.getName:{}", target.getName());
+        log.info("target.getAge:{}", target.getAge());
+        log.info("target.getIsAdmin:{}", target.getIsAdmin());
+        log.info("target.getExistingField:{}", target.getExistingField());
     }
 
     @Test
