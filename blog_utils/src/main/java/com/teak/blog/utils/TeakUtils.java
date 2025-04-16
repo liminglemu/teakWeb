@@ -1,5 +1,6 @@
 package com.teak.blog.utils;
 
+
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import lombok.extern.slf4j.Slf4j;
@@ -147,11 +148,8 @@ public class TeakUtils {
         BeanUtils.copyProperties(source, target, getNullPropertyNames(source));
     }
 
-
     // 在类顶部添加缓存声明
-    private static final Cache<Class<?>, List<String>> PROPERTY_NAMES_CACHE = Caffeine.newBuilder()
-            .maximumSize(1000)
-            .build();
+    private static final Cache<Class<?>, List<String>> PROPERTY_NAMES_CACHE = Caffeine.newBuilder().maximumSize(1000).build();
 
     /**
      * 获取空属性名数组工具方法
