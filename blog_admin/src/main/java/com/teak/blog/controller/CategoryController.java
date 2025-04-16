@@ -5,8 +5,9 @@ import com.teak.blog.entity.vo.CategoryVo;
 import com.teak.blog.handler.GlobalExceptionHandler;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.CategoryService;
+import com.teak.blog.utils.TeakUtils;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -24,12 +25,12 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/api/category")
+@RequiredArgsConstructor
 public class CategoryController {
+
     private final CategoryService categoryService;
 
-    public CategoryController(CategoryService categoryService) {
-        this.categoryService = categoryService;
-    }
+    private final TeakUtils teakUtils;
 
     @GetMapping("/list")
     public GlobalResult list(@RequestParam Long id) {
@@ -44,7 +45,7 @@ public class CategoryController {
         HashMap<String, Object> hashMap = new HashMap<>();
         try {
             Category category = new Category();
-            BeanUtils.copyProperties(categoryVo.getArticle(), category);
+            teakUtils.copyProperties(categoryVo.getArticle(), category);
             category.setUserId(categoryVo.getUserId());
             categoryService.addArticle(category);
             hashMap.put("category", category);
@@ -60,8 +61,7 @@ public class CategoryController {
     public GlobalResult updateArticle(@RequestBody CategoryVo categoryVo) {
         try {
             Category category = new Category();
-            BeanUtils.copyProperties(categoryVo.getArticle(), category);
-
+            teakUtils.copyProperties(categoryVo.getArticle(), category);
             category.setUpdateTime(null);
             categoryService.updateArticle(category);
             return GlobalResult.success(null);

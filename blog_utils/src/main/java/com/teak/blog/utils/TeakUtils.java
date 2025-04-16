@@ -144,7 +144,7 @@ public class TeakUtils {
      * @param <V>    原类型
      * @param <T>    目标类型
      */
-    public <V, T> void updateFromDto(V source, T target) {
+    public <V, T> void copyProperties(V source, T target) {
         BeanUtils.copyProperties(source, target, getNullPropertyNames(source));
     }
 

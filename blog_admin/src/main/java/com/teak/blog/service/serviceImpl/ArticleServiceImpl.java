@@ -13,6 +13,7 @@ import com.teak.blog.mapper.ArticleMapper;
 import com.teak.blog.mapper.CategoryMapper;
 import com.teak.blog.mapper.UserDbMapper;
 import com.teak.blog.service.ArticleService;
+import com.teak.blog.utils.TeakUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -40,12 +41,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     private final ArticleDetailMapper articleDetailMapper;
     private final CategoryMapper categoryMapper;
     private final UserDbMapper userDbMapper;
+    private final TeakUtils teakUtils;
 
-    public ArticleServiceImpl(ArticleMapper articleMapper, ArticleDetailMapper articleDetailMapper, CategoryMapper categoryMapper, UserDbMapper userDbMapper) {
+    public ArticleServiceImpl(ArticleMapper articleMapper, ArticleDetailMapper articleDetailMapper, CategoryMapper categoryMapper, UserDbMapper userDbMapper, TeakUtils teakUtils) {
         this.articleMapper = articleMapper;
         this.articleDetailMapper = articleDetailMapper;
         this.categoryMapper = categoryMapper;
         this.userDbMapper = userDbMapper;
+        this.teakUtils = teakUtils;
     }
 
     @Transactional(rollbackFor = Exception.class)
@@ -104,7 +107,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     @Transactional(rollbackFor = Exception.class)
     public Article addArticle(ArticleVo articleVo) {
         Article article = new Article();
-        BeanUtils.copyProperties(articleVo, article);
+        teakUtils.copyProperties(articleVo, article);
 
         Category category = categoryMapper.getByCateName(articleVo.getCategoryName(), articleVo.getUserId());
         article.setCateId(category.getId());

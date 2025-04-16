@@ -101,7 +101,7 @@ class ApplicationTest {
         target.setAge(20);
 
         // Act
-        teakUtils.updateFromDto(source, target);
+        teakUtils.copyProperties(source, target);
 
         log.info("target.getName:{}", target.getName());
         log.info("target.getAge:{}", target.getAge());
