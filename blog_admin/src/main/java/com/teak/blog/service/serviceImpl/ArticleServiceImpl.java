@@ -14,8 +14,8 @@ import com.teak.blog.mapper.CategoryMapper;
 import com.teak.blog.mapper.UserDbMapper;
 import com.teak.blog.service.ArticleService;
 import com.teak.blog.utils.TeakUtils;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,20 +36,18 @@ import static com.teak.blog.ContentStatusConstants.STATUS_TO_CODE_MAP;
  */
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements ArticleService {
-    private final ArticleMapper articleMapper;
-    private final ArticleDetailMapper articleDetailMapper;
-    private final CategoryMapper categoryMapper;
-    private final UserDbMapper userDbMapper;
-    private final TeakUtils teakUtils;
 
-    public ArticleServiceImpl(ArticleMapper articleMapper, ArticleDetailMapper articleDetailMapper, CategoryMapper categoryMapper, UserDbMapper userDbMapper, TeakUtils teakUtils) {
-        this.articleMapper = articleMapper;
-        this.articleDetailMapper = articleDetailMapper;
-        this.categoryMapper = categoryMapper;
-        this.userDbMapper = userDbMapper;
-        this.teakUtils = teakUtils;
-    }
+    private final ArticleMapper articleMapper;
+
+    private final ArticleDetailMapper articleDetailMapper;
+
+    private final CategoryMapper categoryMapper;
+
+    private final UserDbMapper userDbMapper;
+
+    private final TeakUtils teakUtils;
 
     @Transactional(rollbackFor = Exception.class)
     @Override
