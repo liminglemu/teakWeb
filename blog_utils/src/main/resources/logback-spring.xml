@@ -4,7 +4,7 @@
     <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="teakWeb"/>
 
     <!-- 增强型彩色日志格式 -->
-    <property name="LOG_PATH" value="./logs/${APP_NAME}"/>
+    <property name="LOG_PATH" value="./${APP_NAME}/logs"/>
     <property name="MAX_HISTORY" value="30"/>
     <property name="CONSOLE_PATTERN"
               value="%cyan(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level){INFO=green} %magenta([%thread]) %yellow(%logger{36}) - %green(%msg%n)"/>
