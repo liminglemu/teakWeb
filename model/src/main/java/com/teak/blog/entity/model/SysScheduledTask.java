@@ -1,5 +1,7 @@
 package com.teak.blog.entity.model;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import com.teak.blog.entity.BaseModel;
@@ -28,6 +30,7 @@ public class SysScheduledTask extends BaseModel implements Serializable {
      * 主键
      */
     @SnowflakeAlgorithm
+    @TableField(fill = FieldFill.INSERT)
     private Long id;
 
     /**
@@ -54,16 +57,5 @@ public class SysScheduledTask extends BaseModel implements Serializable {
      * 方法参数(JSON格式)
      */
     private String params;
-
-    /**
-     * 1启用 0停用
-     */
-    private Integer status;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-    private Integer isDeleted;
 
 }

@@ -50,10 +50,8 @@ public class ArticleController {
 
     @PostMapping("/addArticle")
     public GlobalResult addArticle(@RequestBody ArticleVo articleVo) {
-        HashMap<String, Object> hashMap = new HashMap<>();
         Article article = articleService.addArticle(articleVo);
-        hashMap.put("article", article);
-        return GlobalResult.success(hashMap);
+        return GlobalResult.success(article);
     }
 
     @PostMapping("/delArticle")

@@ -23,7 +23,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @RequiredArgsConstructor
 public class ArticleDetailServiceImpl extends ServiceImpl<ArticleDetailMapper, ArticleDetail> implements ArticleDetailService {
+
     private final ArticleDetailMapper articleDetailMapper;
+
     private final RedisTemplate<String, Object> redisTemplate;
 
     @Override

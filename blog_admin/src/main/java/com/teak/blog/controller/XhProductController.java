@@ -43,12 +43,10 @@ public class XhProductController {
         log.info("添加商品");
         log.info(xhProduct.toString());
         boolean flag = xhProductService.save(xhProduct);
-        HashMap<String, Object> hashMap = new HashMap<>();
-        hashMap.put("flag", flag);
         if (flag) {
-            return GlobalResult.success(hashMap);
+            return GlobalResult.success( flag);
         } else {
-            return GlobalResult.error(hashMap);
+            return GlobalResult.error( flag);
         }
     }
 

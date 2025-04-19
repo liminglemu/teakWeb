@@ -6,6 +6,7 @@ import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import com.teak.blog.entity.BaseModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -21,6 +22,7 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @TableName(value = "article")
+@ToString
 public class Article extends BaseModel implements Serializable {
     @SnowflakeAlgorithm
     private Long id;

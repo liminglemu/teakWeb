@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="generate.SysScheduledTaskDao">
+<mapper namespace="com.teak.blog.mapper.SysScheduledTaskMapper">
   <resultMap id="BaseResultMap" type="com.teak.blog.entity.model.SysScheduledTask">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="task_name" jdbcType="VARCHAR" property="taskName" />
@@ -23,11 +23,17 @@
     from sys_scheduled_task
     where id = #{id,jdbcType=BIGINT}
   </select>
+
+  <select id="getAllTask" resultType="com.teak.blog.entity.model.SysScheduledTask">
+      select *
+      from sys_scheduled_task
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from sys_scheduled_task
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="generate.SysScheduledTask" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.teak.blog.entity.model.SysScheduledTask" useGeneratedKeys="true">
     insert into sys_scheduled_task (task_name, cron_expression, bean_name, 
       method_name, params, `status`, 
       create_time, update_time, is_deleted
@@ -37,68 +43,68 @@
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{isDeleted,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="generate.SysScheduledTask" useGeneratedKeys="true">
-    insert into sys_scheduled_task
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="taskName != null">
-        task_name,
-      </if>
-      <if test="cronExpression != null">
-        cron_expression,
-      </if>
-      <if test="beanName != null">
-        bean_name,
-      </if>
-      <if test="methodName != null">
-        method_name,
-      </if>
-      <if test="params != null">
-        params,
-      </if>
-      <if test="status != null">
-        `status`,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="updateTime != null">
-        update_time,
-      </if>
-      <if test="isDeleted != null">
-        is_deleted,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="taskName != null">
-        #{taskName,jdbcType=VARCHAR},
-      </if>
-      <if test="cronExpression != null">
-        #{cronExpression,jdbcType=VARCHAR},
-      </if>
-      <if test="beanName != null">
-        #{beanName,jdbcType=VARCHAR},
-      </if>
-      <if test="methodName != null">
-        #{methodName,jdbcType=VARCHAR},
-      </if>
-      <if test="params != null">
-        #{params,jdbcType=VARCHAR},
-      </if>
-      <if test="status != null">
-        #{status,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="isDeleted != null">
-        #{isDeleted,jdbcType=INTEGER},
-      </if>
-    </trim>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.teak.blog.entity.model.SysScheduledTask" useGeneratedKeys="true">
+      insert into sys_scheduled_task
+      <trim prefix="(" suffix=")" suffixOverrides=",">
+          <if test="taskName != null">
+              task_name,
+          </if>
+          <if test="cronExpression != null">
+              cron_expression,
+          </if>
+          <if test="beanName != null">
+              bean_name,
+          </if>
+          <if test="methodName != null">
+              method_name,
+          </if>
+          <if test="params != null">
+              params,
+          </if>
+          <if test="status != null">
+              `status`,
+          </if>
+          <if test="createTime != null">
+              create_time,
+          </if>
+          <if test="updateTime != null">
+              update_time,
+          </if>
+          <if test="isDeleted != null">
+              is_deleted,
+          </if>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides=",">
+          <if test="taskName != null">
+              #{taskName,jdbcType=VARCHAR},
+          </if>
+          <if test="cronExpression != null">
+              #{cronExpression,jdbcType=VARCHAR},
+          </if>
+          <if test="beanName != null">
+              #{beanName,jdbcType=VARCHAR},
+          </if>
+          <if test="methodName != null">
+              #{methodName,jdbcType=VARCHAR},
+          </if>
+          <if test="params != null">
+              #{params,jdbcType=VARCHAR},
+          </if>
+          <if test="status != null">
+              #{status,jdbcType=INTEGER},
+          </if>
+          <if test="createTime != null">
+              #{createTime,jdbcType=TIMESTAMP},
+          </if>
+          <if test="updateTime != null">
+              #{updateTime,jdbcType=TIMESTAMP},
+          </if>
+          <if test="isDeleted != null">
+              #{isDeleted,jdbcType=INTEGER},
+          </if>
+      </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="generate.SysScheduledTask">
+  <update id="updateByPrimaryKeySelective" parameterType="com.teak.blog.entity.model.SysScheduledTask">
     update sys_scheduled_task
     <set>
       <if test="taskName != null">
@@ -131,7 +137,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="generate.SysScheduledTask">
+  <update id="updateByPrimaryKey" parameterType="com.teak.blog.entity.model.SysScheduledTask">
     update sys_scheduled_task
     set task_name = #{taskName,jdbcType=VARCHAR},
       cron_expression = #{cronExpression,jdbcType=VARCHAR},

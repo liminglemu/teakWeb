@@ -18,7 +18,7 @@ public class GlobalResult {
 
     private Integer code;
     private String message;
-    private Map<String, Object> data;
+    private Object data = null;
 
 
     // 静态工厂方法（线程安全入口）
@@ -42,69 +42,68 @@ public class GlobalResult {
     private static class InnClass {
         private static final GlobalResult globalResult = new GlobalResult();
     }*/
+    public static GlobalResult success() {
+        return create()
+                .setCode(GlobalResultEnums.SUCCESS.getCode())
+                .setMessage(GlobalResultEnums.SUCCESS.getMessage());
+    }
 
-    // 成功响应（推荐使用不可变对象）
-    public static GlobalResult success(Map<String, Object> data) {
-        return new GlobalResult()
+    public static GlobalResult success(Object value) {
+        return create()
                 .setCode(GlobalResultEnums.SUCCESS.getCode())
                 .setMessage(GlobalResultEnums.SUCCESS.getMessage())
-                .setData(data);
+                .setData(value);
     }
 
-    public static GlobalResult successWithMessage(Map<String, Object> data, String message) {
-        return new GlobalResult()
+    public static GlobalResult success(Object value, String message) {
+        return create()
                 .setCode(GlobalResultEnums.SUCCESS.getCode())
                 .setMessage(message)
-                .setData(data);
+                .setData(value);
     }
 
-    // 失败响应（带默认消息）
-    public static GlobalResult error(Map<String, Object> data) {
-        return new GlobalResult()
+    public static GlobalResult error() {
+        return create()
+                .setCode(GlobalResultEnums.FAIL.getCode())
+                .setMessage(GlobalResultEnums.FAIL.getMessage());
+    }
+
+    public static GlobalResult error(Object value) {
+        return create()
                 .setCode(GlobalResultEnums.FAIL.getCode())
                 .setMessage(GlobalResultEnums.FAIL.getMessage())
-                .setData(data != null ? data : Collections.emptyMap());
+                .setData(value);
     }
 
-    // 自定义错误响应
-    public static GlobalResult errorWithMessage(Map<String, Object> data, String customMessage) {
-        return new GlobalResult()
+    public static GlobalResult error(Object value, String message) {
+        return create()
                 .setCode(GlobalResultEnums.FAIL.getCode())
-                .setMessage(customMessage)
-                .setData(data);
+                .setMessage(message)
+                .setData(value);
     }
 
     // 重定向响应
-    public static GlobalResult redirect(Map<String, Object> data) {
-        return new GlobalResult()
+    public static GlobalResult redirect(Object value, String message) {
+        return create()
                 .setCode(GlobalResultEnums.FORWARD.getCode())
-                .setMessage(GlobalResultEnums.FORWARD.getMessage())
-                .setData(data);
+                .setMessage(message)
+                .setData(value);
     }
 
-    // 链式方法（返回新对象保证线程安全）
-    private GlobalResult setCode(Integer code) {
-        GlobalResult result = new GlobalResult();
-        result.code = code;
-        result.message = this.message;
-        result.data = this.data;
-        return result;
+    // 优化后的链式方法
+    public GlobalResult setCode(Integer code) {
+        this.code = code;
+        return this;
     }
 
-    private GlobalResult setMessage(String message) {
-        GlobalResult result = new GlobalResult();
-        result.code = this.code;
-        result.message = message;
-        result.data = this.data;
-        return result;
+    public GlobalResult setMessage(String message) {
+        this.message = message;
+        return this;
     }
 
-    private GlobalResult setData(Map<String, Object> data) {
-        GlobalResult result = new GlobalResult();
-        result.code = this.code;
-        result.message = this.message;
-        result.data = data != null ? Collections.unmodifiableMap(data) : null;
-        return result;
+    private GlobalResult setData(Object data) {
+        this.data = data;
+        return this;
     }
 
 }
