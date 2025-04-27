@@ -145,6 +145,15 @@ public class TeakUtils {
      * @param <T>    目标类型
      */
     public <V, T> void copyProperties(V source, T target) {
+        if (source == null) {
+            return;
+        }
+        if (target == null) {
+            return;
+        }
+        log.debug("Copying properties from {} to {}",
+                source.getClass().getSimpleName(),
+                target.getClass().getSimpleName());
         BeanUtils.copyProperties(source, target, getNullPropertyNames(source));
     }
 
@@ -169,5 +178,4 @@ public class TeakUtils {
                 .filter(name -> src.getPropertyValue(name) == null)
                 .toArray(String[]::new);
     }
-
 }

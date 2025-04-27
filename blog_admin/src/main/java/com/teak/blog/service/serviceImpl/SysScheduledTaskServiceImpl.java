@@ -36,6 +36,8 @@ public class SysScheduledTaskServiceImpl extends ServiceImpl<SysScheduledTaskMap
     @Transactional(rollbackFor = Exception.class)
     @Override
     public void addScheduledTask(SysScheduledTask sysScheduledTask) {
-        sysScheduledTaskMapper.insert(sysScheduledTask);
+        SysScheduledTask scheduledTask = new SysScheduledTask();
+        teakUtils.copyProperties(sysScheduledTask, scheduledTask);
+        sysScheduledTaskMapper.insert(scheduledTask);
     }
 }

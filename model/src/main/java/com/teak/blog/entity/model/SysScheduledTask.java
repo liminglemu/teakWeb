@@ -30,7 +30,6 @@ public class SysScheduledTask extends BaseModel implements Serializable {
      * 主键
      */
     @SnowflakeAlgorithm
-    @TableField(fill = FieldFill.INSERT)
     private Long id;
 
     /**
