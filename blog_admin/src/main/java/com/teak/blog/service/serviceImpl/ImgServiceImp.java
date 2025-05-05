@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teak.blog.entity.model.Img;
 import com.teak.blog.mapper.ImgDao;
 import com.teak.blog.service.ImgService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
  * @Description:
  */
 @Service
+@Slf4j
 public class ImgServiceImp extends ServiceImpl<ImgDao, Img> implements ImgService {
     private final ImgDao imgDao;
 

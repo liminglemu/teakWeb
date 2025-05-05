@@ -18,5 +18,11 @@
       select *
       from sys_scheduled_task
   </select>
+  <select id="findByStatus" resultType="com.teak.blog.entity.model.SysScheduledTask">
+      select *
+      from sys_scheduled_task
+      where status = #{status}
+        and is_deleted = 0;
+  </select>
 
 </mapper>

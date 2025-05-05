@@ -17,4 +17,6 @@ public interface SysScheduledTaskService {
     List<SysScheduledTask> getAllTask();
 
     void addScheduledTask(SysScheduledTask sysScheduledTask);
+
+    List<SysScheduledTask>  findByStatus(int i);
 }

@@ -12,7 +12,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.2.20:3306/mybatisDB?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.2.165:3306/mybatisDB?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     hikari:
       minimum-idle: 5
       maximum-pool-size: 20 # 最大连接数
@@ -26,7 +26,7 @@ spring:
 
   data:
     redis:
-      host: 192.168.2.20
+      host: 192.168.2.165
       port: 6379
       timeout: 5000ms
       lettuce:

@@ -19,11 +19,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -57,6 +60,8 @@ class ApplicationTest {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
+    private final ApplicationContext applicationContext;
+
     public static void main(String[] args) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         /*try {
@@ -68,8 +73,21 @@ class ApplicationTest {
         }*/
 
         String format = simpleDateFormat.format(new Date(503979602));
+
         log.info("format:{}", format);
 
+    }
+
+    @Test
+    void test14() {
+        Object imgServiceImp = applicationContext.getBean("reportGenerateTask");
+        try {
+            Method scheduledTest = imgServiceImp.getClass().getMethod("generateDailyReport", String.class);
+            log.info("generateDailyReport方法名为:{}", scheduledTest.getName());
+            scheduledTest.invoke(imgServiceImp, "{\"format\":\"pdf\"}");
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // 测试用内部类

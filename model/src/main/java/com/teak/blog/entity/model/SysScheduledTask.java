@@ -1,7 +1,5 @@
 package com.teak.blog.entity.model;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.teak.blog.annotation.singleAnnotation.SnowflakeAlgorithm;
 import com.teak.blog.entity.BaseModel;
@@ -11,7 +9,6 @@ import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 动态定时任务表

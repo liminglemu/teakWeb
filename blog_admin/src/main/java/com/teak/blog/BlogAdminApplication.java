@@ -27,23 +27,26 @@ public class BlogAdminApplication {
      */
     public static void main(String[] args) {
         SpringApplication.run(BlogAdminApplication.class, args);
-
         log.info("""
-                
-                
-                    ___                                 ,-.          .---.
-                  ,--.'|_                           ,--/ /|         /. ./|            ,---,
-                  |  | :,'                        ,--. :/ |     .--'.  ' ;          ,---.'|
-                  :  : ' :                        :  : ' /     /__./ \\ : |          |   | :
-                .;__,'  /     ,---.     ,--.--.   |  '  /  .--'.  '   \\' .   ,---.  :   : :
-                |  |   |     /     \\   /       \\  '  |  : /___/ \\ |    ' '  /     \\ :     |,-.
-                :__,'| :    /    /  | .--.  .-. | |  |   \\;   \\  \\;      : /    /  ||   : '  |
-                  '  : |__ .    ' / |  \\__\\/: . . '  : |. \\\\   ;  `      |.    ' / ||   |  / :
-                  |  | '.'|'   ;   /|  ," .--.; | |  | ' \\ \\.   \\    .\\  ;'   ;   /|'   : |: |
-                  ;  :    ;'   |  / | /  /  ,.  | '  : |--'  \\   \\   ' \\ |'   |  / ||   | '/ :
-                  |  ,   / |   :    |;  :   .'   \\;  |,'      :   '  |--" |   :    ||   :    |
-                   ---`-'   \\   \\  / |  ,     .-./'--'         \\   \\ ;     \\   \\  / /    \\  /
-                             `----'   `--`---'                  '---"       `----'  `-'----'
-                """);
+               
+                                                                                                                                                                                \s
+                                                                                                                                                              bbbbbbb           \s
+                         tttt                                                 kkkkkkk                                                                         b:::::b           \s
+                      ttt:::t                                                 k:::::k                                                                         b:::::b           \s
+                      t:::::t                                                 k:::::k                                                                         b:::::b           \s
+                      t:::::t                                                 k:::::k                                                                         b:::::b           \s
+                ttttttt:::::ttttttt        eeeeeeeeeeee      aaaaaaaaaaaaa    k:::::k    kkkkkkkwwwwwww           wwwww           wwwwwww    eeeeeeeeeeee     b:::::bbbbbbbbb   \s
+                t:::::::::::::::::t      ee::::::::::::ee    a::::::::::::a   k:::::k   k:::::k  w:::::w         w:::::w         w:::::w   ee::::::::::::ee   b::::::::::::::bb \s
+                t:::::::::::::::::t     e::::::eeeee:::::ee  aaaaaaaaa:::::a  k:::::k  k:::::k    w:::::w       w:::::::w       w:::::w   e::::::eeeee:::::ee b::::::::::::::::b\s
+                tttttt:::::::tttttt    e::::::e     e:::::e           a::::a  k:::::k k:::::k      w:::::w     w:::::::::w     w:::::w   e::::::e     e:::::e b:::::bbbbb:::::::b
+                      t:::::t          e:::::::eeeee::::::e    aaaaaaa:::::a  k::::::k:::::k        w:::::w   w:::::w:::::w   w:::::w    e:::::::eeeee::::::e b:::::b    b::::::b
+                      t:::::t          e:::::::::::::::::e   aa::::::::::::a  k:::::::::::k          w:::::w w:::::w w:::::w w:::::w     e:::::::::::::::::e  b:::::b     b:::::b
+                      t:::::t          e::::::eeeeeeeeeee   a::::aaaa::::::a  k:::::::::::k           w:::::w:::::w   w:::::w:::::w      e::::::eeeeeeeeeee   b:::::b     b:::::b
+                      t:::::t    tttttte:::::::e           a::::a    a:::::a  k::::::k:::::k           w:::::::::w     w:::::::::w       e:::::::e            b:::::b     b:::::b
+                      t::::::tttt:::::te::::::::e          a::::a    a:::::a k::::::k k:::::k           w:::::::w       w:::::::w        e::::::::e           b:::::bbbbbb::::::b
+                      tt::::::::::::::t e::::::::eeeeeeee  a:::::aaaa::::::a k::::::k  k:::::k           w:::::w         w:::::w          e::::::::eeeeeeee   b::::::::::::::::b\s
+                        tt:::::::::::tt  ee:::::::::::::e   a::::::::::aa:::ak::::::k   k:::::k           w:::w           w:::w            ee:::::::::::::e   b:::::::::::::::b \s
+                          ttttttttttt      eeeeeeeeeeeeee    aaaaaaaaaa  aaaakkkkkkkk    kkkkkkk           www             www               eeeeeeeeeeeeee   bbbbbbbbbbbbbbbb  \s
+               """);
     }
 }

@@ -28,19 +28,6 @@ import java.util.concurrent.atomic.AtomicLong;
 public class AsyncConfig implements AsyncConfigurer {
     private ThreadPoolExecutor executor;
 
-    private static void rejectedExecution(Runnable runnable, ThreadPoolExecutor executor) {
-        if (executor.isShutdown()) {
-            log.warn("线程池已关闭，拒绝新任务: {}", runnable);
-        } else {
-            log.warn("线程池过载，触发拒绝策略. ActiveThreads={}, QueueSize={}, TaskCount={}",
-                    executor.getActiveCount(),
-                    executor.getQueue().size(),
-                    executor.getTaskCount());// 降级策略：转移到备用队列或记录错误
-            // 此处示例：记录到Redis或发送告警
-            log.error("任务被拒绝，请检查系统负载. Task: {}", runnable);
-        }
-    }
-
     @Override
     @Bean("executorService")
     public ExecutorService getAsyncExecutor() {
@@ -87,6 +74,19 @@ public class AsyncConfig implements AsyncConfigurer {
 
         // TTL上下文传递（需确保依赖正确）
         return TtlExecutors.getTtlExecutorService(executor);
+    }
+
+    private static void rejectedExecution(Runnable runnable, ThreadPoolExecutor executor) {
+        if (executor.isShutdown()) {
+            log.warn("线程池已关闭，拒绝新任务: {}", runnable);
+        } else {
+            log.warn("线程池过载，触发拒绝策略. ActiveThreads={}, QueueSize={}, TaskCount={}",
+                    executor.getActiveCount(),
+                    executor.getQueue().size(),
+                    executor.getTaskCount());// 降级策略：转移到备用队列或记录错误
+            // 此处示例：记录到Redis或发送告警
+            log.error("任务被拒绝，请检查系统负载. Task: {}", runnable);
+        }
     }
 
     @Override

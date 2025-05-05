@@ -3,9 +3,6 @@ package com.teak.blog.result;
 import com.teak.blog.result.enums.GlobalResultEnums;
 import lombok.Getter;
 
-import java.util.Collections;
-import java.util.Map;
-
 /**
  * The type Global result.
  *

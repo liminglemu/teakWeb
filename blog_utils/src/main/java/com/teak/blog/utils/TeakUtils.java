@@ -178,4 +178,19 @@ public class TeakUtils {
                 .filter(name -> src.getPropertyValue(name) == null)
                 .toArray(String[]::new);
     }
+
+    /**
+     * 首字母小写并去除空格
+     *
+     * @param str 待处理的字符串
+     * @return 返回字符串
+     */
+    public String lowerFirstCharAndTrim(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        char firstChar = Character.toLowerCase(str.charAt(0));
+        String newString = (str.length() > 1) ? firstChar + str.substring(1) : String.valueOf(firstChar);
+        return newString.trim();
+    }
 }

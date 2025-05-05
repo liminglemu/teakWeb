@@ -18,4 +18,6 @@ import java.util.List;
 @Repository
 public interface SysScheduledTaskMapper extends BaseMapper<SysScheduledTask> {
     List<SysScheduledTask> getAllTask();
+
+    List<SysScheduledTask> findByStatus(int i);
 }

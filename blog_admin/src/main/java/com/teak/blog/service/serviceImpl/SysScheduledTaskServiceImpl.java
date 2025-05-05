@@ -38,6 +38,13 @@ public class SysScheduledTaskServiceImpl extends ServiceImpl<SysScheduledTaskMap
     public void addScheduledTask(SysScheduledTask sysScheduledTask) {
         SysScheduledTask scheduledTask = new SysScheduledTask();
         teakUtils.copyProperties(sysScheduledTask, scheduledTask);
+        scheduledTask.setBeanName(teakUtils.lowerFirstCharAndTrim(scheduledTask.getBeanName()));
+        scheduledTask.setMethodName(teakUtils.lowerFirstCharAndTrim(scheduledTask.getMethodName()));
         sysScheduledTaskMapper.insert(scheduledTask);
+    }
+
+    @Override
+    public List<SysScheduledTask> findByStatus(int i) {
+        return sysScheduledTaskMapper.findByStatus(i);
     }
 }
