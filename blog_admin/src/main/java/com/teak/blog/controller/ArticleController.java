@@ -11,6 +11,7 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created with: IntelliJ IDEA
@@ -46,6 +47,12 @@ public class ArticleController {
         Page<Article> page = articleService.getPage(pageNum, pageSize, category, status, userId);
         hashMap.put("page", page);
         return GlobalResult.success(hashMap);
+    }
+
+    @GetMapping("/getAll")
+    public GlobalResult getAll() {
+      List<Article> articles= articleService.getAll();
+        return GlobalResult.success(articles);
     }
 
     @PostMapping("/addArticle")

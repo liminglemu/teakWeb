@@ -38,8 +38,9 @@ public class SysScheduledTaskServiceImpl extends ServiceImpl<SysScheduledTaskMap
     public void addScheduledTask(SysScheduledTask sysScheduledTask) {
         SysScheduledTask scheduledTask = new SysScheduledTask();
         teakUtils.copyProperties(sysScheduledTask, scheduledTask);
-        scheduledTask.setBeanName(teakUtils.lowerFirstCharAndTrim(scheduledTask.getBeanName()));
-        scheduledTask.setMethodName(teakUtils.lowerFirstCharAndTrim(scheduledTask.getMethodName()));
+        scheduledTask.setBeanName(teakUtils.lowerFirstCharAndTrim(sysScheduledTask.getBeanName()));
+        scheduledTask.setMethodName(teakUtils.lowerFirstCharAndTrim(sysScheduledTask.getMethodName()));
+        scheduledTask.setParameterTypes(teakUtils.resolveReferenceClassName(sysScheduledTask.getParameterTypes()));
         sysScheduledTaskMapper.insert(scheduledTask);
     }
 

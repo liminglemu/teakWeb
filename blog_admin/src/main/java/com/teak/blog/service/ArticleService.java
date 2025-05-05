@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.teak.blog.entity.model.Article;
 import com.teak.blog.entity.vo.ArticleVo;
 
+import java.util.List;
+
 /**
  * Created with: IntelliJ IDEA
  *
@@ -21,4 +23,6 @@ public interface ArticleService extends IService<Article> {
     Article addArticle(ArticleVo articleVo);
 
     void delArticle(Long id);
+
+    List<Article> getAll();
 }

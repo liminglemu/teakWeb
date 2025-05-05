@@ -54,4 +54,9 @@ public class SysScheduledTask extends BaseModel implements Serializable {
      */
     private String params;
 
+    /**
+     * 方法参数类型数组，用逗号分隔例如：String.class,Integer.class
+     */
+    private String parameterTypes;
+
 }

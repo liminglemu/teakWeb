@@ -1,0 +1,616 @@
+2025-05-04 00:30:33.873 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 22500 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:30:33.873 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 22500 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:30:33.876 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:30:33.876 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:30:34.694 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:30:34.694 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:30:34.699 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:30:34.699 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:30:34.743 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:30:34.743 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:30:36.454 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:30:36.454 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:30:36.472 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:30:36.472 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:30:36.474 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:30:36.474 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:30:36.475 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:30:36.475 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:30:36.650 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:30:36.650 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:30:36.651 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2754 ms
+2025-05-04 00:30:36.651 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2754 ms
+2025-05-04 00:30:37.226 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:30:37.226 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:30:37.899 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:30:37.899 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:30:37.930 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3509 (http) with context path ''
+2025-05-04 00:30:37.930 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3509 (http) with context path ''
+2025-05-04 00:30:38.228 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:30:38.228 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:30:38.322 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:30:38.322 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:30:38.797 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cf15477
+2025-05-04 00:30:38.797 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cf15477
+2025-05-04 00:30:38.802 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:30:38.802 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:30:39.159 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 930ms
+2025-05-04 00:30:39.159 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 930ms
+2025-05-04 00:30:39.181 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:30:39.181 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:30:39.188 [main] INFO  ApplicationTest - Started ApplicationTest in 5.799 seconds (process running for 6.848)
+2025-05-04 00:30:39.188 [main] INFO  ApplicationTest - Started ApplicationTest in 5.799 seconds (process running for 6.848)
+2025-05-04 00:30:40.442 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:30:40.442 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:30:40.442 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:30:40.442 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:30:40.444 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:30:40.444 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:30:40.455 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:30:40.455 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:31:59.559 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 2380 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:31:59.559 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 2380 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:31:59.561 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:31:59.561 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:32:00.382 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:32:00.382 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:32:00.384 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:32:00.384 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:32:00.429 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:32:00.429 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:32:02.041 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:32:02.041 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:32:02.060 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:32:02.060 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:32:02.063 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:32:02.063 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:32:02.063 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:32:02.063 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:32:02.227 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:32:02.227 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:32:02.228 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2646 ms
+2025-05-04 00:32:02.228 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2646 ms
+2025-05-04 00:32:02.729 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:32:02.729 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:32:03.360 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:32:03.360 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:32:03.392 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3532 (http) with context path ''
+2025-05-04 00:32:03.392 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3532 (http) with context path ''
+2025-05-04 00:32:03.629 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:32:03.629 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:32:03.697 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:32:03.697 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:32:04.175 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61b76a7d
+2025-05-04 00:32:04.175 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61b76a7d
+2025-05-04 00:32:04.180 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:32:04.180 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:32:04.499 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 869ms
+2025-05-04 00:32:04.499 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 869ms
+2025-05-04 00:32:04.527 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:32:04.527 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:32:04.539 [main] INFO  ApplicationTest - Started ApplicationTest in 5.446 seconds (process running for 6.402)
+2025-05-04 00:32:04.539 [main] INFO  ApplicationTest - Started ApplicationTest in 5.446 seconds (process running for 6.402)
+2025-05-04 00:32:05.382 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:32:05.382 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:32:05.383 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:32:05.383 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:32:05.385 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:32:05.385 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:32:05.396 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:32:05.396 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:34:24.476 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 41880 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:34:24.476 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 41880 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:34:24.477 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:34:24.477 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:34:25.329 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:34:25.329 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:34:25.331 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:34:25.331 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:34:25.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:34:25.379 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:34:26.912 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:34:26.912 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:34:26.929 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:34:26.929 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:34:26.931 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:34:26.931 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:34:26.931 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:34:26.931 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:34:27.099 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:34:27.099 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:34:27.099 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2604 ms
+2025-05-04 00:34:27.099 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2604 ms
+2025-05-04 00:34:27.598 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:34:27.598 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:34:28.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:34:28.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:34:28.165 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3572 (http) with context path ''
+2025-05-04 00:34:28.165 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3572 (http) with context path ''
+2025-05-04 00:34:28.401 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:34:28.401 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:34:28.462 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:34:28.462 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:34:28.867 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63551c66
+2025-05-04 00:34:28.867 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63551c66
+2025-05-04 00:34:28.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:34:28.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:34:29.149 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 747ms
+2025-05-04 00:34:29.149 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 747ms
+2025-05-04 00:34:29.178 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:34:29.178 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:34:29.188 [main] INFO  ApplicationTest - Started ApplicationTest in 5.166 seconds (process running for 6.127)
+2025-05-04 00:34:29.188 [main] INFO  ApplicationTest - Started ApplicationTest in 5.166 seconds (process running for 6.127)
+2025-05-04 00:34:30.042 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:34:30.042 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:34:30.042 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:34:30.042 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:34:30.044 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:34:30.044 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:34:30.055 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:34:30.055 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:35:19.319 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 12008 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:35:19.319 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 12008 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:35:19.322 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:35:19.322 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:35:20.158 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:35:20.158 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:35:20.160 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:35:20.160 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:35:20.208 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:35:20.208 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:35:21.819 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:35:21.819 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:35:21.835 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:35:21.835 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:35:21.838 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:35:21.838 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:35:21.838 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:35:21.838 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:35:21.996 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:35:21.996 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:35:21.996 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2654 ms
+2025-05-04 00:35:21.996 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2654 ms
+2025-05-04 00:35:22.519 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:35:22.519 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:35:23.206 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:35:23.206 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:35:23.227 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3603 (http) with context path ''
+2025-05-04 00:35:23.227 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3603 (http) with context path ''
+2025-05-04 00:35:23.487 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:35:23.487 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:35:23.561 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:35:23.561 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:35:24.104 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57f89680
+2025-05-04 00:35:24.104 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57f89680
+2025-05-04 00:35:24.108 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:35:24.108 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:35:24.428 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 940ms
+2025-05-04 00:35:24.428 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 940ms
+2025-05-04 00:35:24.449 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:35:24.449 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:35:24.456 [main] INFO  ApplicationTest - Started ApplicationTest in 5.593 seconds (process running for 6.546)
+2025-05-04 00:35:24.456 [main] INFO  ApplicationTest - Started ApplicationTest in 5.593 seconds (process running for 6.546)
+2025-05-04 00:35:25.353 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:35:25.353 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:35:25.353 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:35:25.353 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:35:25.355 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:35:25.355 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:35:25.365 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:35:25.365 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:37:44.233 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 14772 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:37:44.233 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 14772 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:37:44.235 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:37:44.235 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:37:44.990 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:37:44.990 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:37:44.993 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:37:44.993 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:37:45.033 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:37:45.033 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:37:46.547 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:37:46.547 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:37:46.564 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:37:46.564 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:37:46.566 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:37:46.566 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:37:46.567 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:37:46.567 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:37:46.758 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:37:46.758 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:37:46.759 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2506 ms
+2025-05-04 00:37:46.759 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2506 ms
+2025-05-04 00:37:47.227 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:37:47.227 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:37:47.891 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:37:47.891 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:37:47.912 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3686 (http) with context path ''
+2025-05-04 00:37:47.912 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3686 (http) with context path ''
+2025-05-04 00:37:48.151 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:37:48.151 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:37:48.220 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:37:48.220 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:37:48.718 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14c18a6a
+2025-05-04 00:37:48.718 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14c18a6a
+2025-05-04 00:37:48.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:37:48.723 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:37:49.083 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 932ms
+2025-05-04 00:37:49.083 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 932ms
+2025-05-04 00:37:49.106 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:37:49.106 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"ImgServiceImp ","methodName":"scheduledTest ","params":"你好你好"}]
+2025-05-04 00:37:49.113 [main] INFO  ApplicationTest - Started ApplicationTest in 5.352 seconds (process running for 6.245)
+2025-05-04 00:37:49.113 [main] INFO  ApplicationTest - Started ApplicationTest in 5.352 seconds (process running for 6.245)
+2025-05-04 00:37:49.874 [main] INFO  ApplicationTest - idWorker:com.teak.blog.utils.IdWorker
+2025-05-04 00:37:49.874 [main] INFO  ApplicationTest - idWorker:com.teak.blog.utils.IdWorker
+2025-05-04 00:37:49.955 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:37:49.955 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:37:49.956 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:37:49.956 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:37:49.957 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:37:49.957 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:37:49.966 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:37:49.966 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:38:43.029 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 39492 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:38:43.029 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 39492 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:38:43.030 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:38:43.030 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:45:48.476 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 41552 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:45:48.476 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 41552 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:45:48.478 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:45:48.478 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:45:49.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:45:49.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:45:49.319 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:45:49.319 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:45:49.363 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:45:49.363 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:45:50.899 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:45:50.899 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:45:50.915 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:45:50.915 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:45:50.917 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:45:50.917 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:45:50.918 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:45:50.918 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:45:51.081 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:45:51.081 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:45:51.081 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2584 ms
+2025-05-04 00:45:51.081 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2584 ms
+2025-05-04 00:45:51.557 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:45:51.557 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:45:52.215 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:45:52.215 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:45:52.247 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3943 (http) with context path ''
+2025-05-04 00:45:52.247 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3943 (http) with context path ''
+2025-05-04 00:45:52.482 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:45:52.482 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:45:52.558 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:45:52.558 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:45:52.989 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@319d106c
+2025-05-04 00:45:52.989 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@319d106c
+2025-05-04 00:45:52.995 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:45:52.995 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:45:53.382 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 898ms
+2025-05-04 00:45:53.382 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 898ms
+2025-05-04 00:45:53.408 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:45:53.408 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:45:53.415 [main] INFO  ApplicationTest - Started ApplicationTest in 5.416 seconds (process running for 6.378)
+2025-05-04 00:45:53.415 [main] INFO  ApplicationTest - Started ApplicationTest in 5.416 seconds (process running for 6.378)
+2025-05-04 00:45:54.276 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:45:54.276 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:45:54.276 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:45:54.276 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:45:54.279 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:45:54.279 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:45:54.289 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:45:54.289 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:46:24.377 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 884 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:46:24.377 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 884 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:46:24.379 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:46:24.379 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:46:25.245 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:46:25.245 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:46:25.248 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:46:25.248 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:46:25.294 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:46:25.294 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:46:26.843 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:46:26.843 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:46:26.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:46:26.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:46:26.866 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:46:26.866 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:46:26.867 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:46:26.867 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:46:27.050 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:46:27.050 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:46:27.051 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2657 ms
+2025-05-04 00:46:27.051 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2657 ms
+2025-05-04 00:46:27.558 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:46:27.558 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:46:28.140 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:46:28.140 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:46:28.166 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3968 (http) with context path ''
+2025-05-04 00:46:28.166 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3968 (http) with context path ''
+2025-05-04 00:46:28.415 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:46:28.415 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:46:28.485 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:46:28.485 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:46:28.866 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35f35c59
+2025-05-04 00:46:28.866 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35f35c59
+2025-05-04 00:46:28.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:46:28.872 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:46:29.198 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 783ms
+2025-05-04 00:46:29.198 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 783ms
+2025-05-04 00:46:29.226 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:46:29.226 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:46:29.240 [main] INFO  ApplicationTest - Started ApplicationTest in 5.317 seconds (process running for 6.24)
+2025-05-04 00:46:29.240 [main] INFO  ApplicationTest - Started ApplicationTest in 5.317 seconds (process running for 6.24)
+2025-05-04 00:46:30.123 [main] INFO  ApplicationTest - scheduledTest:scheduledTest
+2025-05-04 00:46:30.123 [main] INFO  ApplicationTest - scheduledTest:scheduledTest
+2025-05-04 00:46:30.218 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:46:30.218 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:46:30.219 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:46:30.219 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:46:30.221 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:46:30.221 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:46:30.232 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:46:30.232 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:47:22.086 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 21856 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:47:22.086 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 21856 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:47:22.088 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:47:22.088 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:47:23.005 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:47:23.005 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:47:23.008 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:47:23.008 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:47:23.053 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:47:23.053 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:47:24.850 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:47:24.850 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:47:24.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:24.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:24.865 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:47:24.865 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:47:24.866 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:47:24.866 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:47:25.054 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:47:25.054 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:47:25.055 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2945 ms
+2025-05-04 00:47:25.055 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2945 ms
+2025-05-04 00:47:25.573 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:47:25.573 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:47:26.424 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:26.424 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:26.481 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3992 (http) with context path ''
+2025-05-04 00:47:26.481 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 3992 (http) with context path ''
+2025-05-04 00:47:26.751 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:47:26.751 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:47:26.826 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:47:26.826 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:47:27.396 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@638d624a
+2025-05-04 00:47:27.396 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@638d624a
+2025-05-04 00:47:27.400 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:47:27.400 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:47:27.802 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 1051ms
+2025-05-04 00:47:27.802 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 1051ms
+2025-05-04 00:47:27.831 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:47:27.831 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:47:27.838 [main] INFO  ApplicationTest - Started ApplicationTest in 6.285 seconds (process running for 7.166)
+2025-05-04 00:47:27.838 [main] INFO  ApplicationTest - Started ApplicationTest in 6.285 seconds (process running for 7.166)
+2025-05-04 00:47:31.095 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:47:31.095 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:47:31.096 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:47:31.096 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:47:31.120 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:47:31.120 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:47:31.131 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:47:31.131 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:47:39.834 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 39764 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:47:39.834 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 39764 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:47:39.837 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:47:39.837 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:47:40.615 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:47:40.615 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:47:40.617 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:47:40.617 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:47:40.658 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:47:40.658 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:47:42.454 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:47:42.454 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:47:42.471 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:42.471 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:42.473 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:47:42.473 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:47:42.474 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:47:42.474 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:47:42.647 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:47:42.647 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:47:42.648 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2792 ms
+2025-05-04 00:47:42.648 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2792 ms
+2025-05-04 00:47:43.129 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:47:43.129 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:47:43.835 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:43.835 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:47:43.855 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4009 (http) with context path ''
+2025-05-04 00:47:43.855 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4009 (http) with context path ''
+2025-05-04 00:47:44.096 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:47:44.096 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:47:44.161 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:47:44.161 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:47:44.665 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cb43fd3
+2025-05-04 00:47:44.665 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cb43fd3
+2025-05-04 00:47:44.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:47:44.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:47:45.109 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 1011ms
+2025-05-04 00:47:45.109 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 1011ms
+2025-05-04 00:47:45.132 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:47:45.132 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:47:45.141 [main] INFO  ApplicationTest - Started ApplicationTest in 5.798 seconds (process running for 6.737)
+2025-05-04 00:47:45.141 [main] INFO  ApplicationTest - Started ApplicationTest in 5.798 seconds (process running for 6.737)
+2025-05-04 00:47:45.917 [main] INFO  ApplicationTest - scheduledTest方法名为:scheduledTest
+2025-05-04 00:47:45.917 [main] INFO  ApplicationTest - scheduledTest方法名为:scheduledTest
+2025-05-04 00:47:46.000 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:47:46.000 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:47:46.001 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:47:46.001 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:47:46.005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:47:46.005 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:47:46.015 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:47:46.015 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:48:44.631 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 34328 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:48:44.631 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 34328 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:48:44.633 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:48:44.633 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:48:45.484 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:48:45.484 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:48:45.487 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:48:45.487 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:48:45.530 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:48:45.530 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:48:47.114 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:48:47.114 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:48:47.133 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:48:47.133 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:48:47.135 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:48:47.135 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:48:47.136 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:48:47.136 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:48:47.315 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:48:47.315 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:48:47.315 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2661 ms
+2025-05-04 00:48:47.315 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2661 ms
+2025-05-04 00:48:47.792 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:48:47.792 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:48:48.400 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:48:48.400 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:48:48.417 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4038 (http) with context path ''
+2025-05-04 00:48:48.417 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4038 (http) with context path ''
+2025-05-04 00:48:48.685 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:48:48.685 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:48:48.754 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:48:48.754 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:48:49.228 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6aa792
+2025-05-04 00:48:49.228 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6aa792
+2025-05-04 00:48:49.232 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:48:49.232 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:48:49.513 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 827ms
+2025-05-04 00:48:49.513 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 827ms
+2025-05-04 00:48:49.535 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:48:49.535 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"imgServiceImp","methodName":"scheduledTest ","params":"{\"string\":\"你好你好\"}"}]
+2025-05-04 00:48:49.542 [main] INFO  ApplicationTest - Started ApplicationTest in 5.36 seconds (process running for 6.311)
+2025-05-04 00:48:49.542 [main] INFO  ApplicationTest - Started ApplicationTest in 5.36 seconds (process running for 6.311)
+2025-05-04 00:48:50.478 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:48:50.478 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:48:50.479 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:48:50.479 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:48:50.481 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:48:50.481 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:48:50.492 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:48:50.492 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:58:26.394 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 42260 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:58:26.394 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 42260 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 00:58:26.396 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:58:26.396 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 00:58:27.259 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:58:27.259 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 00:58:27.262 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:58:27.262 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 00:58:27.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:58:27.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2025-05-04 00:58:28.863 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:58:28.863 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 00:58:28.883 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:58:28.883 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:58:28.885 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:58:28.885 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 00:58:28.886 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:58:28.886 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 00:58:29.064 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:58:29.064 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 00:58:29.065 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2650 ms
+2025-05-04 00:58:29.065 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2650 ms
+2025-05-04 00:58:29.589 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:58:29.589 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 00:58:30.288 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:58:30.288 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 00:58:30.311 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4273 (http) with context path ''
+2025-05-04 00:58:30.311 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4273 (http) with context path ''
+2025-05-04 00:58:30.551 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:58:30.551 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 00:58:30.624 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:58:30.624 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 00:58:31.111 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64186f60
+2025-05-04 00:58:31.111 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64186f60
+2025-05-04 00:58:31.116 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:58:31.116 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 00:58:31.431 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 878ms
+2025-05-04 00:58:31.431 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 878ms
+2025-05-04 00:58:31.455 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"reportGenerateTask","methodName":"generateDailyReport ","params":"'{\\\"format\\\":\\\"pdf\\\"}'"}]
+2025-05-04 00:58:31.455 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"reportGenerateTask","methodName":"generateDailyReport ","params":"'{\\\"format\\\":\\\"pdf\\\"}'"}]
+2025-05-04 00:58:31.463 [main] INFO  ApplicationTest - Started ApplicationTest in 5.541 seconds (process running for 6.444)
+2025-05-04 00:58:31.463 [main] INFO  ApplicationTest - Started ApplicationTest in 5.541 seconds (process running for 6.444)
+2025-05-04 00:58:32.308 [main] INFO  ApplicationTest - generateDailyReport方法名为:generateDailyReport
+2025-05-04 00:58:32.308 [main] INFO  ApplicationTest - generateDailyReport方法名为:generateDailyReport
+2025-05-04 00:58:32.415 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:58:32.415 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 00:58:32.416 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:58:32.416 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 00:58:32.418 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:58:32.418 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 00:58:32.429 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 00:58:32.429 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 01:00:01.462 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 22300 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 01:00:01.462 [main] INFO  ApplicationTest - Starting ApplicationTest using Java 17.0.14 with PID 22300 (started by 14014 in D:\IdeaProjects\teakWeb\blog_admin)
+2025-05-04 01:00:01.465 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 01:00:01.465 [main] INFO  ApplicationTest - The following 1 profile is active: "dev"
+2025-05-04 01:00:02.269 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 01:00:02.269 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-04 01:00:02.273 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 01:00:02.273 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-05-04 01:00:02.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 01:00:02.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-05-04 01:00:03.862 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 01:00:03.862 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2025-05-04 01:00:03.881 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 01:00:03.881 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 01:00:03.884 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 01:00:03.884 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-04 01:00:03.884 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 01:00:03.884 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-05-04 01:00:04.060 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 01:00:04.060 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-04 01:00:04.060 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2575 ms
+2025-05-04 01:00:04.060 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2575 ms
+2025-05-04 01:00:04.563 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 01:00:04.563 [main] INFO  com.teak.blog.config.MybatisPlusAutoInsert - ✅ MyBatis Plus 自动填充处理器已注册
+2025-05-04 01:00:05.212 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 01:00:05.212 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-auto-1"]
+2025-05-04 01:00:05.236 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4300 (http) with context path ''
+2025-05-04 01:00:05.236 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 4300 (http) with context path ''
+2025-05-04 01:00:05.505 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 01:00:05.505 [AsyncPool-0] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 参数详情: {"i":1}
+2025-05-04 01:00:05.582 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 01:00:05.582 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-04 01:00:06.009 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fdff56b
+2025-05-04 01:00:06.009 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fdff56b
+2025-05-04 01:00:06.013 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 01:00:06.013 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-04 01:00:06.321 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 814ms
+2025-05-04 01:00:06.321 [AsyncPool-1] INFO  com.teak.blog.ServiceMonitorAspect - [性能监控] com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl.findByStatus 执行耗时: 814ms
+2025-05-04 01:00:06.344 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"reportGenerateTask","methodName":"generateDailyReport ","params":"'{\\\"format\\\":\\\"pdf\\\"}'"}]
+2025-05-04 01:00:06.344 [AsyncPool-2] INFO  com.teak.blog.ServiceMonitorAspect - 方法 [com.teak.blog.service.serviceImpl.SysScheduledTaskServiceImpl::findByStatus] 返回: [{"status":1,"statusString":null,"createTime":1746288975000,"updateTime":1746288975000,"isDeleted":0,"isDeletedString":null,"id":1918701144204787714,"taskName":"生成日报表","cronExpression":"0/2 * * * * ?","beanName":"reportGenerateTask","methodName":"generateDailyReport ","params":"'{\\\"format\\\":\\\"pdf\\\"}'"}]
+2025-05-04 01:00:06.351 [main] INFO  ApplicationTest - Started ApplicationTest in 5.341 seconds (process running for 6.282)
+2025-05-04 01:00:06.351 [main] INFO  ApplicationTest - Started ApplicationTest in 5.341 seconds (process running for 6.282)
+2025-05-04 01:00:07.090 [main] INFO  ApplicationTest - generateDailyReport方法名为:generateDailyReport
+2025-05-04 01:00:07.090 [main] INFO  ApplicationTest - generateDailyReport方法名为:generateDailyReport
+2025-05-04 01:00:07.091 [main] INFO  c.teak.blog.service.serviceImpl.ReportGenerateTask - 生成日报表，参数: {"format":"pdf"}
+2025-05-04 01:00:07.091 [main] INFO  c.teak.blog.service.serviceImpl.ReportGenerateTask - 生成日报表，参数: {"format":"pdf"}
+2025-05-04 01:00:07.192 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 01:00:07.192 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 开始关闭异步线程池...
+2025-05-04 01:00:07.192 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 01:00:07.192 [SpringApplicationShutdownHook] INFO  com.teak.blog.config.AsyncConfig - 异步线程池已关闭
+2025-05-04 01:00:07.195 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 01:00:07.195 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-04 01:00:07.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-04 01:00:07.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

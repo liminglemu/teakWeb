@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.teak.blog.entity.model.Article;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created with: IntelliJ IDEA
  *

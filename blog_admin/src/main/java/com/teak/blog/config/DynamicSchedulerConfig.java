@@ -2,6 +2,7 @@ package com.teak.blog.config;
 
 import com.teak.blog.entity.model.SysScheduledTask;
 import com.teak.blog.service.SysScheduledTaskService;
+import com.teak.blog.utils.TeakUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +14,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
 
+import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -41,6 +43,8 @@ public class DynamicSchedulerConfig implements SchedulingConfigurer {
 
     private final ExecutorService executorService;
 
+    private final TeakUtils teakUtils;
+
     @Override
     public void configureTasks(ScheduledTaskRegistrar registrar) {
         registrar.setTaskScheduler(scheduler);
@@ -56,8 +60,29 @@ public class DynamicSchedulerConfig implements SchedulingConfigurer {
             try {
                 log.info("执行任务[{}]", task.getTaskName());
                 Object bean = applicationContext.getBean(task.getBeanName());
-                Method method = bean.getClass().getMethod(task.getMethodName(), String.class);
-                method.invoke(bean, task.getParams());
+
+                // 获取参数类型
+                String parameterTypes = task.getParameterTypes();
+                if (parameterTypes != null) {
+                    String[] typeNames = parameterTypes.split(",");
+                    Class<?>[] classes = new Class[typeNames.length];
+                    for (int i = 0; i < typeNames.length; i++) {
+                        //先匹配基本数据类型，如果匹配不到，再匹配引用数据类型
+                        //至于为什么不将基本数据类型和引用数据类型分开写，是因为基本数据类型是无法使用Class.forName进行反射得到结果
+                        Class<? extends Serializable> aClass = teakUtils.resolveClassName(typeNames[i]);
+                        if (aClass != null) {
+                            classes[i] = aClass;
+                        } else {
+                            classes[i] = Class.forName(typeNames[i].trim());
+                        }
+                    }
+                    Method method = bean.getClass().getMethod(task.getMethodName(), classes);
+                    method.invoke(bean, task.getParams());
+                } else {
+                    Method method = bean.getClass().getMethod(task.getMethodName());
+                    method.invoke(bean);
+                }
+
             } catch (Exception e) {
                 log.error("执行任务[{}]异常: {}", task.getTaskName(), e.getMessage());
             }

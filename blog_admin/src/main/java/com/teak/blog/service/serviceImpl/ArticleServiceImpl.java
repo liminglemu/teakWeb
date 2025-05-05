@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -128,5 +129,10 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         wrapper.eq("article_id", id);
         articleDetailMapper.delete(wrapper);
         articleMapper.deleteById(id);
+    }
+
+    @Override
+    public List<Article> getAll() {
+        return articleMapper.selectList(null);
     }
 }

@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 import java.beans.FeatureDescriptor;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiFunction;
@@ -192,5 +194,71 @@ public class TeakUtils {
         char firstChar = Character.toLowerCase(str.charAt(0));
         String newString = (str.length() > 1) ? firstChar + str.substring(1) : String.valueOf(firstChar);
         return newString.trim();
+    }
+
+    public String resolveReferenceClassName(String typeName) {
+        if (typeName == null) {
+            return null;
+        }
+
+        ArrayList<String> typeClassNames = new ArrayList<>();
+        String[] split = typeName.split(",");
+        for (String splitName : split) {
+            try {
+                boolean handled = false;
+
+                // 处理引用类型
+                Class<? extends Serializable> aClass = getAClass(splitName);
+                if (aClass != null) {
+                    typeClassNames.add(aClass.getName());
+                    handled = true;
+                }
+
+                // 处理数组类型
+                if (!handled && splitName.endsWith("[]")) {
+                    String elementType = splitName.replace("[]", "");
+                    Class<? extends Serializable> arrayAClass = getAClass(elementType);
+                    if (arrayAClass != null) {
+                        typeClassNames.add(Class.forName("[L" + arrayAClass.getName() + ";").getName());
+                        handled = true;
+                    }
+                }
+
+                // 基本数据类型
+                if (!handled) {
+                    typeClassNames.add(splitName);
+                }
+            } catch (ClassNotFoundException e) {
+                log.error("无法解析类型: {}", splitName, e);
+                throw new IllegalArgumentException("无效类型: " + splitName);
+            }
+        }
+        return String.join(",", typeClassNames);
+    }
+
+    private static Class<? extends Serializable> getAClass(String splitName) {
+        return switch (splitName) {
+            case "Integer" -> Integer.class;
+            case "String" -> String.class;
+            case "Double" -> Double.class;
+            case "Float" -> Float.class;
+            case "BigDecimal" -> BigDecimal.class;
+            case "Date" -> Date.class;
+            default -> null;
+        };
+    }
+
+    public Class<? extends Serializable> resolveClassName(String typeName) {
+        return switch (typeName) {
+            case "int" -> int.class;
+            case "long" -> long.class;
+            case "double" -> double.class;
+            case "boolean" -> boolean.class;
+            case "char" -> char.class;
+            case "float" -> float.class;
+            case "byte" -> byte.class;
+            case "short" -> short.class;
+            default -> null;
+        };
     }
 }

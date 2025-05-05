@@ -27,9 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -63,19 +61,34 @@ class ApplicationTest {
     private final ApplicationContext applicationContext;
 
     public static void main(String[] args) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        /*try {
-            Date date1 = simpleDateFormat.parse("2024-04-09 12:48:24.886");
-            Date date2 = simpleDateFormat.parse("2024-04-09 13:23:46.619");
+        /*String[] strings= {"String"};
+        Class<? extends String[]> aClass = strings.getClass();
+        log.info("aClass:{}", aClass);*/
 
-        } catch (ParseException e) {
+        try {
+            Class<?> aClass = Class.forName("int.class");
+            log.info("aClass:{}", aClass);
+
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }*/
+        }
+    }
 
-        String format = simpleDateFormat.format(new Date(503979602));
+    @Test
+    void test16() {
 
-        log.info("format:{}", format);
+        String strings = teakUtils.resolveReferenceClassName("String,String[],int");
+        log.info("解析名称为:{}", strings);
+    }
 
+    @Test
+    void test15() {
+        try {
+            Class<?> aClass = Class.forName("com.teak.blog.entity.model.SysScheduledTask");
+            log.info("aClass:{}", aClass);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
