@@ -9,6 +9,8 @@ import lombok.ToString;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * 动态定时任务表
@@ -50,7 +52,7 @@ public class SysScheduledTask extends BaseModel implements Serializable {
     private String methodName;
 
     /**
-     * 方法参数(JSON格式)
+     * 方法参数 list内部必须承载的都是可序列化对象
      */
     private String params;
 

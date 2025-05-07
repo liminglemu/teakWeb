@@ -1,100 +1,59 @@
-2025-05-05 11:25:26.173 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:25:26.178 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:25:26.174 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:25:26.176 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:25:26.177 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:25:26.175 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:25:26.179 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:25:26.175 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:25:26.176 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:25:26.177 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:26:24.017 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:26:24.017 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:26:24.018 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:26:24.018 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:26:24.019 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:26:24.019 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:26:24.020 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:26:24.020 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:26:24.020 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:26:24.021 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:26:52.012 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:26:52.013 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:26:52.013 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:26:52.014 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:26:52.014 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:26:52.015 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:26:52.015 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:26:52.016 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:26:52.016 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:26:52.017 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:30:38.017 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:30:38.017 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:30:38.017 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:30:38.018 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:30:38.018 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:30:38.019 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:30:38.019 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:30:38.020 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:30:38.021 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:30:38.021 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:31:16.016 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:31:16.017 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:31:16.017 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:31:16.017 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:31:16.018 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:31:16.019 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:31:16.019 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:31:16.019 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:31:16.020 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:31:16.020 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:31:16.443 [main] ERROR com.teak.blog.utils.TeakUtils - 无法解析类型: String[]
-java.lang.ClassNotFoundException: String
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:375)
-	at resolveReferenceClassName(TeakUtils.java:246)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.teak.blog.utils.TeakUtils$$SpringCGLIB$$0.resolveClassName(<generated>)
-	at ApplicationTest.test16(ApplicationTest.java:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+2025-05-06 09:55:23.304 [main] ERROR org.mybatis.spring.mapper.MapperFactoryBean - Error while adding the mapper 'interface com.teak.blog.mapper.SysScheduledTaskMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/teak/blog/mapper/SysScheduledTaskMapper.xml'. Cause: java.lang.IllegalStateException: No typehandler found for property params
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:129)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.parse(MybatisXMLMapperBuilder.java:102)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.loadXmlResource(MybatisMapperAnnotationBuilder.java:153)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parse(MybatisMapperAnnotationBuilder.java:91)
+	at com.baomidou.mybatisplus.core.MybatisMapperRegistry.addMapper(MybatisMapperRegistry.java:90)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.addMapper(MybatisConfiguration.java:129)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:283)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:269)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameter(ParameterResolutionUtils.java:136)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameters(ParameterResolutionUtils.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:59)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:310)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:286)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
@@ -134,63 +93,63 @@ java.lang.ClassNotFoundException: String
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-2025-05-05 11:40:32.005 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:40:32.005 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:40:32.006 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:40:32.006 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:40:32.007 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:40:32.007 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:40:32.007 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:40:32.007 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:40:32.008 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:40:32.009 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:40:32.545 [main] ERROR com.teak.blog.utils.TeakUtils - 无法解析类型: String[]
-java.lang.ClassNotFoundException: class java.lang.String
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:375)
-	at resolveReferenceClassName(TeakUtils.java:209)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.teak.blog.utils.TeakUtils$$SpringCGLIB$$0.resolveClassName(<generated>)
-	at ApplicationTest.test16(ApplicationTest.java:82)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+Caused by: java.lang.IllegalStateException: No typehandler found for property params
+	at org.apache.ibatis.mapping.ResultMapping$Builder.validate(ResultMapping.java:153)
+	at org.apache.ibatis.mapping.ResultMapping$Builder.build(ResultMapping.java:140)
+	at com.baomidou.mybatisplus.core.MybatisMapperBuilderAssistant.buildResultMapping(MybatisMapperBuilderAssistant.java:81)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.buildResultMappingFromContext(MybatisXMLMapperBuilder.java:360)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElement(MybatisXMLMapperBuilder.java:243)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElement(MybatisXMLMapperBuilder.java:218)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElements(MybatisXMLMapperBuilder.java:210)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:125)
+	... 92 common frames omitted
+2025-05-06 09:55:23.362 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysScheduledTaskMapper' defined in file [D:\IdeaProjects\teakWeb\blog_admin\target\classes\com\teak\blog\mapper\SysScheduledTaskMapper.class]: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/teak/blog/mapper/SysScheduledTaskMapper.xml'. Cause: java.lang.IllegalStateException: No typehandler found for property params
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:967)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:283)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:269)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameter(ParameterResolutionUtils.java:136)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameters(ParameterResolutionUtils.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:59)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:310)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:286)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
@@ -230,425 +189,28 @@ java.lang.ClassNotFoundException: class java.lang.String
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-2025-05-05 11:41:36.707 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:41:36.707 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:41:36.707 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:41:36.708 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:41:36.709 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:41:36.709 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:41:36.709 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:41:36.710 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:41:36.710 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:41:36.711 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:41:36.712 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:41:36.712 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:41:36.712 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:41:36.712 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:41:36.713 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:41:36.713 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:41:36.714 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:41:36.714 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:41:36.714 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:41:36.715 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:41:40.386 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:41:40.387 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:41:40.387 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:41:40.388 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:41:40.388 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:41:40.389 [AsyncPool-21] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:41:40.389 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:41:40.389 [AsyncPool-24] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:41:40.389 [AsyncPool-0] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:41:40.390 [AsyncPool-23] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:41:42.353 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:41:42.353 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:41:42.354 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:41:42.354 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:41:42.355 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:41:42.355 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:41:42.355 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:41:42.356 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:41:42.356 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:41:42.356 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:42:11.119 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 11:42:11.119 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:42:11.120 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:42:11.120 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:42:11.120 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:42:11.120 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:42:11.121 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:42:11.121 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:42:11.121 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:42:11.122 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:42:11.124 [main] ERROR com.teak.blog.utils.TeakUtils - 无法解析类型: String[]
-java.lang.ClassNotFoundException: class java.lang.String
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:375)
-	at resolveReferenceClassName(TeakUtils.java:209)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.teak.blog.utils.TeakUtils$$SpringCGLIB$$0.resolveClassName(<generated>)
-	at ApplicationTest.test16(ApplicationTest.java:82)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-2025-05-05 11:42:30.016 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 11:42:30.016 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 11:42:30.017 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 11:42:30.017 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 11:42:30.017 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 11:42:30.017 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 11:42:30.018 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 11:42:30.018 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 11:42:30.018 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 11:42:30.019 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:43:46.778 [main] ERROR com.teak.blog.utils.TeakUtils - 无法解析类型: String[]
-java.lang.ClassNotFoundException: String[]
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:375)
-	at resolveReferenceClassName(TeakUtils.java:217)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.teak.blog.utils.TeakUtils$$SpringCGLIB$$0.resolveClassName(<generated>)
-	at ApplicationTest.test16(ApplicationTest.java:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-2025-05-05 12:44:08.013 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:08.014 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:08.014 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:08.015 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:08.015 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:08.015 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:08.015 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:08.015 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:08.016 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:08.016 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:10.998 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:10.998 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:10.998 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:10.998 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:10.999 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-0] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-23] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-21] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:12.025 [AsyncPool-24] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:15.544 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:15.546 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:16.806 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:16.806 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:16.807 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:16.807 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:16.807 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:16.808 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:16.808 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:16.808 [AsyncPool-0] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:16.808 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:16.808 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:19.064 [AsyncPool-23] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:19.065 [AsyncPool-21] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:19.065 [AsyncPool-24] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:19.066 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:19.067 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:23.432 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:23.433 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:23.433 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:23.434 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:23.434 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:23.434 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:23.434 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:23.434 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:23.435 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:23.435 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:25.422 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:25.424 [AsyncPool-0] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:25.424 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-21] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-24] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-23] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:25.425 [AsyncPool-11] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:28.642 [AsyncPool-17] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:44:28.643 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:44:28.643 [AsyncPool-19] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:44:28.643 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:44:28.643 [AsyncPool-22] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:44:28.643 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:44:28.644 [AsyncPool-13] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:44:28.644 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:44:28.644 [AsyncPool-18] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:44:28.644 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:45:12.819 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:45:12.819 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:45:12.819 [AsyncPool-16] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:45:12.819 [AsyncPool-0] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:45:12.819 [AsyncPool-20] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:45:12.820 [AsyncPool-14] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:45:12.820 [AsyncPool-12] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:45:12.820 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:45:12.820 [AsyncPool-21] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
-2025-05-05 12:45:12.820 [AsyncPool-15] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:45:12.822 [main] ERROR com.teak.blog.utils.TeakUtils - 无法解析类型: String[]
-java.lang.ClassNotFoundException: String[]
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:375)
-	at resolveReferenceClassName(TeakUtils.java:217)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
-	at com.teak.blog.utils.TeakUtils$$SpringCGLIB$$0.resolveClassName(<generated>)
-	at ApplicationTest.test16(ApplicationTest.java:83)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
-	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-2025-05-05 12:45:28.003 [AsyncPool-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表10]异常: String.class
-2025-05-05 12:45:28.003 [AsyncPool-2] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表4]异常: String.class
-2025-05-05 12:45:28.003 [AsyncPool-7] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表2]异常: String.class
-2025-05-05 12:45:28.004 [AsyncPool-3] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: String.class
-2025-05-05 12:45:28.004 [AsyncPool-10] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表9]异常: String.class
-2025-05-05 12:45:28.004 [AsyncPool-9] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表7]异常: String.class
-2025-05-05 12:45:28.004 [AsyncPool-6] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表3]异常: String.class
-2025-05-05 12:45:28.004 [AsyncPool-8] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表8]异常: String.class
-2025-05-05 12:45:28.005 [AsyncPool-4] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表6]异常: String.class
-2025-05-05 12:45:28.005 [AsyncPool-5] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表5]异常: String.class
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/teak/blog/mapper/SysScheduledTaskMapper.xml'. Cause: java.lang.IllegalStateException: No typehandler found for property params
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:83)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 83 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'com/teak/blog/mapper/SysScheduledTaskMapper.xml'. Cause: java.lang.IllegalStateException: No typehandler found for property params
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:129)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.parse(MybatisXMLMapperBuilder.java:102)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.loadXmlResource(MybatisMapperAnnotationBuilder.java:153)
+	at com.baomidou.mybatisplus.core.MybatisMapperAnnotationBuilder.parse(MybatisMapperAnnotationBuilder.java:91)
+	at com.baomidou.mybatisplus.core.MybatisMapperRegistry.addMapper(MybatisMapperRegistry.java:90)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.addMapper(MybatisConfiguration.java:129)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	... 86 common frames omitted
+Caused by: java.lang.IllegalStateException: No typehandler found for property params
+	at org.apache.ibatis.mapping.ResultMapping$Builder.validate(ResultMapping.java:153)
+	at org.apache.ibatis.mapping.ResultMapping$Builder.build(ResultMapping.java:140)
+	at com.baomidou.mybatisplus.core.MybatisMapperBuilderAssistant.buildResultMapping(MybatisMapperBuilderAssistant.java:81)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.buildResultMappingFromContext(MybatisXMLMapperBuilder.java:360)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElement(MybatisXMLMapperBuilder.java:243)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElement(MybatisXMLMapperBuilder.java:218)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.resultMapElements(MybatisXMLMapperBuilder.java:210)
+	at com.baomidou.mybatisplus.core.MybatisXMLMapperBuilder.configurationElement(MybatisXMLMapperBuilder.java:125)
+	... 92 common frames omitted

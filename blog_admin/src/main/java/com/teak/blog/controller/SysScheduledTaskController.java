@@ -1,6 +1,7 @@
 package com.teak.blog.controller;
 
 import com.teak.blog.entity.model.SysScheduledTask;
+import com.teak.blog.entity.vo.SysScheduledTaskVo;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.SysScheduledTaskService;
 import lombok.RequiredArgsConstructor;
@@ -31,8 +32,8 @@ public class SysScheduledTaskController {
     }
 
     @PostMapping("/addScheduledTask")
-    public GlobalResult addScheduledTask(@RequestBody SysScheduledTask sysScheduledTask) {
-        sysScheduledTaskService.addScheduledTask(sysScheduledTask);
+    public GlobalResult addScheduledTask(@RequestBody SysScheduledTaskVo sysScheduledTaskVo) {
+        sysScheduledTaskService.addScheduledTask(sysScheduledTaskVo);
         return GlobalResult.success(null);
     }
 

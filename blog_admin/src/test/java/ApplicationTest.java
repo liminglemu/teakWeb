@@ -2,15 +2,19 @@ import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.RandomUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teak.blog.BlogAdminApplication;
 import com.teak.blog.controller.XhProductController;
 import com.teak.blog.entity.model.Article;
 import com.teak.blog.entity.model.ArticleDetail;
 import com.teak.blog.entity.model.UserDb;
+import com.teak.blog.entity.vo.SysScheduledTaskVo;
 import com.teak.blog.result.GlobalResult;
 import com.teak.blog.service.ArticleDetailService;
 import com.teak.blog.service.ArticleService;
 import com.teak.blog.service.DeviceFaultRecordsService;
+import com.teak.blog.service.SysScheduledTaskService;
 import com.teak.blog.utils.IdWorker;
 import com.teak.blog.utils.TeakUtils;
 import lombok.Data;
@@ -25,6 +29,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -47,37 +52,141 @@ class ApplicationTest {
 
     // 创建ThreadLocal实例（建议用static final修饰）
     private static final ThreadLocal<UserDb> USER_CONTEXT = new ThreadLocal<>();
+    @Autowired
+    private IdWorker idWorker;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
     private final XhProductController xhProductController;
     private final ArticleService articleService;
     private final ArticleDetailService articleDetailService;
     private final ExecutorService executorService;
     private final DeviceFaultRecordsService deviceFaultRecordsService;
     private final TeakUtils teakUtils;
-    @Autowired
-    private IdWorker idWorker;
-    @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
-
     private final ApplicationContext applicationContext;
+    private final SysScheduledTaskService sysScheduledTaskService;
+
 
     public static void main(String[] args) {
-        /*String[] strings= {"String"};
-        Class<? extends String[]> aClass = strings.getClass();
-        log.info("aClass:{}", aClass);*/
-
+       /* ArrayList<Serializable> objects = new ArrayList<>();
+        objects.add("abc");
+        Article article = new Article();
+        article.setTitle("测试");
+        objects.add(article);
+        objects.add(45785245865245L);*/
+        ArrayList<Article> articles = new ArrayList<>();
+        Article article1 = new Article();
+        article1.setTitle("测试");
+        articles.add(article1);
+        Article article2 = new Article();
+        article2.setTitle("测试");
+        articles.add(article2);
+        ObjectMapper mapper = new ObjectMapper();
         try {
-            Class<?> aClass = Class.forName("int.class");
-            log.info("aClass:{}", aClass);
+            String asString = mapper.writeValueAsString(articles);
+            log.info("asString:{}", asString);
 
-        } catch (ClassNotFoundException e) {
+            List<Article> mergeBasedOnFields = mapper.readValue(asString, mapper.getTypeFactory().constructCollectionType(List.class, Article.class));
+            log.info("mergeBasedOnFields:{}", mergeBasedOnFields);
+        } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
     }
 
     @Test
-    void test16() {
+    void test19() {
+        SysScheduledTaskVo sysScheduledTaskVo = new SysScheduledTaskVo();
+        sysScheduledTaskVo.setTaskName("test-List数组");
+        sysScheduledTaskVo.setCronExpression("0/3 * * * * ?");
+        sysScheduledTaskVo.setBeanName("reportGenerateTask");
+        sysScheduledTaskVo.setMethodName("generateDailyReport");
+        ArrayList<Serializable> objects = new ArrayList<>();
+        ArrayList<Article> articles = new ArrayList<>();
+        Article article1 = new Article();
+        article1.setTitle("测试1");
+        Article article2 = new Article();
+        article2.setTitle("测试2");
+        Article article3 = new Article();
+        article3.setTitle("测试3");
+        articles.add(article1);
+        articles.add(article2);
+        articles.add(article3);
+        objects.add(articles);
+        sysScheduledTaskVo.setParams(objects);
+        sysScheduledTaskVo.setStatus(1);
 
-        String strings = teakUtils.resolveReferenceClassName("String,String[],int");
+        sysScheduledTaskVo.setParameterTypes(List.class.getName());
+        sysScheduledTaskService.addScheduledTask(sysScheduledTaskVo);
+    }
+
+    @Test
+    void test18() {
+        SysScheduledTaskVo sysScheduledTaskVo = new SysScheduledTaskVo();
+        sysScheduledTaskVo.setTaskName("test-数组");
+        sysScheduledTaskVo.setCronExpression("0/2 * * * * ?");
+        sysScheduledTaskVo.setBeanName("reportGenerateTask");
+        sysScheduledTaskVo.setMethodName("generateDailyReport");
+        ArrayList<Serializable> objects = new ArrayList<>();
+        String[] strings = new String[]{"abc", "def", "我来测试测试你"};
+        objects.add(strings);
+
+        sysScheduledTaskVo.setParams(objects);
+        sysScheduledTaskVo.setStatus(1);
+
+        sysScheduledTaskVo.setParameterTypes("String[]");
+        sysScheduledTaskService.addScheduledTask(sysScheduledTaskVo);
+    }
+
+    @Test
+    void testParameterConversion() throws Exception {
+        ArrayList<Serializable> serializables = new ArrayList<>();
+        serializables.add("abc");
+        Article article = new Article();
+        article.setTitle("测试");
+        serializables.add(article);
+        serializables.add(45785245865245L);
+        String valueAsString = new ObjectMapper().writeValueAsString(serializables);
+
+        Class<?>[] classes = {String.class, Article.class, Long.class};
+
+        List<?> params = new ObjectMapper().readValue(valueAsString, List.class);
+        Object[] array = new Object[params.size()];
+
+        for (int i = 0; i < params.size(); i++) {
+            array[i] = new ObjectMapper()
+                    .convertValue(params.get(i), classes[i]);
+        }
+
+        assert array[0] instanceof String; // "abc"
+        assert ((Article) array[1]).getTitle().equals("测试");
+        assert (Long) array[2] == 45785245865245L;
+        log.info("array:{}", array);
+    }
+
+
+    @Test
+    void test17() {
+        SysScheduledTaskVo sysScheduledTaskVo = new SysScheduledTaskVo();
+        sysScheduledTaskVo.setTaskName("test");
+        sysScheduledTaskVo.setCronExpression("0/5 * * * * ?");
+        sysScheduledTaskVo.setBeanName("reportGenerateTask");
+        sysScheduledTaskVo.setMethodName("generateDailyReport");
+        ArrayList<Serializable> objects = new ArrayList<>();
+        objects.add("abc");
+        Article article = new Article();
+        article.setTitle("测试");
+        objects.add(article);
+        objects.add(45785245865245L);
+
+        sysScheduledTaskVo.setParams(objects);
+        sysScheduledTaskVo.setStatus(1);
+
+        sysScheduledTaskVo.setParameterTypes("String,com.teak.blog.entity.model.Article,Long");
+        sysScheduledTaskService.addScheduledTask(sysScheduledTaskVo);
+    }
+
+    @Test
+    void test16() {
+        String strings = teakUtils.resolveReferenceClassName("String,String[],Integer[]");
         log.info("解析名称为:{}", strings);
     }
 

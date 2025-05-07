@@ -196,6 +196,13 @@ public class TeakUtils {
         return newString.trim();
     }
 
+
+    /**
+     * 解析引用类型和数组类型
+     *
+     * @param typeName 类型名称
+     * @return 返回用逗号分割的引用类型和数组类型全类名
+     */
     public String resolveReferenceClassName(String typeName) {
         if (typeName == null) {
             return null;
@@ -211,6 +218,10 @@ public class TeakUtils {
                 Class<? extends Serializable> aClass = getAClass(splitName);
                 if (aClass != null) {
                     typeClassNames.add(aClass.getName());
+                    handled = true;
+                }
+                if ("Object".equals(splitName)) {
+                    typeClassNames.add(Object.class.getName());
                     handled = true;
                 }
 
@@ -239,15 +250,26 @@ public class TeakUtils {
     private static Class<? extends Serializable> getAClass(String splitName) {
         return switch (splitName) {
             case "Integer" -> Integer.class;
+            case "Long" -> Long.class;
             case "String" -> String.class;
             case "Double" -> Double.class;
             case "Float" -> Float.class;
             case "BigDecimal" -> BigDecimal.class;
             case "Date" -> Date.class;
+            case "Boolean" -> Boolean.class;
+            case "Byte" -> Byte.class;
+            case "Short" -> Short.class;
+            case "Character" -> Character.class;
             default -> null;
         };
     }
 
+    /**
+     * 解析基本数据类型
+     *
+     * @param typeName 类型名称
+     * @return 直接返回基本数据类型class类
+     */
     public Class<? extends Serializable> resolveClassName(String typeName) {
         return switch (typeName) {
             case "int" -> int.class;

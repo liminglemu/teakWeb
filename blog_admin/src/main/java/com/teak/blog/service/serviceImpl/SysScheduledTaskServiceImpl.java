@@ -1,7 +1,10 @@
 package com.teak.blog.service.serviceImpl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teak.blog.entity.model.SysScheduledTask;
+import com.teak.blog.entity.vo.SysScheduledTaskVo;
 import com.teak.blog.mapper.SysScheduledTaskMapper;
 import com.teak.blog.service.SysScheduledTaskService;
 import com.teak.blog.utils.TeakUtils;
@@ -35,12 +38,20 @@ public class SysScheduledTaskServiceImpl extends ServiceImpl<SysScheduledTaskMap
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public void addScheduledTask(SysScheduledTask sysScheduledTask) {
+    public void addScheduledTask(SysScheduledTaskVo sysScheduledTaskVo) {
         SysScheduledTask scheduledTask = new SysScheduledTask();
-        teakUtils.copyProperties(sysScheduledTask, scheduledTask);
-        scheduledTask.setBeanName(teakUtils.lowerFirstCharAndTrim(sysScheduledTask.getBeanName()));
-        scheduledTask.setMethodName(teakUtils.lowerFirstCharAndTrim(sysScheduledTask.getMethodName()));
-        scheduledTask.setParameterTypes(teakUtils.resolveReferenceClassName(sysScheduledTask.getParameterTypes()));
+        teakUtils.copyProperties(sysScheduledTaskVo, scheduledTask);
+        scheduledTask.setBeanName(teakUtils.lowerFirstCharAndTrim(sysScheduledTaskVo.getBeanName()));
+        scheduledTask.setMethodName(teakUtils.lowerFirstCharAndTrim(sysScheduledTaskVo.getMethodName()));
+        scheduledTask.setParameterTypes(teakUtils.resolveReferenceClassName(sysScheduledTaskVo.getParameterTypes()));
+        if (sysScheduledTaskVo.getParams() != null) {
+            try {
+                scheduledTask.setParams(new ObjectMapper().writeValueAsString(sysScheduledTaskVo.getParams()));
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
         sysScheduledTaskMapper.insert(scheduledTask);
     }
 

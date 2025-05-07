@@ -1,6 +1,7 @@
 package com.teak.blog.service;
 
 import com.teak.blog.entity.model.SysScheduledTask;
+import com.teak.blog.entity.vo.SysScheduledTaskVo;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
 public interface SysScheduledTaskService {
     List<SysScheduledTask> getAllTask();
 
-    void addScheduledTask(SysScheduledTask sysScheduledTask);
+    void addScheduledTask(SysScheduledTaskVo sysScheduledTaskVo);
 
     List<SysScheduledTask>  findByStatus(int i);
 }

@@ -1,5 +1,6 @@
 package com.teak.blog.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teak.blog.entity.model.SysScheduledTask;
 import com.teak.blog.service.SysScheduledTaskService;
 import com.teak.blog.utils.TeakUtils;
@@ -27,7 +28,7 @@ import java.util.concurrent.ExecutorService;
  * @Date: 2025/5/4 00:01
  * @Project: teakWeb
  * @File: DynamicSchedulerConfig.java
- * @Description:
+ * @Description: 动态定时任务配置类，只能支持基本数据类型，引用类型，不支持泛型数据
  */
 @Slf4j
 @Configuration
@@ -76,15 +77,43 @@ public class DynamicSchedulerConfig implements SchedulingConfigurer {
                             classes[i] = Class.forName(typeNames[i].trim());
                         }
                     }
-                    Method method = bean.getClass().getMethod(task.getMethodName(), classes);
-                    method.invoke(bean, task.getParams());
+
+                    //解析参数
+                    List list = new ObjectMapper().readValue(task.getParams(), List.class);
+                    if (list.size() == classes.length) {
+
+                        Object[] array = new Object[list.size()];
+
+                        for (int i = 0; i < list.size(); i++) {
+                            Object rawValue = list.get(i);
+                            Class<?> targetType = classes[i];
+                            log.info("正在转换参数 {}: 原始类型={}, 目标类型={}", i,
+                                    rawValue.getClass().getSimpleName(),
+                                    targetType.getSimpleName());
+
+                            array[i] = new ObjectMapper().convertValue(rawValue, targetType);
+
+                            log.info("转换结果 {}: [{}] {}", i,
+                                    array[i].getClass().getSimpleName(),
+                                    array[i]);
+                        }
+
+                        Method method = bean.getClass().getMethod(task.getMethodName(), classes);
+                        method.invoke(bean, array);
+                        log.info("==================================================================================================================");
+                    } else {
+                        throw new RuntimeException("参数个数不匹配");
+                    }
+
                 } else {
+                    //这里是进行无参调用
                     Method method = bean.getClass().getMethod(task.getMethodName());
                     method.invoke(bean);
                 }
 
             } catch (Exception e) {
                 log.error("执行任务[{}]异常: {}", task.getTaskName(), e.getMessage());
+                throw new RuntimeException(e);
             }
         }, executorService);
     }
