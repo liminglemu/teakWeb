@@ -58,6 +58,7 @@ public class DynamicSchedulerConfig implements SchedulingConfigurer {
 
     private Runnable createRunnable(SysScheduledTask task) {
         return () -> CompletableFuture.runAsync(() -> {
+            log.info("当前线程是否为守护线程：" + Thread.currentThread().isDaemon());
             try {
                 log.info("执行任务[{}]", task.getTaskName());
                 Object bean = applicationContext.getBean(task.getBeanName());

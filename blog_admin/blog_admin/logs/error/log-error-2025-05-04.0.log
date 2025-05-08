@@ -1,8 +1,0 @@
-2025-05-04 00:30:40.003 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: No bean named 'ImgServiceImp ' available
-2025-05-04 00:34:30.011 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: No bean named 'ImgServiceImp ' available
-2025-05-04 00:45:54.027 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: com.teak.blog.service.serviceImpl.ImgServiceImp$$SpringCGLIB$$0.scheduledTest (java.lang.String)
-2025-05-04 00:46:30.024 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: com.teak.blog.service.serviceImpl.ImgServiceImp$$SpringCGLIB$$0.scheduledTest (java.lang.String)
-2025-05-04 00:47:31.075 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: Error creating bean with name 'imgServiceImp': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
-2025-05-04 00:47:46.003 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: com.teak.blog.service.serviceImpl.ImgServiceImp$$SpringCGLIB$$0.scheduledTest (java.lang.String)
-2025-05-04 00:48:50.030 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: com.teak.blog.service.serviceImpl.ImgServiceImp$$SpringCGLIB$$0.scheduledTest (java.lang.String)
-2025-05-04 00:58:31.999 [scheduled-task-1] ERROR com.teak.blog.config.DynamicSchedulerConfig - 执行任务[生成日报表]异常: com.teak.blog.service.serviceImpl.ReportGenerateTask.generateDailyReport (java.lang.String)
